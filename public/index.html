@@ -1,0 +1,2161 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="Java">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Wlcaption">
+<meta property="og:url" content="http://holagames.cn/index.html">
+<meta property="og:site_name" content="Wlcaption">
+<meta property="og:description" content="Java">
+<meta property="og:locale" content="zh-Hans">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Wlcaption">
+<meta name="twitter:description" content="Java">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"right","display":"remove","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://holagames.cn/"/>
+
+
+
+
+
+  <title>Wlcaption</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right 
+   page-home 
+ ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Wlcaption</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Java游戏服务器开发和Unity客户端开发</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-resume">
+          <a href="/resume/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            简历
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-categories " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://holagames.cn/2017/09/15/Android编程规范/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="wlcaption">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Wlcaption">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/09/15/Android编程规范/" itemprop="url">Android编程规范</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-14T22:11:24Z">
+                2017-09-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Android/" itemprop="url" rel="index">
+                    <span itemprop="name">Android</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><ol>
+<li>为什么需要编码规范<br> 编码规范对于程序员而言尤为重要，有以下几个原因： <ul>
+<li>一个软件的生命周期中，80%的花费在于维护 </li>
+<li>几乎没有任何一个软件，在其整个生命周期中，均由最初的开发人员来维护</li>
+<li>编码规范可以改善软件的可读性，可以让程序员尽快而彻底地理解新的代码</li>
+</ul>
+</li>
+</ol>
+<h2 id="源文件规范"><a href="#源文件规范" class="headerlink" title="源文件规范"></a>源文件规范</h2><ol>
+<li><p>文件名<br> 源文件名必须和它包含的顶层类名保持一致，包括大小写，并以.java作为后缀名。</p>
+</li>
+<li><p>文件编码<br> 所有源文件编码必须是<code>UTF-8</code></p>
+</li>
+</ol>
+<h2 id="命名"><a href="#命名" class="headerlink" title="命名"></a>命名</h2><ol>
+<li><p>包名<br> 命名规则：一个唯一包名的前缀总是全部小写的<code>ASCII</code>字母并且是一个<strong>顶级域名</strong>,通常是<code>com,edu,gov,mil,net,org</code>。<br> 包名的后续部分根据不同机构各自内部的命名规范而不尽相同。这类命名规范可能以特定目录名的组成来区分部门 <code>(department)</code>,<br> 项目<code>(project)</code>,机器<code>(machine)</code>,或注册名<code>(login names)</code>.<br> 例如： <code>com.domain.xx</code>           </p>
+<p> 包命名必须以<code>com.domain</code>开始,后面跟有项目名称（或者缩写）,再后面为模块名或层级名称。           </p>
+<pre><code>如：`com.domain.项目缩写.模块名` `com.domain.xx.bookmark`        
+如：`com.domain.项目缩写.层级名` `com.domain.xx.activity`          
+</code></pre></li>
+<li><p>类和接口命名<br> 命名规则：类名是个一名词，采用大小写混合的方式，每个单词的首字母大写。尽量使你的类名简洁而富于描述。使用完整单词，<br> 避免缩写词(除非该缩写词被更广泛使用，像 URL，HTML)        </p>
+<p> 接口一般要使用<code>able</code>,<code>ible</code>,<code>er</code>等后缀              </p>
+<p> 类名必须使用<strong>驼峰规则</strong>，即首字母必须大写，如果为词组，则每个单词的首字母也必须要大写，类名必须使用名词，或名词词组。<br> 要求类名简单，不允许出现无意义的单词。</p>
+</li>
+<li><p>方法的命名<br> 命名规则：方法名是一个动词，采用大小写混合的方式，第一个单词的首字母小写，其后单词的首字母大写。<br> 例如： <code>public void run(); public String getBookName();</code>     </p>
+<p> 类中常用方法的命名：              </p>
+<pre><code>- 类的获取方法（一般具有返回值）一般要求在被访问的字段名前加上`get`.     
+    如`getFirstName()`,`getLastName()`.
+    一般来说,`get`前缀方法返回的是单个值,`find`前缀的方法返回的是列表值.
+
+- 类的设置方法(一般返回类型为`void`)：被访问字段名的前面加上前缀 `set`.    
+    如`setFirstName()`,`setLastName()`.
+
+- 类的布尔型的判断方法一般要求方法名使用单词`is`或`has`做前缀.      
+    如`isPersistent()`,`isString()`.或者使用具有逻辑意义的单词,例如`equal`或`equals`.
+
+- 类的普通方法一般采用完整的英文描述说明成员方法功能,第一个单词尽可能采用动词,首字母小写.     
+    如`openFile()`, `addCount()`.
+- 构造方法应该用递增的方式写,(参数多的写在后面).
+- `toString()`方法：一般情况下，每个类都应该定义`toString()`.
+</code></pre></li>
+<li><p>变量命名<br> 命名规则：第一个单词的首字母小写，其后单词的首字母大写。变量名不应以下划线或美元符号开头，尽管这在语法上是允许的。变量名应简短且富于描述。<br> 变量名的选用应该易于记忆，即，能够指出其用途。尽量避免单个字符的变量名，除非是一次性的临时变量。临时变量通常被取名为 <code>i,j,k,m,n</code>它们一般用于整型；<br> <code>c,d,e</code> 它们一般用于字符型。<br> 在<code>Android</code>中成员变量<br> 非<code>public</code>非<code>static</code>的变量可以使用<code>m</code>开头<br> 非常量的<code>static</code>变量可以使用<code>s</code>开头</p>
+</li>
+</ol>
+<pre><code>变量命名也必须使用**驼峰规则**，但是首字母必须小写，变量名尽可能的使用名词或名词词组。同样要求简单易懂，不允许出现无意义的单词。
+例如：`private String mBookName; ` 
+</code></pre><ol>
+<li><p>常量命名<br> 命名规则：类常量的声明，应该全部大写，单词间用下划线隔开。<br> 例如：<code>private static final int MIN_WIDTH = 4;</code></p>
+</li>
+<li><p>异常命名<br> 自定义异常的命名必须以<code>Exception</code>为结尾。已明确标示为一个异常。</p>
+</li>
+<li><p>layout命名<br> <code>layout.xml</code>的命名必须以全部单词小写，单词间以下划线分割，并且使用名词或名词词组，即使用 模块名<em>功能名称</em>所属页面类型 来命名。<br> 如：<code>video_controller_player_activity</code>     视频模块下的-控制栏-属于播放器的-Activity页</p>
+</li>
+<li><p>id命名<br> ·layout<code>中所使用的</code>id<code>必须以全部单词小写，单词间以下划线分割，并且使用名词或名词词组，并且要求能够通过</code>id<code>直接理解当前组件要实现的功能。       
+ 如：某</code>TextView @+id/tv_book_name_show<code>如：某</code>EditText @+id/<code>et_book_name_edit</code>          </p>
+</li>
+<li><p>资源命名<br> <code>layout</code>中所使用的所有资源(如<code>drawable</code>,<code>style</code>等),命名必须以全部单词小写，单词间以下划线分割，并且尽可能的使用名词或名词组，<br> 即使用 模块名_用途 来命名。如果为公共资源，如分割线等，则直接用用途来命名<br> 如：<code>menu_icon_navigate.png</code><br> 如：某分割线：<code>line.png</code> 或 <code>separator.png</code>        </p>
+</li>
+</ol>
+<h2 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h2><p><code>Java</code>程序有两类注释：实现注释<code>(implementation comments)</code>和文档注释<code>(document comments)</code>。<br>实现注释是使用/<em>…</em>/和//界定的注释。文档注释(被称为”doc comments”)由/<em>*…</em>/界定。文档注释可以通过javadoc 工具转换成HTML 文件。</p>
+<ol>
+<li><p>类注释<br> 每一个类都要包含如下格式的注释，以说明当前类的功能等。<br> /**</p>
+<ul>
+<li>类名</li>
+<li>@author 作者 <br></li>
+<li>实现的主要功能。</li>
+<li>创建日期</li>
+<li>修改者，修改日期，修改内容。<br>*/</li>
+</ul>
+</li>
+<li><p>方法注释<br> 每一个方法都要包含 如下格式的注释 包括当前方法的用途，当前方法参数的含义，当前方法返回值的内容和抛出异常的列表。<br> /**</p>
+<ul>
+<li></li>
+<li>方法的一句话概述</li>
+<li><p>方法详述（简单方法可不必详述）</p></li>
+<li>@param s 说明参数含义</li>
+<li>@return 说明返回值含义</li>
+<li>@throws IOException 说明发生此异常的条件</li>
+<li>@throws NullPointerException 说明发生此异常的条件<br>*/</li>
+</ul>
+</li>
+<li><p>类成员变量和常量注释<br> 成员变量和常量需要使用<code>java doc</code>形式的注释，以说明当前变量或常量的含义<br> /**</p>
+<ul>
+<li>XXXX含义<br>*/</li>
+</ul>
+</li>
+<li><p>其他注释<br> 方法内部的注释 如果需要多行 使用/<em>…… </em>/形式，如果为单行是用//……形式的注释。<br> 不要再方法内部使用 java doc 形式的注释“/<em>*……</em>/”</p>
+</li>
+</ol>
+<h2 id="代码风格"><a href="#代码风格" class="headerlink" title="代码风格"></a>代码风格</h2><ol>
+<li>缩进<br> 除了换行符之外，ASCII空格（0x20）是唯一合法的空格字符。这意味着<br> 不允许使用<code>Tab</code>进行缩进，应该使用空格进行缩进，推荐缩进为4个空格<br> <code>Eclipse</code>中将<code>Tab</code>替换为4个空格的设置方法(很多人都习惯直接按4次空格，感觉不设置习惯了也挺好)<pre><code>- 代码设置
+    `Window-&gt;Preferences-&gt;General-&gt;Editors-&gt;Text Editors-&gt;`勾选`Insert spaces for tabs``
+- XML文件的Tab配置
+    `Window-&gt;Preferences-&gt;XML-&gt;XML Files-&gt;Editor&gt;`选择右侧区域的`Indent using spaces`
+</code></pre></li>
+</ol>
+<ol>
+<li><p>空行<br> 空行将逻辑相关的代码段分隔开，以提高可读性。       </p>
+<p>  下列情况应该总是使用空行：<br>    - 一个源文件的两个片段之间<br>    - 类声明和接口声明之间<br>    - 两个方法之间<br>    - 方法内的局部变量和方法的第一条语句之间<br>    - 一个方法内的两个逻辑段之间，用以提高可读性  </p>
+<p> 通常在 变量声明区域之后要用空行分隔，常量声明区域之后要有空行分隔，方法声明之前要有空行分隔。</p>
+</li>
+<li><p>方法<br>    - 一个方法尽量不要超过15行(可能会有难度，但是尽量不要太多，弄个方法几千行这是绝对不允许的)，如果方法太长，说明当前方法业务逻辑已经非常复杂，</p>
+<pre><code>那么就需要进行方法拆分，保证每个方法只作一件事。
+</code></pre><p>    - 不要使用<code>try catch</code>处理业务逻辑！！！！</p>
+</li>
+<li><p>参数和返回值</p>
+<ul>
+<li>一个方法的参数尽可能的不要超过4个(根据情况可能也会有些难度)</li>
+<li>如果一个方法返回的是一个错误码，请使用异常！！</li>
+<li>尽可能不要使用<code>null</code>替代为异常</li>
+</ul>
+</li>
+<li><p>神秘数字<br> 代码中不允许出现单独的数字，字符！如果需要使用数字或字符，则将它们按照含义封装为静态常量!(<code>for</code>语句中除外)</p>
+</li>
+<li><p>控制语句<br> 判断中如有常量，则应将常量置于判断式的右侧。如：<br> <code>if (true == isAdmin())...</code><br> 尽量不要使用三目条件的嵌套。</p>
+<p> 在<code>if</code>、<code>else</code>、<code>for</code>、<code>do</code>和<code>while</code>语句中，即使没有语句或者只有一行，也不得省略花括号：</p>
+ <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (<span class="keyword">true</span>)&#123;</div><div class="line">	<span class="comment">//do something......</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p> 不要使用下面的方式:</p>
+ <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (<span class="keyword">true</span>)</div><div class="line">	i = <span class="number">0</span>; <span class="comment">//不要使用这种</span></div></pre></td></tr></table></figure>
+</li>
+</ol>
+<pre><code>对于循环：
+//将操作结构保存在临时变量里，减少方法调用次数
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">final</span> <span class="keyword">int</span> count = products.getCount();</div><div class="line"><span class="keyword">while</span>(index &lt; count)&#123;</div><div class="line">	<span class="comment">// ...</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+而不是
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">while</span>(index &lt; products.getCount())&#123;</div><div class="line">	<span class="comment">//每此都会执行一次getCount()方法，</span></div><div class="line">	<span class="comment">//若此方法耗时则会影响执行效率</span></div><div class="line">	<span class="comment">//而且可能带来同步问题，若有同步需求，请使用同步块或同步方法</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</code></pre><ol>
+<li><p>访问控制<br> 若没有足够理由，不要把实例或类变量声明为公有。</p>
+</li>
+<li><p>变量赋值<br> 不要使用内嵌(embedded)赋值运算符试图提高运行时的效率，这是编译器的工作。例如：<br>  <code>d = (a = b + c) + r;</code><br> 应该写成 </p>
+ <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">a = b + c; </div><div class="line">d = a + r;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<ol>
+<li><p>圆括号的试用<br> 一般而言，在含有多种运算符的表达式中使用圆括号来避免运算符优先级问题，是个好方法。<br> 即使运算符的优先级对你而言可能很清楚，但对其他人未必如此。你不能假设别的程序员和你一样清楚运算符的优先级。<br> 不要这样写：<br> <code>if (a == b &amp;&amp; c == d)</code><br> 正确的方式为：<br> <code>if ((a == b) &amp;&amp; (c == d))</code></p>
+</li>
+<li><p>返回值<br>设法让你的程序结构符合目的。例如： </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (booleanExpression) &#123; </div><div class="line">	<span class="keyword">return</span> <span class="keyword">true</span>; </div><div class="line">&#125; <span class="keyword">else</span> &#123; </div><div class="line">	<span class="keyword">return</span> <span class="keyword">false</span>; </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>应该代之以如下方法：<br><code>return booleanExpression</code></p>
+<p>类似地： </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (condition) &#123; </div><div class="line">	<span class="keyword">return</span> x; </div><div class="line">&#125; </div><div class="line"><span class="keyword">return</span> y;</div></pre></td></tr></table></figure>
+<p>应该写做：<br><code>return (condition ? x : y);</code></p>
+</li>
+<li><p>条件运算符<code>?</code>前的表达式<br>如果一个包含二元运算符的表达式出现在三元运算符” ? : “的”?”之前，那么应该给表达式添上一对圆括号。例如：<br><code>(x &gt;= 0) ? x : -x</code></p>
+</li>
+<li><p>所有未使用的import语句应该被删除。    </p>
+</li>
+<li><p>重载（Overload）方法必须放在一起</p>
+</li>
+<li><p>非空块中花括号的使用<br>在非空代码块中使用花括号时要遵循<code>K&amp;R</code>风格`(Kernighan and Ritchie Style)：<br>左花括号（{）前不能换行，在其后换行。<br>在右花括号（}）前要有换行。</p>
+</li>
+<li><p>空代码块中花括号的使用<br>如果一个代码块是空的，可以直接使用<code>{}</code>。除了<code>if/else-if/else</code>和<code>try/catch/finally</code>这样的多块语句.</p>
+</li>
+<li><p>列宽<br>列宽必须为120字符，以下情况可以不遵守列宽限制：<br>无法限制宽度的内容，比如注释里的长<code>URL</code><br><code>package</code>和<code>import</code>语句<br>注释中需要被粘贴到<code>Shell</code>里去执行的命令</p>
+</li>
+<li><p>枚举<br>用逗号分割每个枚举变量，并且变量要单独在一行</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">enum</span> Color &#123;</div><div class="line">	RED,</div><div class="line">	GREEN,</div><div class="line">	YELLOW</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<ol>
+<li>长整形数字<br>长整型数字必须使用大写字母<code>L</code>结尾，不能使用小写字母<code>l</code>，以便和数字1进行区分。例如使用3000000000L而不是3000000000l</li>
+</ol>
+<h2 id="开发格式统一"><a href="#开发格式统一" class="headerlink" title="开发格式统一"></a>开发格式统一</h2><ol>
+<li><p>Eclipse<br> <code>Windows -&gt; Preferences -&gt; Java -&gt; Code Style</code><br> 然后选择<code>Import</code>导入相应的<code>Clean Up</code>、<code>Code Templates</code>、<code>Formatter</code>等XML文件。<br> 如果不需要Copyright信息，想要自定义的，可以不导入Code Templates。</p>
+</li>
+<li><p>IDEA<br> <code>File -&gt; Import Settings</code>选择下载链接中的<code>IDEA_Style.jar</code>文件，<br> 可以看到两个选项，只需代码风格的，可以仅选择<code>Code style schemes</code>,<br> 如果需要默认的<code>Copyright</code>信息，选择<code>Default Project settings</code>。</p>
+</li>
+</ol>
+<h2 id="代码严谨性要求"><a href="#代码严谨性要求" class="headerlink" title="代码严谨性要求"></a>代码严谨性要求</h2><ol>
+<li><p><code>ArrayList</code>通过<code>get</code>方法使用下标获取元素，如果使用的下标不在<code>ArrayList</code>大小范围内，将产生<code>java.lang.IndexOutOfBoundsException</code>的异常，导致<code>app</code>出现<code>Crash</code>。</p>
+</li>
+<li><p>方法中存在<code>return null</code>返回对象直接进行方法调用隐患, 在使用时需要先判断是否为<code>null</code>，一般尽量不要在方法中直接<code>return null</code>，最好用异常代替。</p>
+</li>
+<li><p>销毁<code>Dialog</code>前是否<code>isShowing</code>未判断隐患<br> 调用<code>Android.app.Dialog.cancel()</code>方法前，如果这个<code>dialog</code>不处于<code>showing</code>状态时，会抛出<code>java.lang.IllegalArgumentException</code>的异常，导致<code>app</code>出现<code>Crash</code>。</p>
+</li>
+<li><p>使用<code>String.split</code>结果未判断长度隐患<br> 在使用<code>String.split</code>得到的结果数组前，未对数组进行长度检查，取字段的时候可能发生越界而导致<code>Crash</code>。</p>
+ <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">String source = <span class="string">"&lt;br/&gt;"</span>;</div><div class="line">String[] infos = source.split(<span class="string">"&lt;br/&gt;"</span>);</div><div class="line"><span class="keyword">if</span>(<span class="number">0</span> &lt; infos.length)&#123;</div><div class="line">   String poiName = infos[<span class="number">0</span>];</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<hr>
+<ul>
+<li>邮箱 ：wlcaption@gmail.com  </li>
+<li>Good Luck! </li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-categories " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://holagames.cn/2017/09/15/Handler导致内存泄露分析/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="wlcaption">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Wlcaption">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/09/15/Handler导致内存泄露分析/" itemprop="url">Handler导致内存泄露分析</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-14T22:11:01Z">
+                2017-09-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Android/" itemprop="url" rel="index">
+                    <span itemprop="name">Android</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>一直在听到耳熟能详的词,连我们QA都经常在说这个词,一下子我开始怀疑人生,没有做开发的同学都知道这个词,我自自己也知道,但是到底什么是内存泄漏呢,就在昨天去面试的时候,由于在简历上写了知道OOM,而被面试官问到,我只是说了一些简单的内存泄漏的情况,今天我就好好的总结了一下,几个主要常见的内存泄漏,如下:<br>还是先说说什么是内存泄漏,毕竟不是每天都在跟这个家伙打交道,JAVA是垃圾回收语言的一种，开发者无需特意管理内存分配。但是JAVA中还是存在着许多内存泄露的可能性，如果不好好处理内存泄露，会导致APP内存单元无法释放被浪费掉，最终导致内存全部占据堆栈(heap)挤爆进而程序崩溃。内存泄露说到内存泄露，就不得不提到内存溢出，这两个比较容易混淆的概念，我们来分析一下。内存泄露：程序在向系统申请分配内存空间后(new)，在使用完毕后未释放。结果导致一直占据该内存单元，我们和程序都无法再使用该内存单元，直到程序结束，这是内存泄露。内存溢出：程序向系统申请的内存空间超出了系统能给的。比如内存只能分配一个int类型，我却要塞给他一个long类型，系统就出现oom。又比如一车最多能坐5个人，你却非要塞下10个，车就挤爆了。大量的内存泄露会导致内存溢出(oom)。</p>
+<p>Android内存泄漏的八种可能:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">Static Activities</div><div class="line">Static Views</div><div class="line">Inner Classes</div><div class="line">Anonymous Classes</div><div class="line">Handler</div><div class="line">Threads</div><div class="line">TimerTask</div><div class="line">Sensor Manager</div></pre></td></tr></table></figure></p>
+<p>详细请看该文章<a href="http://www.jianshu.com/p/ac00e370f83d?hmsr=toutiao.io&amp;utm_medium=toutiao.io&amp;utm_source=toutiao.io" target="_blank" rel="external">Android内存泄漏的八种可能</a></p>
+<p>今天我们主要讲Hander内存泄漏.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">Handler mHandler = <span class="keyword">new</span> Handler() &#123;</div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">handleMessage</span><span class="params">(Message msg)</span> </span>&#123;</div><div class="line">	    <span class="comment">// do something.</span></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>当我们这样创建<code>Handler</code>的时候<code>Android Lint</code>会提示我们这样一个<code>warning： In Android, Handler classes should be static or leaks might occur.</code>。</p>
+<p>一直以来没有仔细的去分析泄露的原因，先把主要原因列一下：</p>
+<ul>
+<li><code>Android</code>程序第一次创建的时候，默认会创建一个<code>Looper</code>对象，<code>Looper</code>去处理<code>Message Queue</code>中的每个<code>Message</code>,主线程的<code>Looper</code>存在整个应用程序的生命周期.</li>
+<li><code>Hanlder</code>在主线程创建时会关联到<code>Looper</code>的<code>Message Queue</code>,<code>Message</code>添加到消息队列中的时候<code>Message(排队的Message)</code>会持有当前<code>Handler</code>引用，<br>当<code>Looper</code>处理到当前消息的时候，会调用<code>Handler#handleMessage(Message)</code>.就是说在<code>Looper</code>处理这个<code>Message</code>之前，<br>会有一条链<code>MessageQueue -&gt; Message -&gt; Handler -&gt; Activity</code>，由于它的引用导致你的<code>Activity</code>被持有引用而无法被回收`</li>
+<li><strong>在java中，no-static的内部类会隐式的持有当前类的一个引用。static的内部类则没有。</strong></li>
+</ul>
+<p>##具体分析<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SampleActivity</span> <span class="keyword">extends</span> <span class="title">Activity</span> </span>&#123;</div><div class="line"></div><div class="line">  <span class="keyword">private</span> <span class="keyword">final</span> Handler mHandler = <span class="keyword">new</span> Handler() &#123;</div><div class="line">		<span class="meta">@Override</span></div><div class="line">		<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">handleMessage</span><span class="params">(Message msg)</span> </span>&#123;</div><div class="line">		  <span class="comment">// do something</span></div><div class="line">		&#125;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="meta">@Override</span></div><div class="line">  <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">(Bundle savedInstanceState)</span> </span>&#123;</div><div class="line">    <span class="keyword">super</span>.onCreate(savedInstanceState);</div><div class="line">	<span class="comment">// 发送一个10分钟后执行的一个消息</span></div><div class="line">	mHandler.postDelayed(<span class="keyword">new</span> Runnable() &#123;</div><div class="line">	  <span class="meta">@Override</span></div><div class="line">	  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123; &#125;</div><div class="line">	&#125;, <span class="number">600000</span>);</div><div class="line"></div><div class="line">	<span class="comment">// 结束当前的Activity</span></div><div class="line">	finish();</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>在<code>finish()</code>的时候，该<code>Message</code>还没有被处理，<code>Message</code>持有<code>Handler</code>,<code>Handler</code>持有<code>Activity</code>,这样会导致该<code>Activity</code>不会被回收，就发生了内存泄露.</p>
+<p>##解决方法</p>
+<ul>
+<li>通过程序逻辑来进行保护。<ul>
+<li>如果<code>Handler</code>中执行的是耗时的操作，在关闭<code>Activity</code>的时候停掉你的后台线程。线程停掉了，就相当于切断了<code>Handler</code>和外部连接的线，<br><code>Activity</code>自然会在合适的时候被回收。</li>
+<li>如果<code>Handler</code>是被<code>delay</code>的<code>Message</code>持有了引用，那么在<code>Activity</code>的<code>onDestroy()</code>方法要调用<code>Handler</code>的<code>remove*</code>方法，把消息对象从消息队列移除就行了。<ul>
+<li>关于<code>Handler.remove*</code>方法<ul>
+<li><code>removeCallbacks(Runnable r)</code> ——清除r匹配上的Message。</li>
+<li><code>removeC4allbacks(Runnable r, Object token)</code> ——清除r匹配且匹配token（Message.obj）的Message，token为空时，只匹配r。</li>
+<li><code>removeCallbacksAndMessages(Object token)</code> ——清除token匹配上的Message。</li>
+<li><code>removeMessages(int what)</code> ——按what来匹配</li>
+<li><code>removeMessages(int what, Object object)</code> ——按what来匹配<br>我们更多需要的是清除以该<code>Handler</code>为<code>target</code>的所有<code>Message(Callback)</code>就调用如下方法即可<code>handler.removeCallbacksAndMessages(null)</code>;</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>将<code>Handler</code>声明为静态类。<br>  静态类不持有外部类的对象，所以你的<code>Activity</code>可以随意被回收。但是不持有<code>Activity</code>的引用，如何去操作<code>Activity</code>中的一些对象？ 这里要用到弱引用</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyActivity</span> <span class="keyword">extends</span> <span class="title">Activity</span> </span>&#123;</div><div class="line">	<span class="keyword">private</span> MyHandler mHandler;</div><div class="line"></div><div class="line">	<span class="meta">@Override</span></div><div class="line">	<span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">(Bundle savedInstanceState)</span> </span>&#123;</div><div class="line">		<span class="keyword">super</span>.onCreate(savedInstanceState);</div><div class="line">		mHandler = <span class="keyword">new</span> MyHandler(<span class="keyword">this</span>);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="meta">@Override</span></div><div class="line">	<span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onDestroy</span><span class="params">()</span> </span>&#123;</div><div class="line">		<span class="comment">// Remove all Runnable and Message.</span></div><div class="line">		mHandler.removeCallbacksAndMessages(<span class="keyword">null</span>);</div><div class="line">		<span class="keyword">super</span>.onDestroy();</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">MyHandler</span> <span class="keyword">extends</span> <span class="title">Handler</span> </span>&#123;</div><div class="line">		<span class="comment">// WeakReference to the outer class's instance.</span></div><div class="line">		<span class="keyword">private</span> WeakReference&lt;MyActivity&gt; mOuter;</div><div class="line"></div><div class="line">		<span class="function"><span class="keyword">public</span> <span class="title">MyHandler</span><span class="params">(MyActivity activity)</span> </span>&#123;</div><div class="line">			mOuter = <span class="keyword">new</span> WeakReference&lt;MyActivity&gt;(activity);</div><div class="line">		&#125;</div><div class="line"></div><div class="line">		<span class="meta">@Override</span></div><div class="line">		<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">handleMessage</span><span class="params">(Message msg)</span> </span>&#123;</div><div class="line">			MyActivity outer = mOuter.get();</div><div class="line">			<span class="keyword">if</span> (outer != <span class="keyword">null</span>) &#123;</div><div class="line">				<span class="comment">// Do something with outer as your wish.</span></div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<hr>
+<ul>
+<li>邮箱 ：wlcaption@gmail.com</li>
+<li>Good Luck!</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-categories " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://holagames.cn/2017/09/09/去盛大面试汇总/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="wlcaption">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Wlcaption">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/09/09/去盛大面试汇总/" itemprop="url">去盛大面试汇总</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-08T16:13:12Z">
+                2017-09-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/随笔/" itemprop="url" rel="index">
+                    <span itemprop="name">随笔</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>最近几天琢磨着换份工作，然后前几天投了份简历，我只投了一份简历，那就是盛大，就抱着去看看的态度，也没有怎么准备，就在前天收到面试通知，心里是起初是高兴的，后面就是紧张了，我该怎么准备呢，时间就这样来到今天下午，早早的就到了盛大总部，然后在外面闲逛了一会，差不多就两点了，登记之后，坐了几分钟，然后面试我的人过来了，是两个大牛，我们边走边聊，然后去了12层，开始是简单自我介绍我的经历和工作，下面是我对这次面试的总结：<br>1、接入sdk注意事项<br>2、接入sdk对于你来说最大的问题是什么<br>3、Android四大组件<br>4、Service的服务要点，进程间通信的要点，一个Service如何共享给其它Service<br>5、Unity自动化打包技术<br>6、armeabi和x86最大的区别<br>7、Ios打包技巧<br>8、如何设置Unity导出的Xcode项目能在虚拟机里面正常运行<br>9、华为推送和小米推送与极光推送最大的不同，同样是推送，优点是什么？<br>10、C++ STL库应用，说说容器的一些具体方法<br>11、算法题，假如有1000层的大楼，应该如何设计电梯</p>
+<p>主要负责人问我的问题:<br>1、 除了Sdk，Unity客户端开发的一些问题<br>2、项目的计划<br>3、当前项目的完成程度</p>
+<p>啊哈，最后就是谈薪资了。</p>
+<hr>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-categories " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://holagames.cn/2017/09/08/Sdk开发工程师要求/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="wlcaption">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Wlcaption">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/09/08/Sdk开发工程师要求/" itemprop="url">Sdk开发工程师要求</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-07T23:54:45Z">
+                2017-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Sdk/" itemprop="url" rel="index">
+                    <span itemprop="name">Sdk</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>一、Ios、Android平台下的Sdk产品与第三方平台的集成与接入<br>二、负责接入开发过程中的文档及API手册编写</p>
+<p>【面向android】<br>1、熟练掌握Java,C++,熟悉面向对象开发，具备扎实的编程基础和良好的编程习惯<br>2、熟悉Android体系架构，熟练使用SDK开发，熟练使用Android各种UI组件<br>3、熟悉Android体系架构、网络通信机制、数据格式，数据库操作，会使用apk反编译工具查阅manifest、资源配置，分析配置问题 </p>
+<p>【面向IOS】<br>1、熟悉掌握C++、Objective-C,熟悉xcode项目文件结构、编译参数配置，熟悉AppDelegate和UIViewController生命周期<br>2、熟悉常用算法和数据结构，熟悉基础设计模式，熟悉MacOS、Xcode及iPhone SDK开发环境及相关开发工具<br>3、可以根据编译错误定位常见配置问题，会使用开发工具查看日至，并通过日志定位常见问题 </p>
+<hr>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-categories " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://holagames.cn/2017/09/06/Unity开发必须掌握的Android知识/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="wlcaption">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Wlcaption">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/09/06/Unity开发必须掌握的Android知识/" itemprop="url">Unity开发必须掌握的Android知识</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-06T09:58:46Z">
+                2017-09-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Unity/" itemprop="url" rel="index">
+                    <span itemprop="name">Unity</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>随着项目开发到尾期的时候,必要考虑的一个因素就是Sdk, 那就是接入android部分,和ios部分, 作为一个Unity开发来说这些东西你可以不学,你觉得很难,一想到要学Java和Oc好多人都懵了,那几天我就在这里给大家解忧,我将详细写Android和Ios与Unity之间的通信,和互相调用,以最直接的方式来帮助大家,下面我是我写的教程:<br>工具方面我用的是Unity5.6.1f, android分两个环境分是Eclipse和Android Stuidio,Xcode使用的版本是8,其实版本不是最重要的思路和方法才是最重要的.随着Unity、cocos2dx等优秀跨平台游戏引擎的出现，开发者可以把自己从繁重的Android、iOS原生台开发中解放出来，把精力放在游戏的创作。原来做一款跨平台的游戏可能需要开发者懂得Java、Objective-C、C#甚至是C、C++，现在借助Unity我们开发者只需要懂得很少的原生应用开发知识就能够打造一款优秀的游戏。可能每个项目组只需要有1-2个人懂Android，iOS开发就够了。但是也正因为如此，很多同事有了充足的理由不去学习、接触Android和iOS的开发，等到真正需要做接入的时候才开始找人找资料，难免会踩坑。基于此，本文的目的就是通过介绍基础的Android开发知识以及部分的实际操作，让大家有一定的Android基础知识储备。又或者是当作一份Unity接入Android SDK/插件的基础教程，只要照着做，就基本上不会错了。<br>本文将会从大家熟悉的Unity为出发点来介绍如何将自己写的或者第三方的Android插件集成到自己的游戏中。</p>
+<ol>
+<li>Unity是怎么打包APK文件的？</li>
+<li>Android开发基础以及导入到Unity</li>
+<li>Unity导出Android项目到Eclipse和AndroidStudio</li>
+<li>Unity导出Xcode项目并且打包成.ipa</li>
+<li>Android和Ios回调的处理</li>
+</ol>
+<h3 id="Unity是怎么打包APK文件的？"><a href="#Unity是怎么打包APK文件的？" class="headerlink" title="Unity是怎么打包APK文件的？"></a>Unity是怎么打包APK文件的？</h3><p>大家看过一些第三方组件的接入文档都知道，在Unity里面有几个特殊的文件夹是跟打包APK有关的。首先我们就来了解一下，这些文件夹里面的内容是经历了哪些操作才被放到APK里面的呢？</p>
+<p>在Unity的Assets目录下，Plugins/Android无疑是其中的重中之重，首先我们先来看一个常见的Plugins/Android目录是什么样子的。</p>
+<p>-android </p>
+<p>–assets</p>
+<p>–libs</p>
+<p>–res</p>
+<p>–AndroidManifest.xml</p>
+<h4 id="接下来我们分别来看看Android打包工具都会做什么样的操作。"><a href="#接下来我们分别来看看Android打包工具都会做什么样的操作。" class="headerlink" title="接下来我们分别来看看Android打包工具都会做什么样的操作。"></a>接下来我们分别来看看Android打包工具都会做什么样的操作。</h4><p>● libs文件夹里面有很多<em>.jar文件，以及被放在固定名字的文件夹里面的</em>.so文件。*.jar文件是Java编译器把.java代码编译后的文件，Android在打包的时候会把项目里面的所有jar文件进行一次合并、压缩、重新编译变成classes.dex文件被放在APK根目录下。当应用被执行的时候Android系统内的Java虚拟机（Dalvik或者Art），会去解读classes.dex里面的字节码并且执行。把众多jar包编译成classes.dex文件是打包Android应用不可或缺的一步。</p>
+<p>看到这里有人可能会想不对啊，这一步只将jar包打成dex文件，那之前的java文件生成jar文件难道不是在这一步做吗？没错，这里用的jar包一般是由其他Android的IDE生成完成后再拷贝过来的。本文后面的部分会涉及到怎么使用Android的IDE并且生成必要的文件。</p>
+<p>● libs文件夹的*.so文件则是可以动态的被Android系统加载的库文件，一般是由C/C++撰写而成然后编译成的二进制文件。要注意的是，由于实际执行这些二进制库的CPU的架构不一样，所以同样的C\C++代码一般会针对不同的CPU架构生成几分不同的文件。这就是为什么libs文件夹里面通常都有armeabi-v7a、armeabi、x86等几个固定的文件夹，而且里面的.so文件也都是有相同的命名方式。Java虚拟机在加载这些动态库的时候会根据当前CPU的架构来选择对应的so文件。有时候这些so文件是可以在不同的CPU架构上执行的，只是在不对应的架构上执行速度会慢一些，所以当追求速度的时候可以给针对每个架构输出对应的so文件，当追求包体大小的时候输出一个armeabi的so文件就可以了,这也是为了安全性着想，毕竟.so库很难被反编译，一些重要的处理函数都会被打成.so库。</p>
+<p>● assets文件夹，这个里面的东西最简单了，在打包APK的时候，这些文件里面的内容会被原封不动的被拷贝到APK根目录下的assets文件夹，一般情况会放置一些不变得配置文件。这个文件夹有几个特性。</p>
+<p>√ 里面的文件基本不会被Android的打包工具修改，应用里面要用的时候可以读出来。<br>√ 打出包以后，这个文件夹是只读的，不能修改。<br>√ 读取这个文件夹里面的内容的时候要通过特定的Android API来读取，参考getAssets()。<br>√ 基于上述两点，在Unity中，要读取这部分内容要通过WWW来进行加载。</p>
+<p>除了Plugins/Android内的所有assets文件夹里面的文件会连同StreamingAssets目录下的文件一起被放到APK根目录下的assets文件夹。</p>
+<p>● res文件夹里面一般放的是xml文件以及一些图片素材文件。xml文件一般来说有以下几种：<br>√ 布局文件，被放在res中以layout开头的文件夹中，文件里描述的一般都是原生界面的布局信息。由于Unity游戏的显示是直接通过GL指令来完成的，所以我们一般不会涉及到这些文件。<br>√ 字符串定义文件，一般被放到values文件夹下，这个里面可以定义一些字符串在里面，方便程序做国际<br>化还有本地化用。当然有时候被放到里面的还有其他xml会引用到的字符串，一般常见的是app的名称。<br>√ 动画文件，一般定义的是Android原生界面元素的动画，对于Unity游戏，我们一般也不会涉及他。<br>√ 图片资源，一般放在以drawable为开头的文件夹内。这些文件夹的后缀一般会根据手机的像素密度来来进行区分，这样我们可以往这些文件夹内放入对应像素密度的图片资源。<br>例如后缀为ldpi的drawable文件夹里面的图片的尺寸一般来说会是整个系列里面最小的，因为这个文件夹的内容会被放到像素密度最低的那些手机上运行。而一般1080p或者2k甚至4k的手机在读取图片的时候会从后缀为xxxxhdpi的文件夹里面去读，这样才可以保证应用内的图像清晰。图片资源在打包过程中会被放到APK的res文件夹内的对应目录。<br>√ Android还有其他一些常见的xml文件，这里就不一一列举了。</p>
+<p>res文件夹下的xml文件在被打包的时候会被转换成一种读取效率更高的一种特殊格式（也是二进制的格式），命名的时候还是以xml为结尾被放到APK包里面的res文件夹下，其目录结构会跟打包之前的目录结构相对应。</p>
+<p>除了转换xml之外，Android的打包工具还会把res文件夹下的资源文件跟代码静态引用到的资源文件的映射给建立起来，放到APK根目录的resources.arsc文件。这一步可以确保安卓应用启动的时候可以加载出正确的界面，是打包Android应用不可或缺的一步。</p>
+<p>● AndroidManifest.xml，这份文件太重要了，这是一份给Android系统读取的指引，在Android系统安装、启动应用的时候，他会首先来读取这个文件的内容，分析出这个应用分别使用了那些基本的元素，以及应该从classes.dex文件内读取哪一段代码来使用又或者是应该往桌面上放哪个图标，这个应用能不能被拿来debug等等。在后面的部分会有详细解释。打包工具在处理Unity项目里面的AndroidManifest文件时会将所有AndroidManifest文件的内容合并到一起，也就是说主项目引用到的库项目里面如果也有AndroidManifest文<br>件，都会被合并到一起。这样就不需要手动复制粘贴。需要说明的是，这份文件在打包Android程序的时候是必不可少的，但是在Unity打包的时候，他会先检查Plugins目录下有没有这份文件，如果没有就会用一个自带的AndroidManifest来代替。此外，Unity还会自动检查项目中AndroidManifest里面的某些信息是不是默认值，如果是的话，会拿Unity项目中的值来进行替换。例如，游戏的App名称以及图标等。</p>
+<p>● project.properties，这份文件一般只有在库项目里面能看得到，里面的内容极少，就只有一句话android.library=true。但是少了这份文件Android的打包工具就不会认为这个文件夹里面是个Android的库项目，从而在打包的时候整个文件夹会被忽略。这有时候不会影响到打包的流程，打包过程中也不会报错，但是打出的APK包缺少资源或者代码，一跑就崩溃。关于这份文件，其实在Unity的官方文档上并没有详细的描述（因为他实际上是Android项目的基础知识），导致很多刚刚接触Unity-Android开发的开发者在这里栽坑。曾<br>经有个很早就开始用Unity做Android游戏的老前辈告诉我要搞定Unity中的Android库依赖的做法是用Eclipse打开Plugins/Android文件夹，把里面的所有的项目依赖处理好就行了。殊不知这样将Unity项目跟Eclipse项目耦合在一起的做法是不太合理的，会造成Unity项目开启的时候缓慢。</p>
+<p>● 其他文件夹例如aidl以及jni在Unity生成APK这一步一般不会涉及到，这里不展开。</p>
+<p>看到了上述介绍的Unity打包APK的基础知识我们知道了往Plugins/Android目录下放什么样的文件会对APK包产生什么样的影响。但是实际上上述的内容只是着重的讲了Unity是怎么打包APK，所以接下来会简述一下打包这个步骤到底是怎么完成的。</p>
+<p>Android提供了一个叫做aapt的工具，这个工具的全称是Android Asset Packaging Tool，这个工具完成了上述大部分的对资源文件处理的工作，而Unity则是通过对Android提供的工具链（Android Build Tools）的一系列调用从而完成打包APK的操作。这里感觉有点像我们写了个bat/bash脚本，这个脚本按照顺序调用Android提供的工具一样。在一些常见的Android IDE里面，这样的“bat/bash脚本”往往是一个完整的构建系统。最早的Android IDE是Eclipse，他的构建系统是Ant，是基于XML配置的构建系统。后来Android团队推出了Android专用的IDE——Android Studio（这个在文章后面会有详述），他的构建系统则是换成了gradle，从基于xml的配置一下子升级到了语言（DSL, Domain Specific Language）的层级，给使用Android Studio的人带来更多的弹性。</p>
+<p>写到这里我想很多人都清楚了要怎么把Android的SDK/插件放到Unity里面并且打包到Unity里面。这时候应该有人会说，光会放这些文件不够啊，我还需要知道自己怎么写Android的代码并且输出相应的SDK/插件给Unity使用啊。</p>
+<p>本文接下来的内容将会一步一步描述怎么写Android代码并且输出库文件给Unity。</p>
+<h4 id="Android开发基础以及导入到Unity"><a href="#Android开发基础以及导入到Unity" class="headerlink" title="Android开发基础以及导入到Unity"></a>Android开发基础以及导入到Unity</h4><p>那就开始我们的第一个Android App,这里我不会讲太多的Android教程，毕竟我们不是Android开发，我们的重点还是Unity开发，那就开始我们的Android基础之旅吧。</p>
+<h5 id="开始你的第一个Android程序"><a href="#开始你的第一个Android程序" class="headerlink" title="开始你的第一个Android程序"></a>开始你的第一个Android程序</h5><p>安装好Android studio，设置好我们的Jdk,下载好Android Sdk，Gradle最好自己从官网下载，自己配置，这里具体配置我就不说了，直接百度可以很快的配置好，只要在控制台输入：gradle -v,有提示信息就说明你配置正确了，如果提示不是命令行，那是环境变量的配置，配置好之后再测试。那我们开始创建一个新的Android项目。<br>在接下来弹出的界面里面输入应用名称，公司域名（这个其实不怎么重要）以包名（Package Name），其中我认为最重要的是包名，毕竟看一个应用的包名可以看得出一个开发者的逼格如何。。。<br><img src="http://upload-images.jianshu.io/upload_images/2463091-32d506b5698d8043.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="1.png"></p>
+<p>接下来选择要开发什么类型的App，这里勾上Phone and Tablet就可以了。SDK的选择一般来说根据项目的需要，最低一般不低于API 9: Android 2.3(Gingerbread)，这也是Unity能接受的最低SDK。如果有些插件不能运行在这么低的Android SDK环境下的话可以酌情考虑提升到API 15: Android 4.3(IceCreamSandwich)，这个等级的API一般也是可以兼容绝大多数近3-4年的机器。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2463091-1fcf55014efdbb4e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="2.png"></p>
+<p>因为我们要输出的内容是给Unity用的，这里可以先选择不带有Activity（就是承载游戏画面的基础部件），后续用到再说。<br><img src="http://upload-images.jianshu.io/upload_images/2463091-434bf4a9e8112a35.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="3.png"></p>
+<p>点击OK以后Android Studio就会开始初始化当前的这个Android项目。初始化会需要一段时间，因为AndroidStudio有可能会去下载一些必要的框架或者更新Android工具的版本。初始化完成以后到左边按照图里面的步骤点开就可以看到整个项目目录树的情况。<br><img src="http://upload-images.jianshu.io/upload_images/2463091-dc0731d5f9e200b7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="2.png"></p>
+<p>通过上图我们可以知道，一个Android Studio的项目（Project）可以由许多小的模块（Module）组成，这些模块可以是带有Activity的应用类模块，也可以是不带有Activity的库模块等等。这些小的模块之间可以有引用关系。我们可以把一些完成基础功能或者容易被复用的模块单独拆出来。</p>
+<p>如果要新建一个模块我们可以在上图的列表中点右键选择New Module，在弹出的界面中我们可以选择要新建什么样的模块，或者从Eclipse导入旧的项目也可以。一般来说给Unity游戏开发插件最常用的就是库模块（AndroidLibrary）。同样的，在接下来弹出的窗口中填写好模块名称、包名以及最低运行的SDK。</p>
+<p>● libs目录跟本文第一部分介绍的libs目录的功用是一样的，把依赖到的库放在这里面就可以了。<br>● src/main/res目录也是跟本文第一部分介绍的res目录的功能和结构是一样的，把对应资源放进去就可以了。<br>● 接下来是java代码所在的目录src/main/java，这个目录有点特殊，他的子路径跟java文件里面定义的包名（package name）要对应的上。<br>● AndroidManifest.xml也是跟第一部分介绍的AndroidManifest的功能是一样的。<br>● build文件夹是Android Studio动态生成的，打出的APK包（应用模块）或者AAR包（库模块）会被放到这里面的output文件夹。需要注意的是这个文件夹不应该被放提交到svn里面，要不然会造成项目成员之间的冲突，切记。<br>● src/test以及src/androidTest是做单元测试用的，本文不涉及。</p>
+<p>至此，我们就可以开始动手写代码了，这里我们写一个可以弹出Android的Toast提示的Activity来替换掉Unity默认的Activity。</p>
+<p>简述一下Unity跟Activity的关系：在Android系统中，打开一个应用，就是开启该应用指定的启动Activity。<br>Unity里面有个默认的Activity，他的作用就是在系统启动应用的时候加载Unity的Player，这个Player就是就相当于是Unity应用的“播放器”，他会执行我们在Unity项目中创作的内容，并且通过GL指令渲染到指定的SurfaceView中，而SurfaceView则是被置于Activity里面的一个特殊的View。</p>
+<p>创建完成之后我们打开MainActivity这就是我们Android要运行的主Activity，里面的内容如下:<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MainActivity</span> <span class="keyword">extends</span> <span class="title">Activity</span> </span>&#123;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">(Bundle savedInstanceState)</span> </span>&#123;</div><div class="line">    <span class="keyword">super</span>.onCreate(savedInstanceState);</div><div class="line">&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>需要注意的是这只是一个最基础的Android Activity，他还不会去加载我们的Unity出来，所以我们要让他继承自Unity的Activity而不是默认的。为此，我们要先将Unity相应的jar包引入到我们的模块当中。首先找到Unity的安装目录，然后找到以下子目录Editor\Data\PlaybackEngines\AndroidPlayer\Variations\il2cpp\Release\Classes\里<br>面的classes.jar，这个就是被打包成jar包的Unity默认的Activity。我们把这个jar包复制到当前模块的libs目录下（可以把这个jar包改成你想要的名字，便于管理）。（这个jar包的源码在Editor\Data\PlaybackEngines\AndroidPlayer\Source\com\unity3d\player这个目录下。感兴趣的同学可以翻阅一下源码，就可以理解Unity播放器的加载机制。）</p>
+<p>接下来，我们可以在Android Studio左边的Project View中找到当前的模块以后点击右键，选择“Open ModuleSetting”或者直接按F4。在弹出的窗口中我们选到最右边的页签“Dependencies”，然后选择右边绿色的加号-JarDependency。</p>
+<p>从项目的libs文件夹中找到刚刚导入的jar包，点击OK即可。接下来有一个比较关键的步骤就是，我们改变这个jar包的scope属性，因为默认的scope属性（Compile）是会将该jar包里面的内容跟本模块里面Java代码合并到一起。这在之后Unity打包这个模块的jar包的时候会报错，因为Unity里面内置了刚刚这个jar包。所以我们可以参考下图把这个jar包的scope设置成provided。</p>
+<p>搞定了这步骤以后我们就可以回到刚刚新创建出来的Activity把他的父类改成UnityPlayerActivity，同时别忘记引用一下相应的package，改完之后的代码是这样的：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MainActivity</span> <span class="keyword">extends</span> <span class="title">UnityPlayerActivity</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">(Bundle savedInstanceState)</span> </span>&#123;</div><div class="line">        <span class="keyword">super</span>.onCreate(savedInstanceState);</div><div class="line">    &#125;</div><div class="line">    &#125;</div></pre></td></tr></table></figure></p>
+<p>到这一步，如果我们的Activity如果能被运行的话，他应该能够借助他的父类UnityPlayerActivity里面的代码来运行Unity。接下来，我们添加几个方法，分别是：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Override</span></div><div class="line">   <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onRestart</span><span class="params">()</span> </span>&#123;</div><div class="line">       <span class="keyword">super</span>.onRestart();</div><div class="line">   &#125;</div><div class="line"></div><div class="line">   <span class="meta">@Override</span></div><div class="line">   <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onResume</span><span class="params">()</span> </span>&#123;</div><div class="line">       <span class="keyword">super</span>.onResume();</div><div class="line">   &#125;</div><div class="line"></div><div class="line">   <span class="meta">@Override</span></div><div class="line">   <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onPause</span><span class="params">()</span> </span>&#123;</div><div class="line">       <span class="keyword">super</span>.onPause();</div><div class="line">   &#125;</div><div class="line"></div><div class="line">   <span class="meta">@Override</span></div><div class="line">   <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onStop</span><span class="params">()</span> </span>&#123;</div><div class="line">       <span class="keyword">super</span>.onStop();</div><div class="line"></div><div class="line">   &#125;</div><div class="line"></div><div class="line">   <span class="meta">@Override</span></div><div class="line">   <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onDestroy</span><span class="params">()</span> </span>&#123;</div><div class="line">       <span class="keyword">super</span>.onDestroy();</div><div class="line">   &#125;</div><div class="line"></div><div class="line">   <span class="meta">@Override</span></div><div class="line">   <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onActivityResult</span><span class="params">(<span class="keyword">int</span> requestCode, <span class="keyword">int</span> resultCode, Intent data)</span> </span>&#123;</div><div class="line">       <span class="keyword">super</span>.onActivityResult(requestCode, resultCode, data);</div><div class="line">   &#125;</div><div class="line"></div><div class="line">   <span class="meta">@Override</span></div><div class="line">   <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onNewIntent</span><span class="params">(Intent intent)</span> </span>&#123;</div><div class="line">       <span class="keyword">super</span>.onNewIntent(intent);</div><div class="line">   &#125;</div><div class="line"></div><div class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">HolaSdkInit</span><span class="params">(String appid, String appkey, String privateKey,String oauthLoginServer)</span></span></div><div class="line"><span class="function">   </span>&#123;</div><div class="line">       String msg = <span class="string">"init"</span>;</div><div class="line">       <span class="keyword">if</span>(msg!=<span class="keyword">null</span>)&#123;</div><div class="line">           MessageHandle.resultCallBack(Util.User,UserWrapper.InitSuccess,<span class="string">"success"</span>);</div><div class="line">       &#125;<span class="keyword">else</span> &#123;</div><div class="line">           MessageHandle.resultCallBack(Util.User,UserWrapper.InitFalied,<span class="string">"failed"</span>);</div><div class="line">       &#125;</div><div class="line">   &#125;</div><div class="line"></div><div class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">Login</span><span class="params">(String p)</span> </span>&#123;</div><div class="line">       String username = <span class="string">"wlcaption"</span>;</div><div class="line">       String password = <span class="string">"835114930"</span>;</div><div class="line">       <span class="comment">//加入网络请求</span></div><div class="line">      ReqTask reqTask = <span class="keyword">new</span> ReqTask(<span class="keyword">new</span> ReqTask.Delegate() &#123;</div><div class="line">          <span class="meta">@Override</span></div><div class="line">          <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">execute</span><span class="params">(String result)</span> </span>&#123;<span class="comment">//result 是服务器返回的值</span></div><div class="line">              <span class="keyword">if</span>(result!=<span class="keyword">null</span>)&#123;</div><div class="line">                  MessageHandle.resultCallBack(Util.User,UserWrapper.LoginSuccess,<span class="string">"success"</span>);</div><div class="line">              &#125;<span class="keyword">else</span> &#123;</div><div class="line">                  MessageHandle.resultCallBack(Util.User,UserWrapper.LoginFailed,<span class="string">"failed"</span>);</div><div class="line">              &#125;</div><div class="line">          &#125;</div><div class="line">      &#125;,<span class="string">"username="</span>+username+<span class="string">"&amp;password"</span>+password,<span class="string">"http://hzmj.holagames.cn/myphp/login.php"</span>);<span class="comment">//给服务器传两个字段</span></div><div class="line">       reqTask.execute();</div><div class="line"></div><div class="line"></div><div class="line">   &#125;</div><div class="line"></div><div class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">Pay</span><span class="params">(String payResult)</span></span>&#123;</div><div class="line">       String msg = <span class="string">"pay"</span>;</div><div class="line">       <span class="keyword">if</span>(msg!=<span class="keyword">null</span>)&#123;</div><div class="line">           MessageHandle.resultCallBack(Util.User,UserWrapper.PaySuccess,<span class="string">"success"</span>);</div><div class="line">       &#125;<span class="keyword">else</span> &#123;</div><div class="line">           MessageHandle.resultCallBack(Util.User,UserWrapper.PayFailed,<span class="string">"failed"</span>);</div><div class="line">       &#125;</div><div class="line">   &#125;</div><div class="line"></div><div class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">Logout</span><span class="params">()</span></span></div><div class="line"><span class="function">   </span>&#123;</div><div class="line">       String msg = <span class="string">"logout"</span>;</div><div class="line">       <span class="keyword">if</span>(msg!=<span class="keyword">null</span>)&#123;</div><div class="line">           MessageHandle.resultCallBack(Util.User,UserWrapper.LogoutSuccess,<span class="string">"success"</span>);</div><div class="line">       &#125;<span class="keyword">else</span> &#123;</div><div class="line">           MessageHandle.resultCallBack(Util.User,UserWrapper.LogoutFailed,<span class="string">"failed"</span>);</div><div class="line">       &#125;</div><div class="line">   &#125;</div><div class="line"></div><div class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">CheckBill</span><span class="params">(String userip)</span></span></div><div class="line"><span class="function">   </span>&#123;</div><div class="line">       String msg = <span class="string">"checkBill"</span>;</div><div class="line">       <span class="keyword">if</span>(msg!=<span class="keyword">null</span>)&#123;</div><div class="line">           MessageHandle.resultCallBack(Util.User,UserWrapper.InitSuccess,<span class="string">"success"</span>);</div><div class="line">       &#125;<span class="keyword">else</span> &#123;</div><div class="line">           MessageHandle.resultCallBack(Util.User,UserWrapper.InitFalied,<span class="string">"failed"</span>);</div><div class="line">       &#125;</div><div class="line">   &#125;</div></pre></td></tr></table></figure></p>
+<p>这四个方法是Sdk必不可少的方法，我会在分别实现这四个方法，然后打成Jar包。导入到Unity中去,看得出来，里面最核心的一个方法其实就只是调用Android里面的Toast组件而已，没啥好解释的。相反，是外面的runOnUiThread是值得大家注意的，在Android编程中，所有涉及到对UI的操作必须要放在UI线程里面来做，否则会造成其他线程修改UI线程里面的数据然后崩溃。由于我们写的这四个个方法最后会被Unity那边调用，而来自Unity的调用可能不是UI线程，所以我们要给他做适当的保护。</p>
+<p>在Android中有很多种调度方法可以把某段代码放到UI线程里面来跑。上面这段代码的runOnUiThread的写法是最简便的一种写法。如果遇到比较复杂的逻辑可以考虑使用Messenger或者Handle来调度线程，感兴趣的同学可以上网查一下。</p>
+<h4 id="Android导出Jar"><a href="#Android导出Jar" class="headerlink" title="Android导出Jar"></a>Android导出Jar</h4><p>在该模块的build.gradle添加如下代码:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">task deleteOldJar(type: Delete) &#123;</div><div class="line">    delete &apos;build/outputs/test.jar&apos;</div><div class="line">&#125;</div><div class="line"></div><div class="line">task exportJar(type: Copy) &#123;</div><div class="line">    from(&apos;build/intermediates/bundles/release/&apos;)</div><div class="line">    into(&apos;build/libs/&apos;)</div><div class="line">    include(&apos;classes.jar&apos;)</div><div class="line">    rename (&apos;classes.jar&apos;, &apos;test.jar&apos;)</div><div class="line">&#125;</div><div class="line"></div><div class="line">exportJar.dependsOn(deleteOldJar, build)</div></pre></td></tr></table></figure></p>
+<p>然后在控制台执行: gradlew exportJar<br>第一次执行会花费一点时间，第一次嘛难免会加载很多东西，第二次就很快乐，等我们看BUILD　SUCCESSFUL就说明你已经成功打出jar包，是不是很激动。</p>
+<h4 id="导入到Unity并且编译"><a href="#导入到Unity并且编译" class="headerlink" title="导入到Unity并且编译"></a>导入到Unity并且编译</h4><p>完成Activity的代码编写之后就可以输出这个模块到Unity项目中去。在Android Studio中选择Build - Make Project或者是在左边的项目视图中选中要导出的模块然后选择Build - Make Module。选择完了之后就可以看到下面有个Gradle的进度条，待进度条完成了以后我们就可以到该模块的build/outputs/aar目录下去找输出的文件。打开这个文件夹，可以看到有个*.aar的文件。这个就是该模块所编译出来的结果，如果你用解压缩软件去解压缩它，你会发现他几乎就是一个完整的Android工程。根据本文第一部分所说的内容，我们只要在Unity工程中的Plugins/Android目录下新建一个文件夹，然后把这个文件解压缩以后整个丢进去，再手写一个名字叫project.properties，内容是android.library=true的文件放到新建的文件夹里面就可以了。</p>
+<p>胜利在望，我们接下来只要把Unity工程里面的AndroidManifest.xml文件的入口Activity从Unity默认的的改成我们刚刚写的这个就可以了。需要注意的是，如果是旧的Unity工程，可能已经有人写过相关的AndroidManifest文件放在了Plugins/Android目录下，但是如果是全新的Unity项目的话，就没有这份文件了。在打包的时候，如果Unity发现Plugins/Android目录下没有这份文件，他会复制一份默认的文件并且修改其中跟项目有关的内容。这里我们可以从Unity的安装目录的Editor\Data\PlaybackEngines\AndroidPlayer\Apk文件夹内找到AndroidManifest.xml这份文件，把它复制一份到Unity工程的Plugins/Android目录下。接下来就是修改里面的内容。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</div><div class="line">&lt;manifest xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;</div><div class="line">    package=&quot;sdk.holagames.com.mywarsdkforandroid&quot;</div><div class="line">    android:versionCode=&quot;1&quot;</div><div class="line">    android:versionName=&quot;1.0&quot; &gt;</div><div class="line"></div><div class="line">  &lt;uses-permission android:name=&quot;android.permission.INTERNET&quot; /&gt;</div><div class="line">  &lt;uses-permission android:name=&quot;android.permission.ACCESS_NETWORK_STATE&quot; /&gt;</div><div class="line">  &lt;uses-permission android:name=&quot;android.permission.ACCESS_WIFI_STATE&quot; /&gt;</div><div class="line">  &lt;uses-permission android:name=&quot;android.permission.READ_PHONE_STATE&quot; /&gt;</div><div class="line">  &lt;uses-permission android:name=&quot;android.permission.WRITE_EXTERNAL_STORAGE&quot; /&gt;</div><div class="line"></div><div class="line"></div><div class="line">  &lt;uses-sdk</div><div class="line">      android:minSdkVersion=&quot;15&quot;</div><div class="line">      android:targetSdkVersion=&quot;25&quot; /&gt;</div><div class="line"></div><div class="line">  &lt;application</div><div class="line">       android:allowBackup=&quot;true&quot;&gt;</div><div class="line">    &lt;activity</div><div class="line">        android:name=&quot;sdk.holagames.com.mywarsdkforandroid.MainActivity&quot;</div><div class="line">        android:configChanges=&quot;orientation|keyboardHidden|screenSize&quot;</div><div class="line">        android:screenOrientation=&quot;landscape&quot;</div><div class="line">        &gt;</div><div class="line">      &lt;intent-filter&gt;</div><div class="line">        &lt;action android:name=&quot;android.intent.action.MAIN&quot; /&gt;</div><div class="line"></div><div class="line">        &lt;category android:name=&quot;android.intent.category.LAUNCHER&quot; /&gt;</div><div class="line">      &lt;/intent-filter&gt;</div><div class="line">      &lt;meta-data android:name=&quot;unityplayer.UnityActivity&quot; android:value=&quot;true&quot; /&gt;</div><div class="line">      &lt;meta-data android:name=&quot;unityplayer.ForwardNativeEventsToDalvik&quot; android:value=&quot;false&quot; /&gt;</div><div class="line">    &lt;/activity&gt;</div><div class="line"></div><div class="line">  &lt;/application&gt;</div><div class="line"></div><div class="line">&lt;/manifest&gt;</div></pre></td></tr></table></figure></p>
+<p>● package=”com.example.wei.myapplication”这里的内容如果放着不动，打包的时候Unity会将其修改为Player Setting的Bundle Identifier。<br>● android:versionCode以及android:versionName这两部分的内容则在打包时会根据Player Setting里面的Version以及Bundle Version Code的内容来进行修改。<br>● android:icon以及android:label这两个对应的是应用的图标以及应用名称。如果不改的话，Unity也会自动根据Player Setting里面的内容来进行修改。<br>● android:debuggable=”true”这个在打包的时候Unity也会自动根据Build Setting里面的Development Build选项自动进行修改。<br>● activity里面的android:name，这个name只的是该activity需要运行的哪个Java的Activity的类。如果不修改，加载的就是Unity默认Activity的类。这篇文章需要把默认的Activity改成刚刚我们的实现，所以，我们把刚刚写好的那个Activity的完整名称写上去（包括包名还有类名）。<br>● activity里面的android:label，这个是在桌面上图标下面写的那一行文字，也是应用的名称。不修改的话Unity会帮你维护。<br>● meta-data的这一行的name值是key，value值就是这个key对应的内容。meta-data可以根据需要自定义多个，但是key值不能重复，上面代码里面的unityplayer.UnityActivity应该是写给Unity看的，让Unity知道他自己是运行在这个Activity上。</p>
+<p>这里我们基本上只要修改activity里面的android:name这一项。修改完成后，我们就可以通过Unity自带Build功能来出Android包了。出包之前请检查一下Player Setting里面的Bundle Identifier，不能留默认的包名在这里，会造成编译失败。编译过程中，可能会出现一些错误，下面罗列几个常见的错误，可以尝试解决：</p>
+<ol>
+<li>合并Manifest文件出错，一般来说是在合并所有的AndroidManifest文件的时候出的错，常见的有重复定义了activity、里面的最低sdk写错了。模块的最低sdk不可低于项目的最低sdk。</li>
+<li>jar文件dex错误，当你的项目中不小心存在了一个以上的相同的jar文件，就会出这个错误，把重复的删掉，只留一个就好了。</li>
+<li>找不到Android SDK里面的工具，这个一般来讲是Unity自己的bug，Unity一般不能兼容最新的Android SDK的工具，所以要手动降级才行。</li>
+</ol>
+<p>除了上述这些之外，在打包Android项目的过程中还会出现这些那些的错误，大家看到以后不要慌张，会报错总是好的，而且一般的错误你把错误信息贴在万能的Google上，都能找到解决方案。</p>
+<h5 id="Unity对Android代码的调用"><a href="#Unity对Android代码的调用" class="headerlink" title="Unity对Android代码的调用"></a>Unity对Android代码的调用</h5><p>文章到这里为止，说清楚了怎么把Android这边写成的插件打包到Unity的项目中去。但其实并没有涉及到Unity中怎么调用刚刚写好在Android的Activity中的代码。这一部对于一个Unity开发来说其实非常简单，只要以Unity提供的AndroidJavaClass还有AndroidJavaObject来做为中介就可以在Unity和Java中互传数据。这两个类的调用给人一种通过反射来调用Java代码的感觉。只要你能通过包名和类名拿到某个Java对象，就可以直接通过成员变量名称或者方法名称直接调用到Java那边的代码。举个例子，假如要在Unity中调用刚刚我们写的那个类的的几个方法类的话我们需要在Unity中准备以下代码。<br>先写个单例来定义这个方法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div><div class="line">168</div><div class="line">169</div><div class="line">170</div><div class="line">171</div><div class="line">172</div><div class="line">173</div><div class="line">174</div><div class="line">175</div><div class="line">176</div><div class="line">177</div><div class="line">178</div><div class="line">179</div><div class="line">180</div><div class="line">181</div><div class="line">182</div><div class="line">183</div><div class="line">184</div><div class="line">185</div><div class="line">186</div><div class="line">187</div><div class="line">188</div><div class="line">189</div><div class="line">190</div><div class="line">191</div><div class="line">192</div><div class="line">193</div><div class="line">194</div><div class="line">195</div><div class="line">196</div><div class="line">197</div><div class="line">198</div><div class="line">199</div><div class="line">200</div><div class="line">201</div><div class="line">202</div><div class="line">203</div><div class="line">204</div><div class="line">205</div><div class="line">206</div><div class="line">207</div><div class="line">208</div><div class="line">209</div><div class="line">210</div><div class="line">211</div><div class="line">212</div><div class="line">213</div><div class="line">214</div><div class="line">215</div><div class="line">216</div><div class="line">217</div><div class="line">218</div><div class="line">219</div><div class="line">220</div><div class="line">221</div><div class="line">222</div><div class="line">223</div><div class="line">224</div><div class="line">225</div><div class="line">226</div><div class="line">227</div><div class="line">228</div><div class="line">229</div><div class="line">230</div><div class="line">231</div><div class="line">232</div><div class="line">233</div><div class="line">234</div><div class="line">235</div><div class="line">236</div><div class="line">237</div><div class="line">238</div><div class="line">239</div><div class="line">240</div><div class="line">241</div><div class="line">242</div><div class="line">243</div><div class="line">244</div><div class="line">245</div><div class="line">246</div><div class="line">247</div><div class="line">248</div><div class="line">249</div><div class="line">250</div><div class="line">251</div><div class="line">252</div><div class="line">253</div><div class="line">254</div><div class="line">255</div><div class="line">256</div><div class="line">257</div><div class="line">258</div><div class="line">259</div><div class="line">260</div><div class="line">261</div><div class="line">262</div><div class="line">263</div><div class="line">264</div><div class="line">265</div><div class="line">266</div><div class="line">267</div><div class="line">268</div><div class="line">269</div><div class="line">270</div><div class="line">271</div><div class="line">272</div><div class="line">273</div><div class="line">274</div><div class="line">275</div><div class="line">276</div><div class="line">277</div><div class="line">278</div><div class="line">279</div><div class="line">280</div><div class="line">281</div><div class="line">282</div><div class="line">283</div><div class="line">284</div><div class="line">285</div><div class="line">286</div><div class="line">287</div><div class="line">288</div><div class="line">289</div><div class="line">290</div><div class="line">291</div><div class="line">292</div><div class="line">293</div><div class="line">294</div><div class="line">295</div><div class="line">296</div><div class="line">297</div><div class="line">298</div><div class="line">299</div><div class="line">300</div><div class="line">301</div><div class="line">302</div><div class="line">303</div><div class="line">304</div><div class="line">305</div><div class="line">306</div><div class="line">307</div><div class="line">308</div><div class="line">309</div><div class="line">310</div><div class="line">311</div><div class="line">312</div><div class="line">313</div><div class="line">314</div><div class="line">315</div><div class="line">316</div><div class="line">317</div><div class="line">318</div><div class="line">319</div><div class="line">320</div><div class="line">321</div><div class="line">322</div><div class="line">323</div><div class="line">324</div><div class="line">325</div><div class="line">326</div><div class="line">327</div><div class="line">328</div><div class="line">329</div><div class="line">330</div><div class="line">331</div><div class="line">332</div><div class="line">333</div><div class="line">334</div><div class="line">335</div><div class="line">336</div><div class="line">337</div><div class="line">338</div><div class="line">339</div><div class="line">340</div><div class="line">341</div><div class="line">342</div><div class="line">343</div><div class="line">344</div><div class="line">345</div><div class="line">346</div><div class="line">347</div></pre></td><td class="code"><pre><div class="line">using UnityEngine;</div><div class="line">using System.Collections;</div><div class="line">using System.Collections.Generic;</div><div class="line">using System.Text.RegularExpressions;</div><div class="line">using System.Text;</div><div class="line">using System.Runtime.InteropServices;</div><div class="line"></div><div class="line">namespace Holagames</div><div class="line">&#123;</div><div class="line">    public enum HolagamesSDKType</div><div class="line">    &#123;</div><div class="line">        Analytics = 1,</div><div class="line">        Share = 2,</div><div class="line">        Social = 4,</div><div class="line">        IAP = 8,</div><div class="line">        Ads = 16,</div><div class="line">        User = 32,</div><div class="line">        Push = 64,</div><div class="line">    &#125;;</div><div class="line"></div><div class="line">    public enum UserWrapper</div><div class="line">    &#123;</div><div class="line">        ExitByGame = 0,</div><div class="line">        ExitBySdk = 1,</div><div class="line"></div><div class="line">        InitSuccess = 100,</div><div class="line">        InitFalied = 101,</div><div class="line"></div><div class="line">        LoginSuccess = 200,</div><div class="line">        LoginFailed = 201,</div><div class="line">        LoginCancel = 202,</div><div class="line">        Logining = 203,</div><div class="line">        LoginSwitch = 204,</div><div class="line"></div><div class="line">        LogoutSuccess = 300,</div><div class="line">        LogoutFailed = 301,</div><div class="line">        notLogin = 302,</div><div class="line">        GameContinue = 351,</div><div class="line">        GameExit = 352,</div><div class="line"></div><div class="line">        PaySuccess = 400,</div><div class="line">        PayFailed = 401,</div><div class="line">        PayCancel = 402,</div><div class="line">        PayCheck = 403,</div><div class="line"></div><div class="line">    &#125;;</div><div class="line"></div><div class="line">    public class HolagamesSDK</div><div class="line">    &#123;</div><div class="line">#if UNITY_IPHONE</div><div class="line"></div><div class="line">        /*[DllImport(&quot;__Internal&quot;)]</div><div class="line">        private static extern void _registerActionResultCallback(int type, string gameObject,string func);</div><div class="line"></div><div class="line">        [DllImport(&quot;__Internal&quot;)]</div><div class="line">        private static extern void _LogOut();</div><div class="line"></div><div class="line">        [DllImport(&quot;__Internal&quot;)]</div><div class="line">        private static extern void _entryaGameCenter();</div><div class="line">        </div><div class="line">        [DllImport(&quot;__Internal&quot;)]</div><div class="line">        private static extern void _Login();</div><div class="line"></div><div class="line">        [DllImport(&quot;__Internal&quot;)]</div><div class="line">        private static extern void _Init();</div><div class="line">        </div><div class="line">        [DllImport(&quot;__Internal&quot;)]</div><div class="line">        private static extern string _getUserID();</div><div class="line">                </div><div class="line">        [DllImport(&quot;__Internal&quot;)]</div><div class="line">        private static extern void _hideToolBar();</div><div class="line"></div><div class="line">        [DllImport(&quot;__Internal&quot;)]</div><div class="line">        private static extern void _showToolBar();</div><div class="line"></div><div class="line"></div><div class="line">          [DllImport(&quot;__Internal&quot;)]</div><div class="line">        private static extern void _pay(string msg);*/</div><div class="line"></div><div class="line"></div><div class="line">#endif</div><div class="line"></div><div class="line">        private static HolagamesSDK _instance;</div><div class="line">        public static HolagamesSDK instance;</div><div class="line"></div><div class="line"></div><div class="line">        public static HolagamesSDK getInstance()</div><div class="line">        &#123;</div><div class="line">            if (null == _instance)</div><div class="line">            &#123;</div><div class="line">                _instance = new HolagamesSDK();</div><div class="line">            &#125;</div><div class="line">            return _instance;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        public HolagamesSDK()</div><div class="line">        &#123;</div><div class="line">#if UNITY_ANDROID</div><div class="line">            jc = new AndroidJavaClass(&quot;com.unity3d.player.UnityPlayer&quot;);</div><div class="line">            jo = jc.GetStatic&lt;AndroidJavaObject&gt;(&quot;currentActivity&quot;);</div><div class="line">#endif</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        /// &lt;summary&gt;</div><div class="line">        /// sdk初始化</div><div class="line">        /// &lt;/summary&gt;</div><div class="line">        /// &lt;param name=&quot;appid&quot;&gt;&lt;/param&gt;</div><div class="line">        /// &lt;param name=&quot;appkey&quot;&gt;&lt;/param&gt;</div><div class="line">        public void init(string appid, string appkey, string privateKey, string oauthLoginServer)</div><div class="line">        &#123;</div><div class="line">#if UNITY_ANDROID</div><div class="line">            Debug.Log(&quot;UNITY_ANDROID===HolaSdkInit!!&quot;);</div><div class="line">            jo.Call(&quot;HolaSdkInit&quot;, appid, appkey, privateKey, oauthLoginServer);</div><div class="line">#elif UNITY_IPHONE</div><div class="line">            //_Init();</div><div class="line">#endif</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        // 登录</div><div class="line">        public void Login(string LoginString)</div><div class="line">        &#123;</div><div class="line">#if UNITY_ANDROID</div><div class="line">            Debug.Log(&quot;UNITY_ANDROID===HolaSdk==Login!!&quot;);</div><div class="line">            jo.Call(&quot;Login&quot;, LoginString);</div><div class="line">#endif</div><div class="line"></div><div class="line">#if UNITY_IPHONE</div><div class="line">            // _Login();</div><div class="line">#endif</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        // 注销</div><div class="line">        public void Logout()</div><div class="line">        &#123;</div><div class="line">#if UNITY_ANDROID</div><div class="line">            jo.Call(&quot;Logout&quot;);</div><div class="line">#endif</div><div class="line">#if UNITY_IPHONE</div><div class="line"></div><div class="line">            //_LogOut();</div><div class="line">#endif</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        // 切换帐号</div><div class="line">        public void SwitchLogin()</div><div class="line">        &#123;</div><div class="line">#if UNITY_ANDROID</div><div class="line">            jo.Call(&quot;SwitchLogin&quot;);</div><div class="line">#endif</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        // 当前登陆状态</div><div class="line">        public bool isLogin()</div><div class="line">        &#123;</div><div class="line">#if UNITY_ANDROID</div><div class="line">            return jo.Call&lt;bool&gt;(&quot;isLogin&quot;);</div><div class="line">#else</div><div class="line">            return false;</div><div class="line">#endif</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        // 隐藏悬浮窗</div><div class="line">        public void hideToolBar()</div><div class="line">        &#123;</div><div class="line">#if UNITY_ANDROID</div><div class="line">            Debug.Log(&quot;hideToolBar&quot;);</div><div class="line">            jo.Call(&quot;hideToolBar&quot;);</div><div class="line">#endif</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        // 显示悬浮窗</div><div class="line">        public void showToolBar()</div><div class="line">        &#123;</div><div class="line">#if UNITY_ANDROID</div><div class="line">            Debug.Log(&quot;showToolBar&quot;);</div><div class="line">            jo.Call(&quot;showToolBar&quot;);</div><div class="line">#endif</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        // 进入用户中心</div><div class="line">        public void entryGameCenter()</div><div class="line">        &#123;</div><div class="line">#if UNITY_ANDROID</div><div class="line">            Debug.Log(&quot;entryGameCenter&quot;);</div><div class="line">            jo.Call(&quot;entryGameCenter&quot;);</div><div class="line">#endif</div><div class="line"></div><div class="line">#if UNITY_IPHONE</div><div class="line">            //_entryaGameCenter();</div><div class="line">#endif</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        public void ExitSDK()</div><div class="line">        &#123;</div><div class="line">#if UNITY_ANDROID</div><div class="line">            jo.Call(&quot;Logout&quot;);</div><div class="line">#endif</div><div class="line">        &#125;</div><div class="line"></div><div class="line"></div><div class="line">        // 支付</div><div class="line">        public void Pay(string msg)</div><div class="line">        &#123;</div><div class="line">#if UNITY_ANDROID</div><div class="line">            Debug.Log(&quot;andriod pay=&quot; + msg);</div><div class="line">            jo.Call(&quot;Pay&quot;, msg);</div><div class="line">#elif UNITY_IPHONE</div><div class="line">            //_pay(msg);</div><div class="line">#endif</div><div class="line">        &#125;</div><div class="line"></div><div class="line"></div><div class="line">        // 支付</div><div class="line">        public void CheckBill(string msg)</div><div class="line">        &#123;</div><div class="line">#if UNITY_ANDROID</div><div class="line">            Debug.Log(&quot;andriod CheckBill=&quot; + msg);</div><div class="line">            jo.Call(&quot;CheckBill&quot;, msg);</div><div class="line">#elif UNITY_IPHONE</div><div class="line">            //_pay(msg);</div><div class="line">#endif</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        /// &lt;summary&gt;</div><div class="line">        /// 获取用户ID</div><div class="line">        /// &lt;/summary&gt;</div><div class="line">        /// &lt;returns&gt;&lt;/returns&gt;</div><div class="line">        public string getUserID()</div><div class="line">        &#123;</div><div class="line">#if UNITY_ANDROID</div><div class="line">            return jo.Call&lt;string&gt;(&quot;getUserID&quot;);</div><div class="line">#elif UNITY_IPHONE</div><div class="line">            return &quot;&quot;;//_getUserID();</div><div class="line">#else</div><div class="line">            return string.Empty;</div><div class="line">#endif</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        /// &lt;summary&gt;</div><div class="line">        /// 获取用户ID</div><div class="line">        /// &lt;/summary&gt;</div><div class="line">        /// &lt;returns&gt;&lt;/returns&gt;</div><div class="line">        public string getChannelId()</div><div class="line">        &#123;</div><div class="line">#if UNITY_ANDROID</div><div class="line">            return jo.Call&lt;string&gt;(&quot;getChannelId&quot;);</div><div class="line">#else</div><div class="line">            return string.Empty;</div><div class="line">#endif</div><div class="line">        &#125;</div><div class="line"></div><div class="line"></div><div class="line">        public void registerActionCallback(int type, MonoBehaviour gameObject, string functionName)</div><div class="line">        &#123;</div><div class="line">#if UNITY_ANDROID</div><div class="line">            if (mAndroidJavaClass == null)</div><div class="line">            &#123;</div><div class="line">                mAndroidJavaClass = new AndroidJavaClass(&quot;com.holagames.sdk.MessageHandle&quot;);</div><div class="line">            &#125;</div><div class="line">            string gameObjectName = gameObject.gameObject.name;</div><div class="line">            mAndroidJavaClass.CallStatic(&quot;registerActionResultCallback&quot;, new object[] &#123; type, gameObjectName, functionName &#125;);</div><div class="line">#endif</div><div class="line"></div><div class="line">#if UNITY_IPHONE</div><div class="line">            //_registerActionResultCallback(type, gameObject.gameObject.name, functionName);</div><div class="line">#endif</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        public void loginGameRole(string type, string msg)</div><div class="line">        &#123;</div><div class="line">#if UNITY_ANDROID</div><div class="line">            jo.Call(&quot;LoginGameRole&quot;, type, msg);</div><div class="line">#endif</div><div class="line"></div><div class="line">        &#125;</div><div class="line"></div><div class="line">        public void CreateRole(string type, string msg)</div><div class="line">        &#123;</div><div class="line">#if UNITY_ANDROID</div><div class="line">            jo.Call(&quot;CreateRole&quot;, type, msg);</div><div class="line">#endif</div><div class="line">        &#125;</div><div class="line"></div><div class="line">#if UNITY_ANDROID</div><div class="line">        private AndroidJavaClass jc;</div><div class="line">        private AndroidJavaObject jo;</div><div class="line"></div><div class="line">        private AndroidJavaClass mAndroidJavaClass;</div><div class="line">#endif</div><div class="line">        /**</div><div class="line">     	@brief the Dictionary type change to the string type </div><div class="line">    	 @param Dictionary</div><div class="line">    	 @return  string</div><div class="line">    	*/</div><div class="line">        public static Dictionary&lt;string, string&gt; stringToDictionary(string message)</div><div class="line">        &#123;</div><div class="line">            Dictionary&lt;string, string&gt; param = new Dictionary&lt;string, string&gt;();</div><div class="line">            if (null != message)</div><div class="line">            &#123;</div><div class="line">                    string[] tokens = message.Split(&apos;&amp;&apos;);</div><div class="line"></div><div class="line">                    for (var i = 0; i &lt; tokens.Length; i++)</div><div class="line">                    &#123;</div><div class="line">                        string[] _s = tokens[i].Split(&apos;=&apos;);</div><div class="line">                        if (_s.Length == 2)</div><div class="line">                        &#123;</div><div class="line">                            param.Add(_s[0], _s[1]);</div><div class="line">                        &#125;</div><div class="line">                        else</div><div class="line">                        &#123;</div><div class="line">                            string _v = &quot;&quot;;</div><div class="line">                            int _index = tokens[i].IndexOf(&quot;=&quot;);</div><div class="line">                            _v = tokens[i].Substring(_index + 1);</div><div class="line"></div><div class="line">                            param.Add(_s[0], _v);</div><div class="line">                        &#125;</div><div class="line">                    &#125;</div><div class="line">            &#125;</div><div class="line"></div><div class="line">            return param;</div><div class="line">        &#125;</div><div class="line"></div><div class="line"></div><div class="line">        public static string dictionaryToString(Dictionary&lt;string, string&gt; maps)</div><div class="line">        &#123;</div><div class="line">            StringBuilder param = new StringBuilder();</div><div class="line">            if (null != maps)</div><div class="line">            &#123;</div><div class="line">                foreach (KeyValuePair&lt;string, string&gt; kv in maps)</div><div class="line">                &#123;</div><div class="line">                    if (param.Length == 0)</div><div class="line">                    &#123;</div><div class="line">                        param.AppendFormat(&quot;&#123;0&#125;=&#123;1&#125;&quot;, kv.Key, kv.Value);</div><div class="line">                    &#125;</div><div class="line">                    else</div><div class="line">                    &#123;</div><div class="line">                        param.AppendFormat(&quot;&amp;&#123;0&#125;=&#123;1&#125;&quot;, kv.Key, kv.Value);</div><div class="line">                    &#125;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">            //			byte[] tempStr = Encoding.UTF8.GetBytes (param.ToString ());</div><div class="line">            //			string msgBody = Encoding.Default.GetString(tempStr);</div><div class="line">            return param.ToString();</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>然后就是真正调用方法的地方，代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div><div class="line">168</div><div class="line">169</div><div class="line">170</div><div class="line">171</div><div class="line">172</div><div class="line">173</div><div class="line">174</div><div class="line">175</div><div class="line">176</div><div class="line">177</div><div class="line">178</div><div class="line">179</div><div class="line">180</div><div class="line">181</div><div class="line">182</div><div class="line">183</div><div class="line">184</div><div class="line">185</div><div class="line">186</div><div class="line">187</div><div class="line">188</div><div class="line">189</div><div class="line">190</div><div class="line">191</div><div class="line">192</div><div class="line">193</div><div class="line">194</div><div class="line">195</div><div class="line">196</div><div class="line">197</div><div class="line">198</div><div class="line">199</div><div class="line">200</div><div class="line">201</div><div class="line">202</div><div class="line">203</div><div class="line">204</div><div class="line">205</div><div class="line">206</div><div class="line">207</div><div class="line">208</div><div class="line">209</div><div class="line">210</div><div class="line">211</div><div class="line">212</div><div class="line">213</div><div class="line">214</div><div class="line">215</div><div class="line">216</div><div class="line">217</div><div class="line">218</div><div class="line">219</div><div class="line">220</div><div class="line">221</div><div class="line">222</div><div class="line">223</div><div class="line">224</div><div class="line">225</div><div class="line">226</div><div class="line">227</div><div class="line">228</div><div class="line">229</div><div class="line">230</div><div class="line">231</div><div class="line">232</div><div class="line">233</div><div class="line">234</div><div class="line">235</div><div class="line">236</div><div class="line">237</div><div class="line">238</div><div class="line">239</div><div class="line">240</div><div class="line">241</div><div class="line">242</div><div class="line">243</div><div class="line">244</div><div class="line">245</div><div class="line">246</div><div class="line">247</div><div class="line">248</div><div class="line">249</div><div class="line">250</div><div class="line">251</div><div class="line">252</div><div class="line">253</div><div class="line">254</div><div class="line">255</div><div class="line">256</div><div class="line">257</div><div class="line">258</div><div class="line">259</div><div class="line">260</div><div class="line">261</div><div class="line">262</div><div class="line">263</div><div class="line">264</div><div class="line">265</div><div class="line">266</div><div class="line">267</div><div class="line">268</div><div class="line">269</div><div class="line">270</div><div class="line">271</div><div class="line">272</div><div class="line">273</div><div class="line">274</div><div class="line">275</div><div class="line">276</div><div class="line">277</div><div class="line">278</div><div class="line">279</div><div class="line">280</div><div class="line">281</div><div class="line">282</div><div class="line">283</div><div class="line">284</div><div class="line">285</div><div class="line">286</div><div class="line">287</div><div class="line">288</div><div class="line">289</div><div class="line">290</div><div class="line">291</div><div class="line">292</div><div class="line">293</div><div class="line">294</div><div class="line">295</div><div class="line">296</div><div class="line">297</div><div class="line">298</div><div class="line">299</div><div class="line">300</div><div class="line">301</div><div class="line">302</div><div class="line">303</div><div class="line">304</div><div class="line">305</div><div class="line">306</div><div class="line">307</div><div class="line">308</div><div class="line">309</div><div class="line">310</div><div class="line">311</div><div class="line">312</div><div class="line">313</div><div class="line">314</div><div class="line">315</div><div class="line">316</div><div class="line">317</div><div class="line">318</div><div class="line">319</div><div class="line">320</div><div class="line">321</div><div class="line">322</div><div class="line">323</div><div class="line">324</div><div class="line">325</div><div class="line">326</div><div class="line">327</div><div class="line">328</div><div class="line">329</div><div class="line">330</div><div class="line">331</div><div class="line">332</div><div class="line">333</div><div class="line">334</div><div class="line">335</div><div class="line">336</div><div class="line">337</div><div class="line">338</div><div class="line">339</div><div class="line">340</div><div class="line">341</div><div class="line">342</div><div class="line">343</div><div class="line">344</div><div class="line">345</div><div class="line">346</div><div class="line">347</div><div class="line">348</div><div class="line">349</div><div class="line">350</div><div class="line">351</div><div class="line">352</div><div class="line">353</div><div class="line">354</div><div class="line">355</div><div class="line">356</div><div class="line">357</div><div class="line">358</div><div class="line">359</div><div class="line">360</div><div class="line">361</div><div class="line">362</div><div class="line">363</div><div class="line">364</div><div class="line">365</div><div class="line">366</div><div class="line">367</div><div class="line">368</div><div class="line">369</div><div class="line">370</div><div class="line">371</div><div class="line">372</div><div class="line">373</div><div class="line">374</div><div class="line">375</div><div class="line">376</div><div class="line">377</div><div class="line">378</div><div class="line">379</div><div class="line">380</div><div class="line">381</div><div class="line">382</div><div class="line">383</div><div class="line">384</div><div class="line">385</div><div class="line">386</div><div class="line">387</div><div class="line">388</div><div class="line">389</div><div class="line">390</div><div class="line">391</div><div class="line">392</div><div class="line">393</div><div class="line">394</div><div class="line">395</div><div class="line">396</div><div class="line">397</div><div class="line">398</div><div class="line">399</div><div class="line">400</div><div class="line">401</div><div class="line">402</div><div class="line">403</div><div class="line">404</div><div class="line">405</div><div class="line">406</div><div class="line">407</div><div class="line">408</div><div class="line">409</div><div class="line">410</div><div class="line">411</div><div class="line">412</div><div class="line">413</div><div class="line">414</div><div class="line">415</div><div class="line">416</div><div class="line">417</div><div class="line">418</div><div class="line">419</div><div class="line">420</div><div class="line">421</div><div class="line">422</div><div class="line">423</div><div class="line">424</div><div class="line">425</div><div class="line">426</div><div class="line">427</div><div class="line">428</div><div class="line">429</div><div class="line">430</div><div class="line">431</div><div class="line">432</div><div class="line">433</div><div class="line">434</div><div class="line">435</div><div class="line">436</div><div class="line">437</div><div class="line">438</div><div class="line">439</div><div class="line">440</div><div class="line">441</div><div class="line">442</div><div class="line">443</div><div class="line">444</div><div class="line">445</div><div class="line">446</div><div class="line">447</div><div class="line">448</div></pre></td><td class="code"><pre><div class="line">using UnityEngine;</div><div class="line">using System.Collections;</div><div class="line">using Holagames;</div><div class="line">using System.Collections.Generic;</div><div class="line">using System;</div><div class="line">using System.Text;</div><div class="line"></div><div class="line">public class HuaWeiGameCenter : MonoBehaviour</div><div class="line">&#123;</div><div class="line">    public bool IsInit = false;</div><div class="line">    public bool IsCheckBill = false;</div><div class="line">    public float Timer = 0;</div><div class="line">    public string Message = &quot;AAAA&quot;;</div><div class="line">    public string Message1 = &quot;AAAA&quot;;</div><div class="line"></div><div class="line">    void Awake()</div><div class="line">    &#123;</div><div class="line">        //UnityEngine.NotificationServices.deviceToken.ToString();</div><div class="line">        HolagamesSDK.getInstance().registerActionCallback((int)HolagamesSDKType.User, this, &quot;HolaSdkCallBack&quot;);</div><div class="line">        HolagamesSDK.getInstance().registerActionCallback((int)HolagamesSDKType.IAP, this, &quot;HolaSdkCallBack&quot;);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">   </div><div class="line"></div><div class="line">    void AndroidReceive(string content)</div><div class="line">    &#123;</div><div class="line">        Debug.Log(content);</div><div class="line">        Message1 = content;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    void AndroidReceiveChangeUser(string ChangeUser)</div><div class="line">    &#123;</div><div class="line">        Debug.Log(&quot;ChangeUser&quot;);</div><div class="line">        StartSDK();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    void AndroidReceiveLoginFailed(string Value)</div><div class="line">    &#123;</div><div class="line"></div><div class="line">    &#125;</div><div class="line"></div><div class="line">    void AndroidReceiveLogin(string Value)</div><div class="line">    &#123;</div><div class="line">        string Account = Value.Split(&apos;_&apos;)[0];</div><div class="line">        string Password = Value.Split(&apos;_&apos;)[1];</div><div class="line">        Debug.Log(Account + &quot; &quot; + Password);</div><div class="line"></div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public void StartSDK()</div><div class="line">    &#123;</div><div class="line">#if XIAOMI</div><div class="line">        HolagamesSDK.getInstance().init(&quot;2882303761517475726&quot;, &quot;5331747594726&quot;, &quot;HfM9lFxOF5S0lMdWbkXgQQ==&quot;, &quot;&quot;);  </div><div class="line">        return;</div><div class="line">#elif OPPO   </div><div class="line">        HolagamesSDK.getInstance().init(&quot;&quot;, &quot;ab03f4746b8C0A1d68624598177f64AD&quot;, &quot;&quot;, &quot;&quot;);  </div><div class="line">        return;</div><div class="line">#elif UC</div><div class="line">        HolagamesSDK.getInstance().init(&quot;&quot;, &quot;&quot;, &quot;&quot;, &quot;&quot;);  </div><div class="line">        return;</div><div class="line">#elif QIHOO360</div><div class="line">        HolagamesSDK.getInstance().init(&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;);</div><div class="line">        return;</div><div class="line">#elif VIVO</div><div class="line">        HolagamesSDK.getInstance().init(&quot;9885e4eaa65e696ed43360ac994a05df&quot;, &quot;42816dacc5cfbe9fd0e95cfe35f2eebc&quot;, &quot;20160201102033928864&quot;, &quot;&quot;);  </div><div class="line">        return;</div><div class="line">#elif QQ</div><div class="line">        HolagamesSDK.getInstance().init(&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;);</div><div class="line">        return;</div><div class="line">#elif BAIDU</div><div class="line">        HolagamesSDK.getInstance().init(&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;);</div><div class="line">        return;</div><div class="line">#elif IQIYI</div><div class="line">        HolagamesSDK.getInstance().init(&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;);</div><div class="line">        return;</div><div class="line">#elif MZW</div><div class="line">        HolagamesSDK.getInstance().init(&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;);</div><div class="line">        return;</div><div class="line">#elif AMIGO</div><div class="line">        HolagamesSDK.getInstance().init(&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;);</div><div class="line">        return;</div><div class="line">#elif MEIZU</div><div class="line">        HolagamesSDK.getInstance().init(&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;);</div><div class="line">        return;</div><div class="line">#elif COOLPAD</div><div class="line">        HolagamesSDK.getInstance().init(&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;);</div><div class="line">        return;</div><div class="line">#elif LESHI</div><div class="line">        HolagamesSDK.getInstance().init(&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;);</div><div class="line">        return;</div><div class="line">#elif DPWNJOY</div><div class="line">        HolagamesSDK.getInstance().init(&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;);</div><div class="line">        return;</div><div class="line">#elif ANZHI</div><div class="line">        HolagamesSDK.getInstance().init(&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;);</div><div class="line">        return;</div><div class="line">#elif WDJ</div><div class="line">        HolagamesSDK.getInstance().init(&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;);</div><div class="line">        return;</div><div class="line">#elif LENOVO</div><div class="line">        HolagamesSDK.getInstance().init(&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;);</div><div class="line">        return;</div><div class="line">#elif PYW</div><div class="line">        HolagamesSDK.getInstance().init(&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;);</div><div class="line">        return;</div><div class="line">#elif HOLA</div><div class="line">        HolagamesSDK.getInstance().init(&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;);</div><div class="line">        return;</div><div class="line">#elif TT</div><div class="line">        HolagamesSDK.getInstance().init(&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;);</div><div class="line">        return;</div><div class="line">#elif HAIMA</div><div class="line">        HolagamesSDK.getInstance().init(&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;);</div><div class="line">        return;</div><div class="line">#elif JOLO</div><div class="line">        HolagamesSDK.getInstance().init(&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;);</div><div class="line">        return;</div><div class="line">#elif DEBUG</div><div class="line">        HolagamesSDK.getInstance().init(&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;);</div><div class="line">        return;</div><div class="line">#elif QIANHUAN</div><div class="line">        HolagamesSDK.getInstance().init(&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;);</div><div class="line">        return;</div><div class="line">#else</div><div class="line">        HolagamesSDK.getInstance().init(&quot;&quot;, &quot;&quot;, &quot;&quot;, &quot;&quot;);</div><div class="line">#endif</div><div class="line">    &#125;</div><div class="line"></div><div class="line"></div><div class="line">    private void HolaSdkCallBack(string msg)</div><div class="line">    &#123;</div><div class="line">        Debug.Log(&quot;HolaSdkCallBack==&quot; + msg);</div><div class="line">        Message = msg;</div><div class="line">        Dictionary&lt;string, string&gt; dic = HolagamesSDK.stringToDictionary(msg);</div><div class="line">        int code = Convert.ToInt32(dic[&quot;code&quot;]);</div><div class="line">        string result = dic[&quot;msg&quot;];</div><div class="line">        switch (code)</div><div class="line">        &#123;</div><div class="line">            case (int)UserWrapper.InitFalied:</div><div class="line">                Debug.LogError(&quot;SDK Init Failed&quot;);</div><div class="line">                break;</div><div class="line"></div><div class="line">            case (int)UserWrapper.InitSuccess:</div><div class="line">                Debug.LogError(&quot;SDK InitSuccess&quot;);</div><div class="line">                Message1 = &quot;SDK InitSuccess&quot;;</div><div class="line">                IsInit = true;</div><div class="line">                break;</div><div class="line">            case (int)UserWrapper.LoginCancel:</div><div class="line">#if XIAOMI</div><div class="line">                HolagamesSDK.getInstance().Login(&quot;&quot;);</div><div class="line">#endif</div><div class="line">                break;</div><div class="line"></div><div class="line">            case (int)UserWrapper.LoginSwitch:</div><div class="line">                break;</div><div class="line"></div><div class="line">            case (int)UserWrapper.LoginFailed:</div><div class="line">                break;</div><div class="line"></div><div class="line">            case (int)UserWrapper.Logining:</div><div class="line">                break;</div><div class="line"></div><div class="line">            case (int)UserWrapper.LoginSuccess:</div><div class="line">                Debug.LogError(&quot;SDK LoginSuccess&quot;);</div><div class="line">                string _chane = &quot;QQ&quot;;</div><div class="line"></div><div class="line">                string Account = _chane + result;</div><div class="line">                string Password = &quot;t_&quot; + result;</div><div class="line">                Debug.Log(Account + &quot; &quot; + Password);</div><div class="line"></div><div class="line">                Message = Account + &quot; &quot; + Password;</div><div class="line"></div><div class="line">                break;</div><div class="line">            case (int)UserWrapper.LogoutFailed:</div><div class="line">                break;</div><div class="line"></div><div class="line">            case (int)UserWrapper.LogoutSuccess:</div><div class="line">                Message1 = &quot;SDK LogoutSuccess&quot;;</div><div class="line">                break;</div><div class="line"></div><div class="line">            case (int)UserWrapper.notLogin:</div><div class="line">                break;</div><div class="line"></div><div class="line">            case (int)UserWrapper.PayFailed:</div><div class="line">                IsCheckBill = false;</div><div class="line">                Message = &quot;UserWrapper.PayFailed&quot; + msg;</div><div class="line">                break;</div><div class="line"></div><div class="line">            case (int)UserWrapper.PaySuccess:</div><div class="line">                IsCheckBill = false;</div><div class="line">                Message = &quot;UserWrapper.PaySuccess&quot;;</div><div class="line">                break;</div><div class="line"></div><div class="line">            case (int)UserWrapper.PayCheck:</div><div class="line">                IsCheckBill = true;</div><div class="line">                Message = &quot;UserWrapper.PayCheck&quot;;</div><div class="line">                break;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    void Update()</div><div class="line">    &#123;</div><div class="line">        if (IsCheckBill)</div><div class="line">        &#123;</div><div class="line">            Message1 = Timer.ToString();</div><div class="line">            Timer += Time.deltaTime;</div><div class="line">            if (Timer &gt; 1)</div><div class="line">            &#123;</div><div class="line">                Timer -= 1;</div><div class="line">                using (AndroidJavaClass jc = new AndroidJavaClass(&quot;com.unity3d.player.UnityPlayer&quot;))</div><div class="line">                &#123;</div><div class="line">                    using (AndroidJavaObject jo = jc.GetStatic&lt;AndroidJavaObject&gt;(&quot;currentActivity&quot;))</div><div class="line">                    &#123;</div><div class="line">                        jo.Call(&quot;CheckBill&quot;, &quot;10001-1-1-6&quot;);</div><div class="line">                    &#125;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    void OnGUI()</div><div class="line">    &#123;</div><div class="line">        GUILayout.BeginHorizontal();</div><div class="line">        if (GUILayout.Button(&quot;initSDK&quot;, GUILayout.Height(80), GUILayout.Width(100)))</div><div class="line">        &#123;</div><div class="line">            Message1 = &quot;Init&quot;;</div><div class="line">            StartSDK();</div><div class="line">        &#125; </div><div class="line"></div><div class="line">        if (GUILayout.Button(&quot;Login&quot;, GUILayout.Height(80), GUILayout.Width(100)))</div><div class="line">        &#123;</div><div class="line"></div><div class="line">            Message1 = &quot;Login&quot;;</div><div class="line">#if QQ</div><div class="line">        HolagamesSDK.getInstance().Login(&quot;WX&quot;);</div><div class="line">#else</div><div class="line">            HolagamesSDK.getInstance().Login(&quot;&quot;);</div><div class="line">#endif</div><div class="line"></div><div class="line">        &#125;</div><div class="line"></div><div class="line">        if (GUILayout.Button(&quot;ToGame&quot;, GUILayout.Height(80), GUILayout.Width(100)))</div><div class="line">        &#123;</div><div class="line">            Message1 = &quot;ToGame&quot;;</div><div class="line">            HolagamesSDK.getInstance().loginGameRole(&quot;create&quot;, &quot;roleId=10278&amp;roleName=阳光社&amp;roleLevel=12&amp;zoneId=androids26&amp;zoneName=混服22服幽灵杀手&amp;roleCTime=1481543091&amp;roleLevelMTime=1481547775&amp;vip=0&quot;);</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        if (GUILayout.Button(&quot;CreateRole&quot;, GUILayout.Height(80), GUILayout.Width(100)))</div><div class="line">        &#123;</div><div class="line">            Message1 = &quot;CreateRole&quot;;</div><div class="line">#if IQIYI</div><div class="line">            HolagamesSDK.getInstance().CreateRole(&quot;&quot;, &quot;&quot;);</div><div class="line">#elif VIVO</div><div class="line">            HolagamesSDK.getInstance().CreateRole(&quot;&quot;, &quot;&quot;);</div><div class="line">#elif HOLA </div><div class="line">            HolagamesSDK.getInstance().CreateRole(&quot;&quot;, &quot;&quot;);</div><div class="line">#endif</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        if(GUILayout.Button(&quot;EnterGameCenter&quot;, GUILayout.Height(80),GUILayout.Width(100)))</div><div class="line">        &#123;</div><div class="line">            Message1 = &quot;EnterGameCenter&quot;;</div><div class="line">#if HOLA</div><div class="line">            HolagamesSDK.getInstance().entryGameCenter();</div><div class="line">#endif</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        if (GUILayout.Button(&quot;ShowFloatView&quot;, GUILayout.Height(80), GUILayout.Width(100)))</div><div class="line">        &#123;</div><div class="line">            Message1 = &quot;ShowFloatView&quot;;</div><div class="line">#if PYW</div><div class="line">            HolagamesSDK.getInstance().showToolBar();</div><div class="line">#elif VIVO</div><div class="line">            HolagamesSDK.getInstance().showToolBar();</div><div class="line">#elif HUAWEI</div><div class="line">            HolagamesSDK.getInstance().showToolBar();</div><div class="line">#elif MEIZU</div><div class="line">            HolagamesSDK.getInstance().showToolBar();</div><div class="line">#elif QIANHUAN</div><div class="line">            HolagamesSDK.getInstance().showToolBar();</div><div class="line">#endif</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        if (GUILayout.Button(&quot;Pay&quot;, GUILayout.Height(80), GUILayout.Width(100)))</div><div class="line">        &#123;</div><div class="line">            Message1 = &quot;Pay&quot;;</div><div class="line">#if UC</div><div class="line">            HolagamesSDK.getInstance().Pay(&quot;1_60_10001_1_1_1_1_1_1&quot;);  //UC</div><div class="line">#elif QQ</div><div class="line">            HolagamesSDK.getInstance().Pay(&quot;1_60_10001_1_1_1_1_1_1&quot;);  //QQ zoneid, diamond, guid, serverid, paytype		</div><div class="line">#elif QIHOO360</div><div class="line">            HolagamesSDK.getInstance().Pay(&quot;100_60钻石_1_xxx_10001_10001&quot; + UnityEngine.Random.Range(1,10000) + &quot;_10001-1-1-6&quot;);  //360  Product_Price Product_Name Product_Id Role_Name Role_Id OrderId guid-server_id-pay_type-cash</div><div class="line">#elif VIVO</div><div class="line">            HolagamesSDK.getInstance().Pay(&quot;1_1_10001_xxx_1_1_60钻石&quot;);  //VIVO diamond, zoneid, guid, name, level, paytype, ProductName</div><div class="line">#elif OPPO</div><div class="line">            HolagamesSDK.getInstance().Pay(&quot;1_1_10001_xxx_1_1_60钻石&quot;);  //VIVO diamond, zoneid, guid, name, level, paytype, ProductName</div><div class="line">#elif BAIDU</div><div class="line">             HolagamesSDK.getInstance().Pay(&quot;1_AndroidS10_10001_xxx_1_1_60钻石&quot;);//BAiDU diamond, zoneid, guid, name, level, paytype, ProductName</div><div class="line">#elif HUAWEI</div><div class="line">             HolagamesSDK.getInstance().Pay(&quot;1_1_10001_xxx_1_1_60钻石&quot;);//HUAWEI diamond, zoneid, guid, name, level, paytype, ProductName</div><div class="line">#elif IQIYI</div><div class="line">            HolagamesSDK.getInstance().Pay(&quot;1_1_10001_xxx_1_1_60钻石&quot;);//IQIYI diamond, zoneid, guid, name, level, paytype, ProductName</div><div class="line">#elif MZW</div><div class="line">            HolagamesSDK.getInstance().Pay(&quot;1_1_10001_xxx_1_1_60钻石&quot;);//mzw diamond, zoneid, guid, name, level, paytype, ProductName</div><div class="line">#elif AMIGO</div><div class="line">            HolagamesSDK.getInstance().Pay(&quot;1_1_10001_xxx_1_1_60钻石&quot;);//am diamond, zoneid, guid, name, level, paytype, ProductName</div><div class="line">#elif MEIZU</div><div class="line">            HolagamesSDK.getInstance().Pay(&quot;1_1_10001_xxx_1_1_60钻石&quot;);//meizu diamond, zoneid, guid, name, level, paytype, ProductName</div><div class="line">#elif COOLPAD</div><div class="line">            HolagamesSDK.getInstance().Pay(&quot;1_1_10001_xxx_1_1_60钻石&quot;);//coolpad diamond, zoneid, guid, name, level, paytype, ProductName</div><div class="line">#elif LESHI</div><div class="line">            HolagamesSDK.getInstance().Pay(&quot;1_1_10001_xxx_1_1_60钻石&quot;);//leshi diamond, zoneid, guid, name, level, paytype, ProductName</div><div class="line">#elif DOWNJOY</div><div class="line">            HolagamesSDK.getInstance().Pay(&quot;1_1_10001_xxx_1_1_60钻石&quot;);//downjoy diamond, zoneid, guid, name, level, paytype, ProductName</div><div class="line">#elif ANZHI</div><div class="line">            HolagamesSDK.getInstance().Pay(&quot;1_1_10001_xxx_1_1_60钻石&quot;);//anzhi diamond, zoneid, guid, name, level, paytype, ProductName</div><div class="line">#elif WDJ</div><div class="line">            HolagamesSDK.getInstance().Pay(&quot;1_60_10001_1_1_1_1_1_1&quot;);//WDJ diamond, zoneid, guid, name, level, paytype, ProductName</div><div class="line">#elif LENOVO</div><div class="line">            HolagamesSDK.getInstance().Pay(&quot;1_1_10001_xxx_1_1_60钻石&quot;);//lenovo diamond, zoneid, guid, name, level, paytype, ProductName</div><div class="line">#elif PYW</div><div class="line">            HolagamesSDK.getInstance().Pay(&quot;1_1_10001_xxx_1_1_60钻石_1&quot;);//pyw diamond, zoneid, guid, name, level, paytype, ProductName</div><div class="line">#elif HOLA</div><div class="line">            HolagamesSDK.getInstance().Pay(&quot;1_AndroidS1_10001_6_1_1_60钻石_1&quot;);//hola diamond, zoneid, guid, name, level, paytype, ProductName,servername</div><div class="line">#elif TT</div><div class="line">            HolagamesSDK.getInstance().Pay(&quot;1_1_10001_xxx_1_1_60钻石&quot;);//tt diamond, zoneid, guid, name, level, paytype, ProductName</div><div class="line">#elif XIAOMI</div><div class="line">            HolagamesSDK.getInstance().Pay(&quot;1_1_10001_xxx_1_1_60钻石_1&quot;);//xiaomi diamond, zoneid, guid, name, level, paytype, ProductName</div><div class="line">#elif JOLO</div><div class="line">            HolagamesSDK.getInstance().Pay(&quot;1_AndroidS1_10001_6_1_1_60钻石_1&quot;);//聚乐 diamond, zoneid, guid, name, level, paytype, ProductName</div><div class="line">#elif DEBUG</div><div class="line">            HolagamesSDK.getInstance().Pay(&quot;http://www.baidu.com&quot;);//debug url</div><div class="line">#elif QIANHUAN</div><div class="line">            HolagamesSDK.getInstance().Pay(&quot;1_AndroidS1_10001_6_1_1_60钻石_1&quot;);//千幻 diamond, zoneid, guid, name, level, paytype, ProductName</div><div class="line">#else</div><div class="line">            HolagamesSDK.getInstance().Pay(&quot;&quot;);</div><div class="line">#endif</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        </div><div class="line">        if (GUILayout.Button(&quot;CheckBill&quot;, GUILayout.Height(80), GUILayout.Width(100)))</div><div class="line">        &#123;</div><div class="line">//#if DEBUG</div><div class="line">            HolagamesSDK.getInstance().CheckBill(&quot;http://www.baidu.com&quot;);  //debug</div><div class="line">//#endif</div><div class="line">            Message1 = &quot;CheckBill&quot;;</div><div class="line">            //HolagamesSDK.getInstance().CheckBill(&quot;http://gdown.baidu.com/data/wisegame/ba226d3cf2cfc97b/baiduyinyue_4920.apk&quot;);</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        if (GUILayout.Button(&quot;ExitSDk&quot;, GUILayout.Height(80), GUILayout.Width(100)))</div><div class="line">        &#123;</div><div class="line">#if QQ</div><div class="line">            HolagamesSDK.getInstance().Logout();</div><div class="line">#else</div><div class="line">            HolagamesSDK.getInstance().ExitSDK();</div><div class="line">#endif</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        if (GUILayout.Button(&quot;ChangeAccount&quot;, GUILayout.Height(80), GUILayout.Width(100)))</div><div class="line">        &#123;</div><div class="line">            Message1 = &quot;ChangeAccount&quot;;</div><div class="line">            HolagamesSDK.getInstance().SwitchLogin();</div><div class="line">        &#125;</div><div class="line">        GUILayout.EndHorizontal();</div><div class="line">        GUILayout.BeginHorizontal();</div><div class="line">        GUILayout.Label(Message, GUILayout.Height(200), GUILayout.Width(500));</div><div class="line">        GUILayout.Label(Message1, GUILayout.Height(200), GUILayout.Width(500));</div><div class="line">        GUILayout.EndHorizontal();</div><div class="line">    &#125;</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">    /// &lt;summary&gt;</div><div class="line">    /// 实现php的URLENCODE函数</div><div class="line">    /// &lt;/summary&gt;</div><div class="line">    /// &lt;param name=&quot;str&quot;&gt;&lt;/param&gt;</div><div class="line">    /// &lt;returns&gt;&lt;/returns&gt;</div><div class="line">    public string UrlEncode(string str)</div><div class="line">    &#123;</div><div class="line">        StringBuilder sb = new StringBuilder();</div><div class="line"></div><div class="line">        for (var i = 0; i &lt; str.Length; i++)</div><div class="line">        &#123;</div><div class="line">            char c = str[i];</div><div class="line">            if ((c &gt;= &apos;0&apos; &amp;&amp; c &lt;= &apos;9&apos;) || (c &gt;= &apos;a&apos; &amp;&amp; c &lt;= &apos;z&apos;) || (c &gt;= &apos;A&apos; &amp;&amp; c &lt;= &apos;Z&apos;))</div><div class="line">            &#123;</div><div class="line">                sb.Append(c);</div><div class="line">            &#125;</div><div class="line">            else</div><div class="line">            &#123;</div><div class="line">                byte[] bystr = charToByte(str[i]);</div><div class="line"></div><div class="line">                sb.Append(@&quot;%&quot;);</div><div class="line"></div><div class="line">                for (int ij = 0; ij &lt; bystr.Length; ij++)</div><div class="line">                &#123;</div><div class="line">                    if (bystr[ij] != 0)</div><div class="line">                    &#123;</div><div class="line">                        sb.Append(Convert.ToString(bystr[ij], 16).ToUpper());</div><div class="line">                    &#125;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        return (sb.ToString());</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public byte[] charToByte(char c)</div><div class="line">    &#123;</div><div class="line">        byte[] b = new byte[2];</div><div class="line">        b[0] = (byte)((c &amp; 0xFF00) &gt;&gt; 8);</div><div class="line">        b[1] = (byte)(c &amp; 0xFF);</div><div class="line">        return b;</div><div class="line">    &#125;</div><div class="line"></div><div class="line"></div><div class="line">    /// &lt;summary&gt;</div><div class="line">    /// ios登录取帐号</div><div class="line">    /// &lt;/summary&gt;</div><div class="line">    /// &lt;param name=&quot;www&quot;&gt;&lt;/param&gt;</div><div class="line">    /// &lt;returns&gt;&lt;/returns&gt;</div><div class="line">    IEnumerator LoginPhp(WWW www)</div><div class="line">    &#123;</div><div class="line"></div><div class="line">        yield return www;</div><div class="line">        Debug.LogError(www.text);</div><div class="line">        Debug.LogError(www.error);</div><div class="line">        if (www.error == null &amp;&amp; www.text != &quot;0&quot;)</div><div class="line">        &#123;</div><div class="line">            string _chane = &quot;KY_&quot;;</div><div class="line"></div><div class="line">#if KY</div><div class="line">#elif TBT</div><div class="line">            _chane = &quot;TBT_&quot;;</div><div class="line">            if (www.text == &quot;-1&quot;)</div><div class="line">            &#123;</div><div class="line">                HolagamesSDK.getInstance().Login(&quot;&quot;);</div><div class="line">                return;</div><div class="line">            &#125;</div><div class="line">#endif</div><div class="line"></div><div class="line">            string Account  = _chane + www.text;</div><div class="line">            string Password = &quot;t_&quot; + www.text;</div><div class="line">            Debug.Log(Account + &quot; &quot; + Password);</div><div class="line"></div><div class="line">        &#125;</div><div class="line"></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>简单介绍一下这段代码的几个关键点：</p>
+<ol>
+<li>通过UnityPlayer可以很方便的拿到当前Activity的Java对象实例。</li>
+<li>对Java对象实例的方法的调用实际上很简单，只要调用Call就可以了。</li>
+<li>注意用宏来区隔Native代码。UNITY_ANDROID 这个推荐的写法.</li>
+<li>推荐在new出AndroidJavaClass还有AndroidJavaObject的地方用using来进行保护，确保执行结束后Unity会自动回收相应的代码。</li>
+</ol>
+<p>写了这么多我们来测试一下，将相关资源拷贝的Unity中，然后对Apk进行签名，这里我是自己已经准备好了，签名文件，不会弄签名文件可以去Android Stuidio中自己生成，设置完成之后我们就打出一个apk，如果打包出错的话，先看看控制的报错信息，然后对照控制的报错信息来修改。下面是我测试的数据，分别从初始化,登录,支付,注销这几个接口来测试的，如果你有其它接口，你可以自己添加进去，然后再来测试,我测试的结果如下:<br><img src="http://upload-images.jianshu.io/upload_images/2463091-9660dac5242dcc9f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="3.png"><br>如果有我下面截图的数据那就说明你已经成功了。<br>下篇文章我将对Ios进行接入，本来想写在一起的，但是感觉篇幅太大，很多同学一开始都是Android，Ios难免难度有点大，敬请期待我下篇文章，最近几天会更新的。<br>源码下载地址:<a href="https://github.com/wlcaption/MyWarHolaSdk" target="_blank" rel="external">https://github.com/wlcaption/MyWarHolaSdk</a></p>
+<p>其他的部分在这篇文章里面我们不展开。</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-categories " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://holagames.cn/2017/09/05/游戏开发随想（更新中）/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="wlcaption">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Wlcaption">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/09/05/游戏开发随想（更新中）/" itemprop="url">游戏开发随想（更新中）</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-05T11:10:57Z">
+                2017-09-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/转载/" itemprop="url" rel="index">
+                    <span itemprop="name">转载</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>这个一个非常牛叉的大牛写的,他也是我的好朋友,和他共事半年多,他已经做游戏10多年,而且还写过游戏引擎,也是一直做游戏,和他共事这段时间我学到了很多东西,在这里共享他的一篇文章<br>如果对游戏有兴趣的同学可以关注他的个人博客网站:<a href="http://www.wy182000.com" target="_blank" rel="external">http://www.wy182000.com</a><br>原文:<br>做了十几年游戏，经常会有各种想法念头突然出现，也会给自己做一些总结，但是一直都没有想过把这些东西写下来。近几年来，感觉自己的记忆力每况日下，所以脑子里的很多东西会随手记在手机的便签中，<br>其中也包含了很多其他人的观点和启示。得益于这几年一直在使用小米手机，手机里的便签越来越好用，一直到现在的云便签，很多东西都得以保留了下来。现在想想还是抽时间总结一下，对自己对其他人可能都会有用处。今天先开个头，后面再慢慢不停的完善。（题外话，说到小米，我可以算是小米的绝对粉丝，家里有小米各个方面的产品，但是它有的时候真是叫我又爱又恨，有时间一定写一篇关于小米的感想。）<br>有一个解决问题的方法，叫“5whys”，其实就是不停的问自己为什么，之前有一篇blog写到了关于运维的问题解决思路里面有提到，其实触类旁通，大部分问题都可以使用这个方法来解决，包括做游戏。</p>
+<p>先来看看做什么样的游戏。<br>游戏分很多种，按类型分FPS、ACT、RPG、SLG等等，按交互方式分联网和单机，按平台分端游、页游、手游、主机游戏，按收费情况分休闲游戏、深度游戏。在这多种多样的游戏里选择一个制作方向确实不是一件容易的事。<br>到底要做什么样的游戏，在之前的游戏经验里，做什么游戏至少我这边主要还是被动选择的，有些是公司在做什么游戏进去就做了什么游戏，有些是公司定了什么方向就按照这个方向去做了。<br>现在回头想想，这其实是游戏成败的第一步，也是最重要的一步。只不过之前都不需要自己考虑，但是想想如果是自己的公司或者自己是制作人，这一步就真的要慎重了。</p>
+<p>我觉得主要可能考虑几个问题。<br>首先，明确一点游戏是做给自己玩的，如果自己都不想玩，怎么去让其他人愿意玩甚至愿意付费。所以在选择过程中可以倾向于自己的偏好，当然不是自己偏好的不一定不能做，但最好是自己熟悉和接受的类型，一个自己连碰都不会碰的游戏类型还是不要去做了。</p>
+<p>其次，结合自己团队的能力和经验，去选择合适的方向，比如技术比较强会找一些有技术门槛的东西尝试，策划强的侧重游戏玩法和周边养成，美术强更多的美术表现展示。当然这个也没有那么绝对，现在的游戏环境下，可能真的需要各个方面都很强才能成功了，至少不能拖后腿。</p>
+<p>另外，根据自己公司和项目的状况，确定合理的方案。这部分之前也吃了很多亏。如果公司没有足够强的经济实力完全支撑游戏的开发和后期的维护，就不要轻易去尝试收费能力弱的休闲游戏，虽然这类行游戏可能更吸量、有更好的留存、成本更低，但是收入见效也更慢，往往需要积累足够的量，通过量变带来质变，等待周期较长，前期和后期维护可能付出的成本远远大于现实的收益，当然线上持续的生命周期可能也会更长。不过小公司还是不建议走这条路，还不如从实际情况出发走一条更适合自己道路，如卡牌、策略等收入见效快的游戏。<br>当然还是要提一点，现在的游戏也没有以前那么好做了，想要成功往往会更加困难，从现在游戏市场情况来看，用户积累和收费可能要同步挖掘，才能可能有更好的生存机会。但是，这永远是矛盾的两个方向，想要收费最简单的就是卖数值，想要用户体验就不能有很多的数值，只有在两个方向中间找到一个平衡，另外找一些其他的突破口，才可能有更好的机会。</p>
+<p>总的来说，对于做什么，没有一个明确答案，每个公司每个团队每个制作人都会有自己的选择，其实这跟天时、地利、人和全都相关。</p>
+<p>—–</p>
+<p>选好了做什么还是要再问问自己，为什么做这个游戏。</p>
+<p>先从自己的角度分析，如果这个游戏按照自己的方向做好了，到底好不好玩、有什么是游戏吸引你的地方、自己愿不愿意玩、愿意玩多久、愿不愿意花钱、愿意花多少，虽然可能没有一个准确的答案，但还是要想一想，而且在游戏制作的每个阶段都要不停地问自己，只有这样才可能少走弯路。<br>以前遇到很多制作人其实更像是项目经理，他们每天做的都是版本计划、功能确认，却很少去想一想这个游戏到底好不好玩，游戏游戏，如果不好玩儿，有再多的系统，有再全的功能也没有什么意义。虽然，市面上有很多游戏会是类似的情况，而且可能也赚到了钱，但是这跟市场和推广的机会有很大的关系。但是，如果游戏核心好玩，其实现在市场上所过多强调的所谓窗口期等问题就可能都不是问题了。当然不排除人家在你之前出了一个和你类似的游戏，那这只能说是没有天时了。</p>
+<p>说完从自己的角度分析，接下来还要从用户的角度做同样的分析。做分析之前，还要确定一下，这款游戏的用户定位，根据用户定位的不同，可能的到的答案也会有所差异。比如你的性别定位，游戏玩家的男女比例。你的游戏大量玩家的年龄层是多少、你的核心玩家的年龄层是多少。虽然在游戏获取到真实数据前不一定准确，但自己心里还是要有一个预期，这个预期可能更多的是来源于之前制作游戏的经验和对游戏市场的了解程度了。</p>
+<p>分析的目的就是明确游戏的方向和定位，我们要做的是什么样的游戏，用户群是哪些用户，有什么优势，有什么劣势，靠什么吸引用户，用户的短中长期追求，用户游戏时间预估，留存周期预期，如何吸引玩家付费，商业化深度等等。只有更好的了解自己才能更好的服务用户。</p>
+<p>—–</p>
+<p>做什么，为什么想清楚了，接下来就是谁来做了。关于团队的组建很多时候都是很无奈的，手下就能凑出这些人，也就这些人做了。但是这往往就是悲剧的开始。</p>
+<p>首先，关于制作人。制作人要有对游戏的理解，对团队的管理能力，经得起压力，吃得了苦，果断，坚持等等等等，可以说需要集各种能力于一身，当然十全十美的人是不可能有的，但是一定要有突出闪光点，团队成员要对他信服，有威慑力。我一直认为一个游戏的成败，最主要的因素就是制作人。优秀的制作人制作游戏不一定都能成功，但是成功游戏的背后一定有一个优秀的制作人。这也是我不认同公司盲目开项目的原因，因为市场情况也好、因为合作机会也好，如果当下没有一个合适的制作人来带项目的话，宁愿错失机会也不要轻易去尝试，有的时候回头想想，做多做错的结果还不如不做。</p>
+<p>其次，关于团队成员的选择。最好的人选当然是有热情、有能力、有想法、肯吃苦的了，不过这种人可遇而不可求，遇到了就好好珍惜吧。更多的时候选人有一两项突出点的就已经不错了，这时候选人就有技巧了。我认为态度大于一切，如果连基本的做事态度都没有，其他一切都是徒劳的。其次就是能力经验之类的了。有一点最为重要的，以前我的部门里面试首先需要了解这个人是否玩游戏、爱不爱玩、是不是痴迷，如果游戏连玩都不玩的人一般我的团队里是不会要这样的人的，不管什么岗位，如果你游戏都不玩怎么有可能把游戏做好。另外一点关于员工的工作状态的问题，一般新进员工普遍工作状态会比较好，老员工会相对差些，尤其是待得时间长的员工很难保持一个很好的状态在工作中，人都有疲的时候，而且在公司里老人是很难管的，尤其是公司对他没有什么约束力的时候，公司做的好可以通过工资涨幅奖金来处理，公司做的一般的本来激励就少，对于他们就更难处理了，要开掉还有高额的赔偿金，一般不是太过分大部分也就睁一只眼闭一只眼了，这也是很多公司开的时间越长效率越低的原因。所以在选人的时候我会更倾向于新人，尤其是觉得有潜力的新人（态度积极，学习能力强），或者是一些入职时间不是太长的员工，如果在公司工作时间较长的员工其实我是一般不太想要的，当然这不是绝对的，有的时候更多的还是和个人情况相关了。</p>
+<p>—–</p>
+<p>谁来做之后就是用什么做。</p>
+<p>这部分主要还是一些技术选择问题，选择什么引擎、用什么语言、制作过程中需要用到什么工具、需要用哪些SDK等等。我之前做过端游引擎，对这部分可能更有体会。对于引擎选择，首先，除非是非常大的公司，否则不建议自己研究引擎，一来需要大量的资金支持，另外你去找能维护这个引擎的人也很困难，我们自己的引擎后面就是因为没人维护就停掉了，但是研究引擎真的很锻炼人的能力，你除了要了解游戏怎么做，还要更熟悉做游戏的人需要什么，那段时间对自己以后的提升有很大的帮助。但是后面才认识到，公司出成本做了这个引擎后，虽然东西都还在公司，但是人都走了以后，其实公司之前的积累就都白费了，只是相当于公司出钱给大家做了培训。</p>
+<p>所以，现在做游戏我更倾向于使用市面上的成熟引擎，如Unity。找人好找，现成的插件多，网上资料全，好处多多。而且我认为最好深入研究一种引擎，比如要做Unity就一直使用Unity。因为之前做引擎的时候各种引擎都去研究过，像Unreal、Crysis、Gamebro等等，但是对于个人来说，想把游戏做的更好，还是需要对一个引擎有更深入了解的。Unity本身，目前来看可能更适合现在市场，也是我现在的选择。像Unreal4，因为更容易实现次世代效果，在当下VR比较热的情况下可能会是一个不错的选择，但是做手游并不建议使用，它的兼容性问题很大。至于cocos，即便现在做2D游戏也不建议使用，虽然它新出的cocos creator对于制作H5游戏很方便，但是unity的H5支持也开始越来越好了，而且Unity至少还是有做3D的可能性的，在Unity上面的积累可能应用更广泛一些。</p>
+<p>前端确认了以后，这时候就要考虑后端用什么来实现了。根据之前的经验，对于游戏逻辑方面，建议前后端使用相同的语言，如前端用Unity后端可能就考虑用C#来写游戏逻辑了。好处就是，同样的一个人可以即做前端又做后端，你会发现这会极大的提高效率。因为根据之前的经验，如果前后端是不同人来实现的话，耗时间做多的往往不是开发而是沟通、测试、联调。</p>
+<p>因为Unity的机制问题，它本身对代码的保护相对薄弱，即便很多游戏使用的加密，但是只要花点心思，通过调试总有办法绕过。包括对于游戏作弊，在前端处理其实就是一个博弈过程，永远没有最优解。所以，我做游戏的理念就是，能在服务器算的东西一定不在本地处理，除非是有严重效率问题的东西。一旦所有的逻辑都到了服务器，其实你的前端是否被破解也就没那么重要了。<br>最后，关于各种可以使用的插件和SDK，也是基于之前经验的忠告，如果有第三方可以提供完整支持的，就不要自己再去开发了，虽然有的时候很多开发人员觉得自己开发逼格很高，能提高自身能力，但这些都是浪费时间浪费成本的事情，而且这个积累真的只到个人就截至了，对公司没有太大帮助，当然大公司除外。</p>
+<hr>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-categories " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://holagames.cn/2017/09/05/Unity使用SharedSDK有关微信开放平台回调的问题/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="wlcaption">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Wlcaption">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/09/05/Unity使用SharedSDK有关微信开放平台回调的问题/" itemprop="url">Unity使用SharedSDK有关微信开放平台回调的问题</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-05T11:00:11Z">
+                2017-09-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Sdk/" itemprop="url" rel="index">
+                    <span itemprop="name">Sdk</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>最近在做一个项目Unity棋牌项目，项目里用到了SharedSDK来做登陆和一些分享相关，只要是使用微信的。<br>在使用SharedSDk中发现，其他平台都是好的，可以登陆分享，之后也会收到回调，唯独微信不可以，登陆没有授权页面显示，分享后收不到回调，完全不可用。<br>重SharedSDK官网下载了官方Demo也是不行，研究了一下午，可能初步找到了原因，但是还没有验证成功，因为微信开放平台的应用申请需要时间。现在写下来以备后用。</p>
+<p>首先，也是最重要的一点，要使用微信第三方登陆，需要在微信开放平台注册，并完成企业认证。只有通过了企业认证才能在开放平台中申请移动应用。申请时IOS平台需要填写应用的Bundle ID。Android平台比较麻烦，需要填写包名即Unity里AndroidManifest.xml中的package名，并且需要应用签名，这个可以使用开放平台提供的签名生成工具安装在手机上，然后把自己的应用也安装好，通过包名来查询，得到一串字符字符串就是应用签名了。现在还没办法验证是否修改就是因为目前申请的应用还没有审核通过，只能等了。</p>
+<p>另外，AndroidManifest.xml中的package名需要和Unity里面adroid设置的Package Name一致，并且AndroidManifest.xml中<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;activity</div><div class="line">android:name=”包名.wxapi.WXEntryActivity”</div><div class="line">android:theme=”@android:style/Theme.Translucent.NoTitleBar”</div><div class="line">android:configChanges=”keyboardHidden|orientation|screenSize”</div><div class="line">android:exported=”true” /&gt;</div></pre></td></tr></table></figure></p>
+<p>.wxapi.WXEntryActivity一定要在包名下面，这个也是微信的特殊要求，WXEntryActivity这个文件一定要在包名目录下，SharedSDK自带的Plugins\Android\ShareSDK\libs\DemoCallback.jar包含了这个文件，但是肯定不在你自己的包名目录下，这就需要重新制作替换相应文件了。可以通过SharedSDK官方Unity Demo下载Android_Java_Demo，自己生成相应jar包。<br>首先，如果没有Android开发环境可以先下载adt-bundle，运行eclipse文件夹中的eclipse，打开刚才现在的Android_Java_Demo工程。<br>启动eclipse时，可能会因为Java SDK安装目录的问题无法启动，需要在eclipse.ini的openFile后面添加<br>-vm<br>C:/Program Files/Java/jdk1.8.0_112/bin/javaw.exe 指定自己的Java SDK安装目录。<br>修改WXEntryActivity.java所在目录到包名正确的地址包名.wxapi.WXEntryActivity，然后通过eclipse将WXEntryActivity导出为DemoCallback.jar，具体导出方法可以在网上去查。</p>
+<p>微信分享时，如果设置的ShareContent.SetImageUrl地址无法访问的话，游戏中会出现文字提示“分享操作正在后台进行”之后回调会收到错误消息，所以设置时一定要设置正确地址。</p>
+<p>这样应该就可以了，之后测试成功，我在来确认。<br>今天开放平台的移动应用申请通过了，事实证明确实是这个问题，授权登陆页面可以显示了，回调也能收到了，至此微信登陆算是正常了。<br>另外上面提到的xml中的.wxapi.WXEntryActivity前面也不需要加完整路径，这样也是没有问题的。</p>
+<p>另外，在解决这个问题的时候，微信的官网文档发现，微信登陆不管是开放平台还是公众号，每个用户都会有一个对应该不同应用的不同openid，这个id是不唯一的，要想在不同应用中获取用户的唯一id来辨识用户如，应用和公众号联动，首选同一开放品台帐号下面的所有应用，用户的unionid字段都是相同的，如果需要公众号也有相同的unionid，需要把公众号和开放平台帐号绑定，这样通过unionid就可以唯一表示用户了。</p>
+<p>在编译IOS版本时需要加入如下依赖库<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">libicucore.dylib</div><div class="line">libz.dylib</div><div class="line">libstdc++.dylib</div><div class="line">JavaScriptCore.framework</div><div class="line">CoreTelephony.framework</div><div class="line">微信还需要</div><div class="line">libsqlite3.dylib</div></pre></td></tr></table></figure></p>
+<p>Libraries Search Paths 里的”$(SRCROOT)/Libraries”的双引号去掉<br>并把SharedSDK的IOS下载中的Support和SharedSDK.framework加入到工程中。<br>在unity的Editor/SDKPorter/ShareSDKPostProcessBuild.cs中EditInfoPlist添加<br>//URL Scheme 添加<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">string PlistAdd = @”CFBundleURLTypes CFBundleURLName xxxx CFBundleURLSchemes wxxxxxxxxxxxxx“;</div></pre></td></tr></table></figure></p>
+<p>//白名单添加<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">string LSAdd = @”LSApplicationQueriesSchemes wechat weixin“;</div></pre></td></tr></table></figure></p>
+<p>如果使用微信支付，使用AFNetworking框架，还需要<br>MObileCoreServices.framework<br>如果解析json用到JSONKit<br>JSONKit.m需要在compile sources中添加-fno-objc-arc<br>ShareSDKUnity3DBridge.m中如果初始化<strong>iosShareSDKRegisterAppAndSetPltformsConfig后调用</strong>iosShareSDKGetUserInfo会crash在MTA中，可以注释掉__iosShareSDKRegisterAppAndSetPltformsConfig中的[ShareSDKConnector connectWeChat:[WXApi class]]自己再添加[WXApi registerApp:@”xxxxx” enableMTA:false];屏蔽掉MTA具体什么愿意引起MTA崩溃目前还不是太清楚。<br>另外在UnityAppController.mm中添加<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">#import “WXApi.h”</div><div class="line">#import “WeiPayService.h”</div></pre></td></tr></table></figure></p>
+<p>函数openURL<br>return YES;<br>改为return [WXApi handleOpenURL:url delegate:[WeiPayService instance]];<br>WeiPayService类要实现WXApiDelegate并包含两个定义<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">-(void) onReq:(BaseReq*)req &#123;</div><div class="line">&#125;</div><div class="line">– (void)onResp:(BaseResp *)resp &#123;</div><div class="line">if ([resp isKindOfClass:[PayResp class]]) &#123;</div><div class="line">switch (resp.errCode) &#123;</div><div class="line">case WXSuccess:</div><div class="line">break;</div><div class="line">default:</div><div class="line">break;</div><div class="line">&#125;</div><div class="line">&#125;</div><div class="line">&#125;</div><div class="line">添加函数</div><div class="line">– (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url &#123;</div><div class="line">return [WXApi handleOpenURL:url delegate:[WeiPayService instance]];</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>ios9以上版本废弃了handleOpenURL使用下面的版本<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">– (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary&lt;NSString*, id&gt; *)options ｛</div><div class="line">return [WXApi handleOpenURL:url delegate:[WeiPayService instance]];</div><div class="line">｝</div></pre></td></tr></table></figure></p>
+<p>包括打开第三方app的回调<br>– (BOOL)application:(UIApplication <em>)application openURL:(NSURL </em>)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation<br>在ios9以后也废弃了，都是用上面的函数。</p>
+<p>如果需要使用定位信息，需要在info.plist中加入<br>NSLocationWhenInUseDescription<br>NSLocationAlwaysUsageDescription</p>
+<p>如果想通过分享连接打开app，需要如下操作<br>Android<br>在AndroidManifest.xml文件添加如下代码，<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">activity中加入android:launchMode=”singleTask”</div><div class="line">&lt;activity android:configChanges=”” android:label=”@string/app_name” android:launchMode=”singleTask” android:name=”xxxx.MainActivity” android:screenOrientation=”sensorLandscape”&gt;</div><div class="line">&lt;intent-filter&gt;</div><div class="line">&lt;action android:name=”android.intent.action.VIEW” /&gt;</div><div class="line">&lt;category android:name=”android.intent.category.DEFAULT” /&gt;</div><div class="line">&lt;category android:name=”android.intent.category.BROWSABLE” /&gt;</div><div class="line">&lt;data android:scheme=”xxxx” android:host=”xxxxxx” android:pathPrefix=”/openwith”/&gt;</div><div class="line">&lt;/intent-filter&gt;</div><div class="line"></div><div class="line">Java代码，UnityPlayerActivity重载onCreate和onNewIntent，openurl为具体处理函数，用来处理url传入的参数。</div><div class="line">protected void onCreate(Bundle savedInstanceState) &#123;</div><div class="line">super.onCreate(savedInstanceState);</div><div class="line"></div><div class="line">openurl();</div><div class="line">&#125;</div><div class="line">protected void onNewIntent(Intent intent) &#123;</div><div class="line">super.onNewIntent(intent);</div><div class="line">setIntent(intent);</div><div class="line">openurl()</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>IOS<br>在工程配置的info的URL Types中加入URL Schemes xxxx<br>重载openURL，处理url传入参数。</p>
+<p>在调用是，只需要在浏览器中调用<br>xxxx:xxxxxx/openwith?x=x<br>就可以启动app了。<br>因为微信屏蔽了url schemes，所以上述方法只能在浏览器中使用，如果想在微信启动应用，ios上可以用Universal Links来实现，具体方法如下，<br>工程配置Capabilities中找到Associated Domains，在里面加入<br>applinks:yourdomain.com<br>app就会在第一次启动是在这个域名的空间下载一个apple-app-site-association文件，文件格式如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">“applinks”: &#123;</div><div class="line">“apps”: [],</div><div class="line">“details”: &#123;</div><div class="line">“yourteamid.bundleid”: &#123;</div><div class="line">“paths”:[ “*” ]</div><div class="line">&#125;</div><div class="line">&#125;</div><div class="line">&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>yourteamid就是你的开发者帐号的teamid，bundleid就是ios工程中的bundle id，<br>paths是app相应什么url路径可以用通配符*，或者具体路径如”/xxxx/openwith”<br>把这个apple-app-site-association文件上传到你的http域名的目录下就可以了,<br>ios9.3以后，请求地址变为了.well-known/apple-app-site-association。<br>另外网站需要使用ssl访问，并且保证证书不会提示警告，就是要用正式证书。<br>如果没有证书apple-app-site-association需要签名。<br>cat apple-app-site-association-unsigned.js | openssl smime -sign -inkey g01-server.key -signer g01-server.crt -certfile 　g01-dvcacert.cer -noattr -nodetach -outform DER &gt; apple-app-site-association<br>可以在地址中校验文件是否有效。<br>在微信中打开你的域名就会启动app，如打开<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">http://yourteamid/xxxx/openwith</div></pre></td></tr></table></figure></p>
+<hr>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-categories " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://holagames.cn/2017/09/05/Mysql-问题汇总/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="wlcaption">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Wlcaption">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/09/05/Mysql-问题汇总/" itemprop="url">Mysql 问题汇总</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-05T10:55:11Z">
+                2017-09-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/mysql/" itemprop="url" rel="index">
+                    <span itemprop="name">mysql</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="Mysql问题汇总"><a href="#Mysql问题汇总" class="headerlink" title="Mysql问题汇总"></a>Mysql问题汇总</h3><p>这里总结一下，在使用Mysql中可能会遇到的一些问题。</p>
+<p>如果mysql忘记登陆密码，可以通过忽略密码先登陆进入，<br>在mysqld的后面加入–skip-grant-tables来重新启动msyql服务器，<br>mysqld –skip-grant-tables<br>或者关闭mysql服务然后在my.ini(Windows)或my.cnf中的[mysqld]内添加<br>skip-grant-tables<br>再重新启动mysql就可以了。<br>现在可以直接mysql连接进去了。</p>
+<p>修改密码，有几种方式，<br>使用mysqladmin 修改密码，<br>mysqladmin -u root password “123456”;</p>
+<p>使用SET PASSWORD，修改如果是忽略密码模式这个可能会无效，使用这个命令不需要flush privileges刷新<br>mysql&gt;SET PASSWORD FOR ‘root’@’localhost’ = PASSWORD(‘123456’);</p>
+<p>用UPDATE直接编辑user表<br>mysql&gt;USE mysql;<br>mysql&gt;UPDATE user SET Password = PASSWORD(‘123456′) WHERE user=’root’;<br>mysql&gt;FLUSH PRIVILEGES;</p>
+<p>另外修改用户权限使用<br>mysql&gt;grant all privileges on <em>.</em> to username@localhost identified by ‘password’ with grant option;<br>mysql&gt;flush privileges;<br>localhost 可以使用%替换，表示所有机器都可以</p>
+<p>另外，对于mysql的字符集，utf8和utfmb4，建议都采用utf8mb4，因为微信里的昵称评论会有表情出现，这是utf编码是4位的，而一般的utf8编码是3位，这时就会出现<br>java.sql.SQLException: Incorrect string value: ‘\xF0\x9F\x92\x93′<br>类似的错误，所以尽量采用utf8mb4编码代替utf8编码。<br>如果是现有数据库，使用sql语句<br>ALTER DATABASE database_name CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci;<br>ALTER TABLE table_name CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;<br>ALTER TABLE table_name CHANGE column_name column_name VARCHAR(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;<br>修改当前编码<br>或者使用navicat等数据库工具修改</p>
+<p>同时修改mysql服务器配置<br>[client]<br>default-character-set=utf8mb4</p>
+<p>[mysql]<br>default-character-set=utf8mb4<br>[mysqld]<br>character-set-client-handshake = FALSE<br>character-set-server = utf8mb4<br>collation-server = utf8mb4_unicode_ci<br>init_connect=’SET NAMES utf8mb4’<br>重启服务器<br>在mysql中使用sql语句<br>SHOW VARIABLES WHERE Variable_name LIKE ‘character_set_%’ OR Variable_name LIKE ‘collation%’;<br>确认结果<br>+————————–+——————–+<br>| Variable_name | Value |<br>+————————–+——————–+<br>| character_set_client | utf8mb4 |<br>| character_set_connection | utf8mb4 |<br>| character_set_database | utf8mb4 |<br>| character_set_filesystem | binary |<br>| character_set_results | utf8mb4 |<br>| character_set_server | utf8mb4 |<br>| character_set_system | utf8 |<br>| collation_connection | utf8mb4_unicode_ci |<br>| collation_database | utf8mb4_unicode_ci |<br>| collation_server | utf8mb4_unicode_ci |<br>+————————–+——————–+</p>
+<p>如果你用的是java服务器，升级或确保你的mysql connector版本高于5.1.13。</p>
+<p>jdbc:mysql://localhost:3306/database?useUnicode=true&amp;characterEncoding=utf8&amp;autoReconnect=true&amp;rewriteBatchedStatements=TRUE</p>
+<p>其中的characterEncoding=utf8可以被自动被识别为utf8mb4（当然也兼容原来的utf8），而autoReconnect配置我强烈建议配上</p>
+<p>一般报错Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Communications link failure<br>是因为数据库连接超时，可以修改mysql数据库超时时间来处理<br>mysql﹥ show global variables like ‘wait_timeout’; 可以查看超时时间<br>mysql&gt; set global wait_timeout=2592000; 可以修改超时时间为2592000，30天<br>修改配置文件/etc/my.cnf<br>[mysqld] wait_timeout=2592000</p>
+<p>报错com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Data source rejected establishment of connection, message from server: “Too many connections”，一般是设定的并发连接数太少或者系统繁忙导致连接数被占满，<br>mysql&gt; show global variables like ‘max_connections’; 可以查看连接数<br>mysql&gt; set global max_connections=1000; 修改连接数为1000<br>修改配置文件/etc/my.cnf<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[mysqld] max_connections=<span class="number">1000</span></div></pre></td></tr></table></figure></p>
+<hr>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-categories " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://holagames.cn/2017/08/14/个人计划/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="wlcaption">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Wlcaption">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/08/14/个人计划/" itemprop="url">个人计划</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-14T10:47:41Z">
+                2017-08-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="个人计划"><a href="#个人计划" class="headerlink" title="个人计划"></a>个人计划</h3><p>随着时间的推移,不知不觉已经快到下半年年底了,回顾一下这大半年过得很迷茫,迷迷惑惑中度过了这么多宝贵的时间,感觉阵阵悲痛,一下子突然觉悟过来,今后究竟要走什么样的一条路,经过这几天的苦苦思考,我将决定静下心来,好好的琢磨一番,走前端还是后端开发,为了不含糊的活着,前端知识是必不可少的,毕竟自己是从前端出来的,不能因为任何东西而改变这些本质,后端毕竟是一个趋势,作为一个程序员眼观真的不能局限于此,不能单一的只是一辈子做一个单一的事情,尤其眼下这种环境,物竞天择,适者生存,太单一,目光太短浅,肯定做不好什么事情的,毕竟路还在漫长着,究竟要怎么好好的发展下去,现在要做出相应的思考了,下面是我接下来要增强和扩展的地方:</p>
+<ol>
+<li><p>无论做什么事情都要从基础的事情做起,人家王健林都说了,什么是小计划,比如先赚它一个亿,虽然自己没有这么大目标,但是凡事都要从小事做起,比如写技术文档,坚持从现在开始每周经过好好思考,写它一篇超过5000+的文档,很认真的对待这件事件,虽然是一建可以或有或无的步骤,但是计算一下一周写一篇,严格按照标准技术文档的路线来写,写得严谨,真实,实用,有点技术,写文档的内容包含自己一周的虽见所闻,觉得很有价值的内容.</p>
+</li>
+<li><p>读书,这是个永恒的话题, 人丑就要多读书,读书的目的不是为了提高自己的本质的东西,而是来增强自己的视野,眼界,轮读书的重要性,现在这个阶段不是停留在上学期间那时的为了应付考试,现在的读书是为了追求自身的发展,将自己境界更上一层楼, 其实吧,自己很早就有了这个思想, 买了这么多书,很多时候都只是看看目录就很少理会这件事情了,现在就要静下心来沉淀下来了, 认真对待这件事情,将自己买的书开始翻阅起来, 在今年年末的时候争取看完6~7本,从某个方面来说,既然自己花钱买了东西,不要让它一直独自放在桌子的一脚思考,要让它活跃起来,坚持写点什么都后感,思考作者的写作背景,这本书存在的意义,作者写作的目的,到底要给读者一些什么有用的知识和体会.</p>
+</li>
+<li><p>开源项目,现在github上拥有很多优秀的开源项目,都是很多开发者沉淀下来的精华,现在我需要关注更多的优秀项目,从最基础的做起,比如:以java为例,从项目结构,引入jar的方式,配置的文件的书写标准,包名的命名规范,接口的命名规范,;类名的命名规范,常量的书写方式,Bean的熟悉方式,工具类的书写标准,日志类的书写标准,类与接口的设计技巧,Bean的封装规范,一个方法的设计,传参数返回值的技巧.</p>
+</li>
+<li><p>目前的公司开发的重心,经过两个月的开发,目前客户端和服务端都是自己再琢磨, 在规划好基础的方面兼顾更多的地方,比如微信登录.定位.支付.都是封装成一个完整的体系,更加着重功能方面的开发,尤其是在服务端,消息机制虽然封装的很好了,但是很多时候只是关注了他的用法,实质性的东西没有掌握,接下来有空要琢磨一下Netty和Mina这两个NIO消息机制,数据库就着重mysql方面,工具类就用Mybatis,对于Unity方面在熟练掌握它的控件和工具的同时,更注重它的开发技巧,更加快速的开发,那就需要了解游戏开发者更加实质的东西,尤其是通信方面,通信传递消息的格式,收发机制,回调,协程这个东西.还有就是写接口方面还是php比较方便,也比较符合开发规范,正确的掌握php的一些技巧和开发注意事项.</p>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-categories " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://holagames.cn/2017/08/12/Java之Builder模式/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="wlcaption">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Wlcaption">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/08/12/Java之Builder模式/" itemprop="url">Java之Builder模式</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-11T17:12:22Z">
+                2017-08-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="Java-Builder-模式"><a href="#Java-Builder-模式" class="headerlink" title="Java Builder 模式"></a>Java Builder 模式</h3><p>我们一帮在构造一个javaBean对象时,无非有三种写法:<br>1.直接通过构造函数传参的方式设置属性，这种方法如果属性过多的话会让构造函数十分臃肿，而且不能灵活的选择只设置某些参数。</p>
+<p>2.采用重叠构造区模式，先写第一个只有必要参数的构造器，第二个构造器有一个可选参数，第三个构造器有两个可选参数，以此类推；如果参数比较多时，类里面会出现一堆构造方法，并且阅读困难，很容易就把两个属性参数写颠倒位置了，编译不会出错，但运行就会出错了</p>
+<p>3.采用Javabean 的写法，写一堆属性的setter方法，通过生成对象，让后调用setter方法给属性赋值。  这种方法有个劣势就是构造的过程被分到几个调用中，在构造中可能处于不一致状态，无法保证一致性。</p>
+<p>4.采用Builder 模式构造对象，当一个类的参数多的情况下，使用重叠构造器模式客户端代码会很难编写，并且可读性差；使用javabean模式，调用一个无参的构造器，然后调用setter方法来设置每个必要的参数。但是javabean自身有着严重的缺点，因为构造过程被分到几个调用中，在构造javabean可能处于不一致的状态，类无法仅仅通过检验构造器参数的有效性来保证一致性。另一点不足之处，javabean模式阻止了把类做成不可变的可能，这就需要程序员付出额外的努力来确保他的线程安全； build模式 既能保证像重叠构造器那样的安全，也能实现JavaBean模式那样的可读性。 </p>
+<p>使用build模式的步骤：<br>(1)不直接生成想要的对象，而是让客户端利用所有必要的参数调用构造器（或者静态工厂），得到一个build对象。<br>(2)然后让客户端在build对象上调用类似的setter方法来设置每个相关的可选参数，<br>(3)最后，客户端调用无参的build方法来生成不可变的对象。这个builder是它构建的静态成员类。</p>
+<p>下面就说一下Builder模式使用,</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> com.dyz.persist.util;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestBuilder</span> </span>&#123;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">int</span> servingSize;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">int</span> servings;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">int</span> calories;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">int</span> fat;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">int</span> sodium;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">int</span> carbohydrate;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getServingSize</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> servingSize;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getServings</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> servings;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getCalories</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> calories;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getFat</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> fat;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getSodium</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> sodium;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getCarbohydrate</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> carbohydrate;</div><div class="line">    &#125;</div><div class="line"></div><div class="line"></div><div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">Builder</span> </span>&#123;</div><div class="line">        <span class="keyword">private</span> <span class="keyword">int</span> servingSize = <span class="number">0</span>;</div><div class="line">        <span class="keyword">private</span> <span class="keyword">int</span> servings = <span class="number">0</span>;</div><div class="line">        <span class="keyword">private</span> <span class="keyword">int</span> calories = <span class="number">0</span>;</div><div class="line">        <span class="keyword">private</span> <span class="keyword">int</span> fat = <span class="number">0</span>;</div><div class="line">        <span class="keyword">private</span> <span class="keyword">int</span> sodium = <span class="number">0</span>;</div><div class="line">        <span class="keyword">private</span> <span class="keyword">int</span> carbohydrate = <span class="number">0</span>;</div><div class="line"></div><div class="line">        <span class="function"><span class="keyword">public</span> <span class="title">Builder</span><span class="params">(<span class="keyword">int</span> servingSize, <span class="keyword">int</span> servings)</span> </span>&#123;</div><div class="line">            <span class="keyword">this</span>.servingSize = servingSize;</div><div class="line">            <span class="keyword">this</span>.servings = servings;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="function"><span class="keyword">public</span> Builder <span class="title">calories</span><span class="params">(<span class="keyword">int</span> val)</span> </span>&#123;</div><div class="line">            calories = val;</div><div class="line">            <span class="keyword">return</span> <span class="keyword">this</span>;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="function"><span class="keyword">public</span> Builder <span class="title">carbohydrate</span><span class="params">(<span class="keyword">int</span> val)</span> </span>&#123;</div><div class="line">            carbohydrate = val;</div><div class="line">            <span class="keyword">return</span> <span class="keyword">this</span>;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="function"><span class="keyword">public</span> Builder <span class="title">fat</span><span class="params">(<span class="keyword">int</span> val)</span> </span>&#123;</div><div class="line">            fat = val;</div><div class="line">            <span class="keyword">return</span> <span class="keyword">this</span>;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="function"><span class="keyword">public</span> Builder <span class="title">sodium</span><span class="params">(<span class="keyword">int</span> val)</span> </span>&#123;</div><div class="line">            sodium = val;</div><div class="line">            <span class="keyword">return</span> <span class="keyword">this</span>;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="function"><span class="keyword">public</span> TestBuilder <span class="title">build</span><span class="params">()</span> </span>&#123;</div><div class="line">            <span class="keyword">return</span> <span class="keyword">new</span> TestBuilder(<span class="keyword">this</span>);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">        <span class="function"><span class="keyword">private</span> <span class="title">TestBuilder</span><span class="params">(Builder builder)</span></span>&#123;</div><div class="line">            servingSize = builder.servingSize;</div><div class="line">            servings = builder.servings;</div><div class="line">            calories = builder.calories;</div><div class="line">            fat = builder.fat;</div><div class="line">            sodium = builder.sodium;</div><div class="line">            carbohydrate = builder.carbohydrate;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">        TestBuilder builder = <span class="keyword">new</span> Builder(<span class="number">240</span>,<span class="number">8</span>)</div><div class="line">		.calories(<span class="number">100</span>).</div><div class="line">		sodium(<span class="number">100</span>).</div><div class="line">		carbohydrate(<span class="number">27</span>).</div><div class="line">		build();</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>可以看出Builder是TestBuilder静态的内部类,并且Builder中的属性和TestBuilder中的属性是一致的,所有的属性都在Builder中,TestBuilder中只有获取属性的方法.<br>使用Builder构造一个TestBuilder对象的写法:<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">TestBuilder builder = <span class="keyword">new</span> Builder(<span class="number">240</span>,<span class="number">8</span>)</div><div class="line">		.calories(<span class="number">100</span>).</div><div class="line">		sodium(<span class="number">100</span>).</div><div class="line">		carbohydrate(<span class="number">27</span>).</div><div class="line">		build();</div></pre></td></tr></table></figure></p>
+<p>采用javaBean 写法的缺点就是， 一但调用 new TestBuilder() 构造函数后，对象就被创建了，以后在调用 set 方法设置属性的时候这里设置一下，其他地方又设置一下，无法保证对象的状态一致性，而且代码的可读性很差</p>
+<p>1.Builder 方式创建的对象，在调用 build() 方法之前是不会创建TestBuilder 对象的，所有的属性设置都必须在 build() 方法之前，而且创建了 TestBuilder 对象后就不可以更改其属性了，这就保证了对象状态的唯一性，而且代码的可读性也提高了。<br>2.如果有些参数是必填的，可以加到 Builder 的构造函数中。</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+  </section>
+
+  
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+  </nav>
+
+
+
+          </div>
+          
+
+
+          
+
+        </div>
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+<div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">wlcaption</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+<span id="busuanzi_container_site_pv">
+    本站总访问量<span id="busuanzi_value_site_pv"></span>次
+</span>
+<span id="busuanzi_container_site_uv">
+  本站访客数<span id="busuanzi_value_site_uv"></span>人次
+</span>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  
+    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

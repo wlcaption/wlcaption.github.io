@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Unity," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="简介随着项目开发到尾期的时候,必要考虑的一个因素就是Sdk, 那就是接入android部分,和ios部分, 作为一个Unity开发来说这些东西你可以不学,你觉得很难,一想到要学Java和Oc好多人都懵了,那几天我就在这里给大家解忧,我将详细写Android和Ios与Unity之间的通信,和互相调用,以最直接的方式来帮助大家,下面我是我写的教程:工具方面我用的是Unity5.6.1f, androi">
+<meta name="keywords" content="Unity">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Unity开发必须掌握的Android知识">
+<meta property="og:url" content="http://holagames.cn/2017/09/06/Unity开发必须掌握的Android知识/index.html">
+<meta property="og:site_name" content="Wlcaption">
+<meta property="og:description" content="简介随着项目开发到尾期的时候,必要考虑的一个因素就是Sdk, 那就是接入android部分,和ios部分, 作为一个Unity开发来说这些东西你可以不学,你觉得很难,一想到要学Java和Oc好多人都懵了,那几天我就在这里给大家解忧,我将详细写Android和Ios与Unity之间的通信,和互相调用,以最直接的方式来帮助大家,下面我是我写的教程:工具方面我用的是Unity5.6.1f, androi">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2463091-32d506b5698d8043.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2463091-1fcf55014efdbb4e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2463091-434bf4a9e8112a35.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2463091-dc0731d5f9e200b7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2463091-9660dac5242dcc9f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2017-09-07T15:49:00.410Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Unity开发必须掌握的Android知识">
+<meta name="twitter:description" content="简介随着项目开发到尾期的时候,必要考虑的一个因素就是Sdk, 那就是接入android部分,和ios部分, 作为一个Unity开发来说这些东西你可以不学,你觉得很难,一想到要学Java和Oc好多人都懵了,那几天我就在这里给大家解忧,我将详细写Android和Ios与Unity之间的通信,和互相调用,以最直接的方式来帮助大家,下面我是我写的教程:工具方面我用的是Unity5.6.1f, androi">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/2463091-32d506b5698d8043.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"right","display":"remove","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://holagames.cn/2017/09/06/Unity开发必须掌握的Android知识/"/>
+
+
+
+
+
+  <title>Unity开发必须掌握的Android知识 | Wlcaption</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Wlcaption</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Java游戏服务器开发和Unity客户端开发</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-resume">
+          <a href="/resume/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            简历
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-categories " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://holagames.cn/2017/09/06/Unity开发必须掌握的Android知识/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="wlcaption">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Wlcaption">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Unity开发必须掌握的Android知识</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-06T09:58:46Z">
+                2017-09-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Unity/" itemprop="url" rel="index">
+                    <span itemprop="name">Unity</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>随着项目开发到尾期的时候,必要考虑的一个因素就是Sdk, 那就是接入android部分,和ios部分, 作为一个Unity开发来说这些东西你可以不学,你觉得很难,一想到要学Java和Oc好多人都懵了,那几天我就在这里给大家解忧,我将详细写Android和Ios与Unity之间的通信,和互相调用,以最直接的方式来帮助大家,下面我是我写的教程:<br>工具方面我用的是Unity5.6.1f, android分两个环境分是Eclipse和Android Stuidio,Xcode使用的版本是8,其实版本不是最重要的思路和方法才是最重要的.随着Unity、cocos2dx等优秀跨平台游戏引擎的出现，开发者可以把自己从繁重的Android、iOS原生台开发中解放出来，把精力放在游戏的创作。原来做一款跨平台的游戏可能需要开发者懂得Java、Objective-C、C#甚至是C、C++，现在借助Unity我们开发者只需要懂得很少的原生应用开发知识就能够打造一款优秀的游戏。可能每个项目组只需要有1-2个人懂Android，iOS开发就够了。但是也正因为如此，很多同事有了充足的理由不去学习、接触Android和iOS的开发，等到真正需要做接入的时候才开始找人找资料，难免会踩坑。基于此，本文的目的就是通过介绍基础的Android开发知识以及部分的实际操作，让大家有一定的Android基础知识储备。又或者是当作一份Unity接入Android SDK/插件的基础教程，只要照着做，就基本上不会错了。<br>本文将会从大家熟悉的Unity为出发点来介绍如何将自己写的或者第三方的Android插件集成到自己的游戏中。</p>
+<ol>
+<li>Unity是怎么打包APK文件的？</li>
+<li>Android开发基础以及导入到Unity</li>
+<li>Unity导出Android项目到Eclipse和AndroidStudio</li>
+<li>Unity导出Xcode项目并且打包成.ipa</li>
+<li>Android和Ios回调的处理</li>
+</ol>
+<h3 id="Unity是怎么打包APK文件的？"><a href="#Unity是怎么打包APK文件的？" class="headerlink" title="Unity是怎么打包APK文件的？"></a>Unity是怎么打包APK文件的？</h3><p>大家看过一些第三方组件的接入文档都知道，在Unity里面有几个特殊的文件夹是跟打包APK有关的。首先我们就来了解一下，这些文件夹里面的内容是经历了哪些操作才被放到APK里面的呢？</p>
+<p>在Unity的Assets目录下，Plugins/Android无疑是其中的重中之重，首先我们先来看一个常见的Plugins/Android目录是什么样子的。</p>
+<p>-android </p>
+<p>–assets</p>
+<p>–libs</p>
+<p>–res</p>
+<p>–AndroidManifest.xml</p>
+<h4 id="接下来我们分别来看看Android打包工具都会做什么样的操作。"><a href="#接下来我们分别来看看Android打包工具都会做什么样的操作。" class="headerlink" title="接下来我们分别来看看Android打包工具都会做什么样的操作。"></a>接下来我们分别来看看Android打包工具都会做什么样的操作。</h4><p>● libs文件夹里面有很多<em>.jar文件，以及被放在固定名字的文件夹里面的</em>.so文件。*.jar文件是Java编译器把.java代码编译后的文件，Android在打包的时候会把项目里面的所有jar文件进行一次合并、压缩、重新编译变成classes.dex文件被放在APK根目录下。当应用被执行的时候Android系统内的Java虚拟机（Dalvik或者Art），会去解读classes.dex里面的字节码并且执行。把众多jar包编译成classes.dex文件是打包Android应用不可或缺的一步。</p>
+<p>看到这里有人可能会想不对啊，这一步只将jar包打成dex文件，那之前的java文件生成jar文件难道不是在这一步做吗？没错，这里用的jar包一般是由其他Android的IDE生成完成后再拷贝过来的。本文后面的部分会涉及到怎么使用Android的IDE并且生成必要的文件。</p>
+<p>● libs文件夹的*.so文件则是可以动态的被Android系统加载的库文件，一般是由C/C++撰写而成然后编译成的二进制文件。要注意的是，由于实际执行这些二进制库的CPU的架构不一样，所以同样的C\C++代码一般会针对不同的CPU架构生成几分不同的文件。这就是为什么libs文件夹里面通常都有armeabi-v7a、armeabi、x86等几个固定的文件夹，而且里面的.so文件也都是有相同的命名方式。Java虚拟机在加载这些动态库的时候会根据当前CPU的架构来选择对应的so文件。有时候这些so文件是可以在不同的CPU架构上执行的，只是在不对应的架构上执行速度会慢一些，所以当追求速度的时候可以给针对每个架构输出对应的so文件，当追求包体大小的时候输出一个armeabi的so文件就可以了,这也是为了安全性着想，毕竟.so库很难被反编译，一些重要的处理函数都会被打成.so库。</p>
+<p>● assets文件夹，这个里面的东西最简单了，在打包APK的时候，这些文件里面的内容会被原封不动的被拷贝到APK根目录下的assets文件夹，一般情况会放置一些不变得配置文件。这个文件夹有几个特性。</p>
+<p>√ 里面的文件基本不会被Android的打包工具修改，应用里面要用的时候可以读出来。<br>√ 打出包以后，这个文件夹是只读的，不能修改。<br>√ 读取这个文件夹里面的内容的时候要通过特定的Android API来读取，参考getAssets()。<br>√ 基于上述两点，在Unity中，要读取这部分内容要通过WWW来进行加载。</p>
+<p>除了Plugins/Android内的所有assets文件夹里面的文件会连同StreamingAssets目录下的文件一起被放到APK根目录下的assets文件夹。</p>
+<p>● res文件夹里面一般放的是xml文件以及一些图片素材文件。xml文件一般来说有以下几种：<br>√ 布局文件，被放在res中以layout开头的文件夹中，文件里描述的一般都是原生界面的布局信息。由于Unity游戏的显示是直接通过GL指令来完成的，所以我们一般不会涉及到这些文件。<br>√ 字符串定义文件，一般被放到values文件夹下，这个里面可以定义一些字符串在里面，方便程序做国际<br>化还有本地化用。当然有时候被放到里面的还有其他xml会引用到的字符串，一般常见的是app的名称。<br>√ 动画文件，一般定义的是Android原生界面元素的动画，对于Unity游戏，我们一般也不会涉及他。<br>√ 图片资源，一般放在以drawable为开头的文件夹内。这些文件夹的后缀一般会根据手机的像素密度来来进行区分，这样我们可以往这些文件夹内放入对应像素密度的图片资源。<br>例如后缀为ldpi的drawable文件夹里面的图片的尺寸一般来说会是整个系列里面最小的，因为这个文件夹的内容会被放到像素密度最低的那些手机上运行。而一般1080p或者2k甚至4k的手机在读取图片的时候会从后缀为xxxxhdpi的文件夹里面去读，这样才可以保证应用内的图像清晰。图片资源在打包过程中会被放到APK的res文件夹内的对应目录。<br>√ Android还有其他一些常见的xml文件，这里就不一一列举了。</p>
+<p>res文件夹下的xml文件在被打包的时候会被转换成一种读取效率更高的一种特殊格式（也是二进制的格式），命名的时候还是以xml为结尾被放到APK包里面的res文件夹下，其目录结构会跟打包之前的目录结构相对应。</p>
+<p>除了转换xml之外，Android的打包工具还会把res文件夹下的资源文件跟代码静态引用到的资源文件的映射给建立起来，放到APK根目录的resources.arsc文件。这一步可以确保安卓应用启动的时候可以加载出正确的界面，是打包Android应用不可或缺的一步。</p>
+<p>● AndroidManifest.xml，这份文件太重要了，这是一份给Android系统读取的指引，在Android系统安装、启动应用的时候，他会首先来读取这个文件的内容，分析出这个应用分别使用了那些基本的元素，以及应该从classes.dex文件内读取哪一段代码来使用又或者是应该往桌面上放哪个图标，这个应用能不能被拿来debug等等。在后面的部分会有详细解释。打包工具在处理Unity项目里面的AndroidManifest文件时会将所有AndroidManifest文件的内容合并到一起，也就是说主项目引用到的库项目里面如果也有AndroidManifest文<br>件，都会被合并到一起。这样就不需要手动复制粘贴。需要说明的是，这份文件在打包Android程序的时候是必不可少的，但是在Unity打包的时候，他会先检查Plugins目录下有没有这份文件，如果没有就会用一个自带的AndroidManifest来代替。此外，Unity还会自动检查项目中AndroidManifest里面的某些信息是不是默认值，如果是的话，会拿Unity项目中的值来进行替换。例如，游戏的App名称以及图标等。</p>
+<p>● project.properties，这份文件一般只有在库项目里面能看得到，里面的内容极少，就只有一句话android.library=true。但是少了这份文件Android的打包工具就不会认为这个文件夹里面是个Android的库项目，从而在打包的时候整个文件夹会被忽略。这有时候不会影响到打包的流程，打包过程中也不会报错，但是打出的APK包缺少资源或者代码，一跑就崩溃。关于这份文件，其实在Unity的官方文档上并没有详细的描述（因为他实际上是Android项目的基础知识），导致很多刚刚接触Unity-Android开发的开发者在这里栽坑。曾<br>经有个很早就开始用Unity做Android游戏的老前辈告诉我要搞定Unity中的Android库依赖的做法是用Eclipse打开Plugins/Android文件夹，把里面的所有的项目依赖处理好就行了。殊不知这样将Unity项目跟Eclipse项目耦合在一起的做法是不太合理的，会造成Unity项目开启的时候缓慢。</p>
+<p>● 其他文件夹例如aidl以及jni在Unity生成APK这一步一般不会涉及到，这里不展开。</p>
+<p>看到了上述介绍的Unity打包APK的基础知识我们知道了往Plugins/Android目录下放什么样的文件会对APK包产生什么样的影响。但是实际上上述的内容只是着重的讲了Unity是怎么打包APK，所以接下来会简述一下打包这个步骤到底是怎么完成的。</p>
+<p>Android提供了一个叫做aapt的工具，这个工具的全称是Android Asset Packaging Tool，这个工具完成了上述大部分的对资源文件处理的工作，而Unity则是通过对Android提供的工具链（Android Build Tools）的一系列调用从而完成打包APK的操作。这里感觉有点像我们写了个bat/bash脚本，这个脚本按照顺序调用Android提供的工具一样。在一些常见的Android IDE里面，这样的“bat/bash脚本”往往是一个完整的构建系统。最早的Android IDE是Eclipse，他的构建系统是Ant，是基于XML配置的构建系统。后来Android团队推出了Android专用的IDE——Android Studio（这个在文章后面会有详述），他的构建系统则是换成了gradle，从基于xml的配置一下子升级到了语言（DSL, Domain Specific Language）的层级，给使用Android Studio的人带来更多的弹性。</p>
+<p>写到这里我想很多人都清楚了要怎么把Android的SDK/插件放到Unity里面并且打包到Unity里面。这时候应该有人会说，光会放这些文件不够啊，我还需要知道自己怎么写Android的代码并且输出相应的SDK/插件给Unity使用啊。</p>
+<p>本文接下来的内容将会一步一步描述怎么写Android代码并且输出库文件给Unity。</p>
+<h4 id="Android开发基础以及导入到Unity"><a href="#Android开发基础以及导入到Unity" class="headerlink" title="Android开发基础以及导入到Unity"></a>Android开发基础以及导入到Unity</h4><p>那就开始我们的第一个Android App,这里我不会讲太多的Android教程，毕竟我们不是Android开发，我们的重点还是Unity开发，那就开始我们的Android基础之旅吧。</p>
+<h5 id="开始你的第一个Android程序"><a href="#开始你的第一个Android程序" class="headerlink" title="开始你的第一个Android程序"></a>开始你的第一个Android程序</h5><p>安装好Android studio，设置好我们的Jdk,下载好Android Sdk，Gradle最好自己从官网下载，自己配置，这里具体配置我就不说了，直接百度可以很快的配置好，只要在控制台输入：gradle -v,有提示信息就说明你配置正确了，如果提示不是命令行，那是环境变量的配置，配置好之后再测试。那我们开始创建一个新的Android项目。<br>在接下来弹出的界面里面输入应用名称，公司域名（这个其实不怎么重要）以包名（Package Name），其中我认为最重要的是包名，毕竟看一个应用的包名可以看得出一个开发者的逼格如何。。。<br><img src="http://upload-images.jianshu.io/upload_images/2463091-32d506b5698d8043.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="1.png"></p>
+<p>接下来选择要开发什么类型的App，这里勾上Phone and Tablet就可以了。SDK的选择一般来说根据项目的需要，最低一般不低于API 9: Android 2.3(Gingerbread)，这也是Unity能接受的最低SDK。如果有些插件不能运行在这么低的Android SDK环境下的话可以酌情考虑提升到API 15: Android 4.3(IceCreamSandwich)，这个等级的API一般也是可以兼容绝大多数近3-4年的机器。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2463091-1fcf55014efdbb4e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="2.png"></p>
+<p>因为我们要输出的内容是给Unity用的，这里可以先选择不带有Activity（就是承载游戏画面的基础部件），后续用到再说。<br><img src="http://upload-images.jianshu.io/upload_images/2463091-434bf4a9e8112a35.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="3.png"></p>
+<p>点击OK以后Android Studio就会开始初始化当前的这个Android项目。初始化会需要一段时间，因为AndroidStudio有可能会去下载一些必要的框架或者更新Android工具的版本。初始化完成以后到左边按照图里面的步骤点开就可以看到整个项目目录树的情况。<br><img src="http://upload-images.jianshu.io/upload_images/2463091-dc0731d5f9e200b7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="2.png"></p>
+<p>通过上图我们可以知道，一个Android Studio的项目（Project）可以由许多小的模块（Module）组成，这些模块可以是带有Activity的应用类模块，也可以是不带有Activity的库模块等等。这些小的模块之间可以有引用关系。我们可以把一些完成基础功能或者容易被复用的模块单独拆出来。</p>
+<p>如果要新建一个模块我们可以在上图的列表中点右键选择New Module，在弹出的界面中我们可以选择要新建什么样的模块，或者从Eclipse导入旧的项目也可以。一般来说给Unity游戏开发插件最常用的就是库模块（AndroidLibrary）。同样的，在接下来弹出的窗口中填写好模块名称、包名以及最低运行的SDK。</p>
+<p>● libs目录跟本文第一部分介绍的libs目录的功用是一样的，把依赖到的库放在这里面就可以了。<br>● src/main/res目录也是跟本文第一部分介绍的res目录的功能和结构是一样的，把对应资源放进去就可以了。<br>● 接下来是java代码所在的目录src/main/java，这个目录有点特殊，他的子路径跟java文件里面定义的包名（package name）要对应的上。<br>● AndroidManifest.xml也是跟第一部分介绍的AndroidManifest的功能是一样的。<br>● build文件夹是Android Studio动态生成的，打出的APK包（应用模块）或者AAR包（库模块）会被放到这里面的output文件夹。需要注意的是这个文件夹不应该被放提交到svn里面，要不然会造成项目成员之间的冲突，切记。<br>● src/test以及src/androidTest是做单元测试用的，本文不涉及。</p>
+<p>至此，我们就可以开始动手写代码了，这里我们写一个可以弹出Android的Toast提示的Activity来替换掉Unity默认的Activity。</p>
+<p>简述一下Unity跟Activity的关系：在Android系统中，打开一个应用，就是开启该应用指定的启动Activity。<br>Unity里面有个默认的Activity，他的作用就是在系统启动应用的时候加载Unity的Player，这个Player就是就相当于是Unity应用的“播放器”，他会执行我们在Unity项目中创作的内容，并且通过GL指令渲染到指定的SurfaceView中，而SurfaceView则是被置于Activity里面的一个特殊的View。</p>
+<p>创建完成之后我们打开MainActivity这就是我们Android要运行的主Activity，里面的内容如下:<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MainActivity</span> <span class="keyword">extends</span> <span class="title">Activity</span> </span>&#123;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">(Bundle savedInstanceState)</span> </span>&#123;</div><div class="line">    <span class="keyword">super</span>.onCreate(savedInstanceState);</div><div class="line">&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>需要注意的是这只是一个最基础的Android Activity，他还不会去加载我们的Unity出来，所以我们要让他继承自Unity的Activity而不是默认的。为此，我们要先将Unity相应的jar包引入到我们的模块当中。首先找到Unity的安装目录，然后找到以下子目录Editor\Data\PlaybackEngines\AndroidPlayer\Variations\il2cpp\Release\Classes\里<br>面的classes.jar，这个就是被打包成jar包的Unity默认的Activity。我们把这个jar包复制到当前模块的libs目录下（可以把这个jar包改成你想要的名字，便于管理）。（这个jar包的源码在Editor\Data\PlaybackEngines\AndroidPlayer\Source\com\unity3d\player这个目录下。感兴趣的同学可以翻阅一下源码，就可以理解Unity播放器的加载机制。）</p>
+<p>接下来，我们可以在Android Studio左边的Project View中找到当前的模块以后点击右键，选择“Open ModuleSetting”或者直接按F4。在弹出的窗口中我们选到最右边的页签“Dependencies”，然后选择右边绿色的加号-JarDependency。</p>
+<p>从项目的libs文件夹中找到刚刚导入的jar包，点击OK即可。接下来有一个比较关键的步骤就是，我们改变这个jar包的scope属性，因为默认的scope属性（Compile）是会将该jar包里面的内容跟本模块里面Java代码合并到一起。这在之后Unity打包这个模块的jar包的时候会报错，因为Unity里面内置了刚刚这个jar包。所以我们可以参考下图把这个jar包的scope设置成provided。</p>
+<p>搞定了这步骤以后我们就可以回到刚刚新创建出来的Activity把他的父类改成UnityPlayerActivity，同时别忘记引用一下相应的package，改完之后的代码是这样的：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MainActivity</span> <span class="keyword">extends</span> <span class="title">UnityPlayerActivity</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">(Bundle savedInstanceState)</span> </span>&#123;</div><div class="line">        <span class="keyword">super</span>.onCreate(savedInstanceState);</div><div class="line">    &#125;</div><div class="line">    &#125;</div></pre></td></tr></table></figure></p>
+<p>到这一步，如果我们的Activity如果能被运行的话，他应该能够借助他的父类UnityPlayerActivity里面的代码来运行Unity。接下来，我们添加几个方法，分别是：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Override</span></div><div class="line">   <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onRestart</span><span class="params">()</span> </span>&#123;</div><div class="line">       <span class="keyword">super</span>.onRestart();</div><div class="line">   &#125;</div><div class="line"></div><div class="line">   <span class="meta">@Override</span></div><div class="line">   <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onResume</span><span class="params">()</span> </span>&#123;</div><div class="line">       <span class="keyword">super</span>.onResume();</div><div class="line">   &#125;</div><div class="line"></div><div class="line">   <span class="meta">@Override</span></div><div class="line">   <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onPause</span><span class="params">()</span> </span>&#123;</div><div class="line">       <span class="keyword">super</span>.onPause();</div><div class="line">   &#125;</div><div class="line"></div><div class="line">   <span class="meta">@Override</span></div><div class="line">   <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onStop</span><span class="params">()</span> </span>&#123;</div><div class="line">       <span class="keyword">super</span>.onStop();</div><div class="line"></div><div class="line">   &#125;</div><div class="line"></div><div class="line">   <span class="meta">@Override</span></div><div class="line">   <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onDestroy</span><span class="params">()</span> </span>&#123;</div><div class="line">       <span class="keyword">super</span>.onDestroy();</div><div class="line">   &#125;</div><div class="line"></div><div class="line">   <span class="meta">@Override</span></div><div class="line">   <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onActivityResult</span><span class="params">(<span class="keyword">int</span> requestCode, <span class="keyword">int</span> resultCode, Intent data)</span> </span>&#123;</div><div class="line">       <span class="keyword">super</span>.onActivityResult(requestCode, resultCode, data);</div><div class="line">   &#125;</div><div class="line"></div><div class="line">   <span class="meta">@Override</span></div><div class="line">   <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onNewIntent</span><span class="params">(Intent intent)</span> </span>&#123;</div><div class="line">       <span class="keyword">super</span>.onNewIntent(intent);</div><div class="line">   &#125;</div><div class="line"></div><div class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">HolaSdkInit</span><span class="params">(String appid, String appkey, String privateKey,String oauthLoginServer)</span></span></div><div class="line"><span class="function">   </span>&#123;</div><div class="line">       String msg = <span class="string">"init"</span>;</div><div class="line">       <span class="keyword">if</span>(msg!=<span class="keyword">null</span>)&#123;</div><div class="line">           MessageHandle.resultCallBack(Util.User,UserWrapper.InitSuccess,<span class="string">"success"</span>);</div><div class="line">       &#125;<span class="keyword">else</span> &#123;</div><div class="line">           MessageHandle.resultCallBack(Util.User,UserWrapper.InitFalied,<span class="string">"failed"</span>);</div><div class="line">       &#125;</div><div class="line">   &#125;</div><div class="line"></div><div class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">Login</span><span class="params">(String p)</span> </span>&#123;</div><div class="line">       String username = <span class="string">"wlcaption"</span>;</div><div class="line">       String password = <span class="string">"835114930"</span>;</div><div class="line">       <span class="comment">//加入网络请求</span></div><div class="line">      ReqTask reqTask = <span class="keyword">new</span> ReqTask(<span class="keyword">new</span> ReqTask.Delegate() &#123;</div><div class="line">          <span class="meta">@Override</span></div><div class="line">          <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">execute</span><span class="params">(String result)</span> </span>&#123;<span class="comment">//result 是服务器返回的值</span></div><div class="line">              <span class="keyword">if</span>(result!=<span class="keyword">null</span>)&#123;</div><div class="line">                  MessageHandle.resultCallBack(Util.User,UserWrapper.LoginSuccess,<span class="string">"success"</span>);</div><div class="line">              &#125;<span class="keyword">else</span> &#123;</div><div class="line">                  MessageHandle.resultCallBack(Util.User,UserWrapper.LoginFailed,<span class="string">"failed"</span>);</div><div class="line">              &#125;</div><div class="line">          &#125;</div><div class="line">      &#125;,<span class="string">"username="</span>+username+<span class="string">"&amp;password"</span>+password,<span class="string">"http://hzmj.holagames.cn/myphp/login.php"</span>);<span class="comment">//给服务器传两个字段</span></div><div class="line">       reqTask.execute();</div><div class="line"></div><div class="line"></div><div class="line">   &#125;</div><div class="line"></div><div class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">Pay</span><span class="params">(String payResult)</span></span>&#123;</div><div class="line">       String msg = <span class="string">"pay"</span>;</div><div class="line">       <span class="keyword">if</span>(msg!=<span class="keyword">null</span>)&#123;</div><div class="line">           MessageHandle.resultCallBack(Util.User,UserWrapper.PaySuccess,<span class="string">"success"</span>);</div><div class="line">       &#125;<span class="keyword">else</span> &#123;</div><div class="line">           MessageHandle.resultCallBack(Util.User,UserWrapper.PayFailed,<span class="string">"failed"</span>);</div><div class="line">       &#125;</div><div class="line">   &#125;</div><div class="line"></div><div class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">Logout</span><span class="params">()</span></span></div><div class="line"><span class="function">   </span>&#123;</div><div class="line">       String msg = <span class="string">"logout"</span>;</div><div class="line">       <span class="keyword">if</span>(msg!=<span class="keyword">null</span>)&#123;</div><div class="line">           MessageHandle.resultCallBack(Util.User,UserWrapper.LogoutSuccess,<span class="string">"success"</span>);</div><div class="line">       &#125;<span class="keyword">else</span> &#123;</div><div class="line">           MessageHandle.resultCallBack(Util.User,UserWrapper.LogoutFailed,<span class="string">"failed"</span>);</div><div class="line">       &#125;</div><div class="line">   &#125;</div><div class="line"></div><div class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">CheckBill</span><span class="params">(String userip)</span></span></div><div class="line"><span class="function">   </span>&#123;</div><div class="line">       String msg = <span class="string">"checkBill"</span>;</div><div class="line">       <span class="keyword">if</span>(msg!=<span class="keyword">null</span>)&#123;</div><div class="line">           MessageHandle.resultCallBack(Util.User,UserWrapper.InitSuccess,<span class="string">"success"</span>);</div><div class="line">       &#125;<span class="keyword">else</span> &#123;</div><div class="line">           MessageHandle.resultCallBack(Util.User,UserWrapper.InitFalied,<span class="string">"failed"</span>);</div><div class="line">       &#125;</div><div class="line">   &#125;</div></pre></td></tr></table></figure></p>
+<p>这四个方法是Sdk必不可少的方法，我会在分别实现这四个方法，然后打成Jar包。导入到Unity中去,看得出来，里面最核心的一个方法其实就只是调用Android里面的Toast组件而已，没啥好解释的。相反，是外面的runOnUiThread是值得大家注意的，在Android编程中，所有涉及到对UI的操作必须要放在UI线程里面来做，否则会造成其他线程修改UI线程里面的数据然后崩溃。由于我们写的这四个个方法最后会被Unity那边调用，而来自Unity的调用可能不是UI线程，所以我们要给他做适当的保护。</p>
+<p>在Android中有很多种调度方法可以把某段代码放到UI线程里面来跑。上面这段代码的runOnUiThread的写法是最简便的一种写法。如果遇到比较复杂的逻辑可以考虑使用Messenger或者Handle来调度线程，感兴趣的同学可以上网查一下。</p>
+<h4 id="Android导出Jar"><a href="#Android导出Jar" class="headerlink" title="Android导出Jar"></a>Android导出Jar</h4><p>在该模块的build.gradle添加如下代码:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">task deleteOldJar(type: Delete) &#123;</div><div class="line">    delete &apos;build/outputs/test.jar&apos;</div><div class="line">&#125;</div><div class="line"></div><div class="line">task exportJar(type: Copy) &#123;</div><div class="line">    from(&apos;build/intermediates/bundles/release/&apos;)</div><div class="line">    into(&apos;build/libs/&apos;)</div><div class="line">    include(&apos;classes.jar&apos;)</div><div class="line">    rename (&apos;classes.jar&apos;, &apos;test.jar&apos;)</div><div class="line">&#125;</div><div class="line"></div><div class="line">exportJar.dependsOn(deleteOldJar, build)</div></pre></td></tr></table></figure></p>
+<p>然后在控制台执行: gradlew exportJar<br>第一次执行会花费一点时间，第一次嘛难免会加载很多东西，第二次就很快乐，等我们看BUILD　SUCCESSFUL就说明你已经成功打出jar包，是不是很激动。</p>
+<h4 id="导入到Unity并且编译"><a href="#导入到Unity并且编译" class="headerlink" title="导入到Unity并且编译"></a>导入到Unity并且编译</h4><p>完成Activity的代码编写之后就可以输出这个模块到Unity项目中去。在Android Studio中选择Build - Make Project或者是在左边的项目视图中选中要导出的模块然后选择Build - Make Module。选择完了之后就可以看到下面有个Gradle的进度条，待进度条完成了以后我们就可以到该模块的build/outputs/aar目录下去找输出的文件。打开这个文件夹，可以看到有个*.aar的文件。这个就是该模块所编译出来的结果，如果你用解压缩软件去解压缩它，你会发现他几乎就是一个完整的Android工程。根据本文第一部分所说的内容，我们只要在Unity工程中的Plugins/Android目录下新建一个文件夹，然后把这个文件解压缩以后整个丢进去，再手写一个名字叫project.properties，内容是android.library=true的文件放到新建的文件夹里面就可以了。</p>
+<p>胜利在望，我们接下来只要把Unity工程里面的AndroidManifest.xml文件的入口Activity从Unity默认的的改成我们刚刚写的这个就可以了。需要注意的是，如果是旧的Unity工程，可能已经有人写过相关的AndroidManifest文件放在了Plugins/Android目录下，但是如果是全新的Unity项目的话，就没有这份文件了。在打包的时候，如果Unity发现Plugins/Android目录下没有这份文件，他会复制一份默认的文件并且修改其中跟项目有关的内容。这里我们可以从Unity的安装目录的Editor\Data\PlaybackEngines\AndroidPlayer\Apk文件夹内找到AndroidManifest.xml这份文件，把它复制一份到Unity工程的Plugins/Android目录下。接下来就是修改里面的内容。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</div><div class="line">&lt;manifest xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;</div><div class="line">    package=&quot;sdk.holagames.com.mywarsdkforandroid&quot;</div><div class="line">    android:versionCode=&quot;1&quot;</div><div class="line">    android:versionName=&quot;1.0&quot; &gt;</div><div class="line"></div><div class="line">  &lt;uses-permission android:name=&quot;android.permission.INTERNET&quot; /&gt;</div><div class="line">  &lt;uses-permission android:name=&quot;android.permission.ACCESS_NETWORK_STATE&quot; /&gt;</div><div class="line">  &lt;uses-permission android:name=&quot;android.permission.ACCESS_WIFI_STATE&quot; /&gt;</div><div class="line">  &lt;uses-permission android:name=&quot;android.permission.READ_PHONE_STATE&quot; /&gt;</div><div class="line">  &lt;uses-permission android:name=&quot;android.permission.WRITE_EXTERNAL_STORAGE&quot; /&gt;</div><div class="line"></div><div class="line"></div><div class="line">  &lt;uses-sdk</div><div class="line">      android:minSdkVersion=&quot;15&quot;</div><div class="line">      android:targetSdkVersion=&quot;25&quot; /&gt;</div><div class="line"></div><div class="line">  &lt;application</div><div class="line">       android:allowBackup=&quot;true&quot;&gt;</div><div class="line">    &lt;activity</div><div class="line">        android:name=&quot;sdk.holagames.com.mywarsdkforandroid.MainActivity&quot;</div><div class="line">        android:configChanges=&quot;orientation|keyboardHidden|screenSize&quot;</div><div class="line">        android:screenOrientation=&quot;landscape&quot;</div><div class="line">        &gt;</div><div class="line">      &lt;intent-filter&gt;</div><div class="line">        &lt;action android:name=&quot;android.intent.action.MAIN&quot; /&gt;</div><div class="line"></div><div class="line">        &lt;category android:name=&quot;android.intent.category.LAUNCHER&quot; /&gt;</div><div class="line">      &lt;/intent-filter&gt;</div><div class="line">      &lt;meta-data android:name=&quot;unityplayer.UnityActivity&quot; android:value=&quot;true&quot; /&gt;</div><div class="line">      &lt;meta-data android:name=&quot;unityplayer.ForwardNativeEventsToDalvik&quot; android:value=&quot;false&quot; /&gt;</div><div class="line">    &lt;/activity&gt;</div><div class="line"></div><div class="line">  &lt;/application&gt;</div><div class="line"></div><div class="line">&lt;/manifest&gt;</div></pre></td></tr></table></figure></p>
+<p>● package=”com.example.wei.myapplication”这里的内容如果放着不动，打包的时候Unity会将其修改为Player Setting的Bundle Identifier。<br>● android:versionCode以及android:versionName这两部分的内容则在打包时会根据Player Setting里面的Version以及Bundle Version Code的内容来进行修改。<br>● android:icon以及android:label这两个对应的是应用的图标以及应用名称。如果不改的话，Unity也会自动根据Player Setting里面的内容来进行修改。<br>● android:debuggable=”true”这个在打包的时候Unity也会自动根据Build Setting里面的Development Build选项自动进行修改。<br>● activity里面的android:name，这个name只的是该activity需要运行的哪个Java的Activity的类。如果不修改，加载的就是Unity默认Activity的类。这篇文章需要把默认的Activity改成刚刚我们的实现，所以，我们把刚刚写好的那个Activity的完整名称写上去（包括包名还有类名）。<br>● activity里面的android:label，这个是在桌面上图标下面写的那一行文字，也是应用的名称。不修改的话Unity会帮你维护。<br>● meta-data的这一行的name值是key，value值就是这个key对应的内容。meta-data可以根据需要自定义多个，但是key值不能重复，上面代码里面的unityplayer.UnityActivity应该是写给Unity看的，让Unity知道他自己是运行在这个Activity上。</p>
+<p>这里我们基本上只要修改activity里面的android:name这一项。修改完成后，我们就可以通过Unity自带Build功能来出Android包了。出包之前请检查一下Player Setting里面的Bundle Identifier，不能留默认的包名在这里，会造成编译失败。编译过程中，可能会出现一些错误，下面罗列几个常见的错误，可以尝试解决：</p>
+<ol>
+<li>合并Manifest文件出错，一般来说是在合并所有的AndroidManifest文件的时候出的错，常见的有重复定义了activity、里面的最低sdk写错了。模块的最低sdk不可低于项目的最低sdk。</li>
+<li>jar文件dex错误，当你的项目中不小心存在了一个以上的相同的jar文件，就会出这个错误，把重复的删掉，只留一个就好了。</li>
+<li>找不到Android SDK里面的工具，这个一般来讲是Unity自己的bug，Unity一般不能兼容最新的Android SDK的工具，所以要手动降级才行。</li>
+</ol>
+<p>除了上述这些之外，在打包Android项目的过程中还会出现这些那些的错误，大家看到以后不要慌张，会报错总是好的，而且一般的错误你把错误信息贴在万能的Google上，都能找到解决方案。</p>
+<h5 id="Unity对Android代码的调用"><a href="#Unity对Android代码的调用" class="headerlink" title="Unity对Android代码的调用"></a>Unity对Android代码的调用</h5><p>文章到这里为止，说清楚了怎么把Android这边写成的插件打包到Unity的项目中去。但其实并没有涉及到Unity中怎么调用刚刚写好在Android的Activity中的代码。这一部对于一个Unity开发来说其实非常简单，只要以Unity提供的AndroidJavaClass还有AndroidJavaObject来做为中介就可以在Unity和Java中互传数据。这两个类的调用给人一种通过反射来调用Java代码的感觉。只要你能通过包名和类名拿到某个Java对象，就可以直接通过成员变量名称或者方法名称直接调用到Java那边的代码。举个例子，假如要在Unity中调用刚刚我们写的那个类的的几个方法类的话我们需要在Unity中准备以下代码。<br>先写个单例来定义这个方法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div><div class="line">168</div><div class="line">169</div><div class="line">170</div><div class="line">171</div><div class="line">172</div><div class="line">173</div><div class="line">174</div><div class="line">175</div><div class="line">176</div><div class="line">177</div><div class="line">178</div><div class="line">179</div><div class="line">180</div><div class="line">181</div><div class="line">182</div><div class="line">183</div><div class="line">184</div><div class="line">185</div><div class="line">186</div><div class="line">187</div><div class="line">188</div><div class="line">189</div><div class="line">190</div><div class="line">191</div><div class="line">192</div><div class="line">193</div><div class="line">194</div><div class="line">195</div><div class="line">196</div><div class="line">197</div><div class="line">198</div><div class="line">199</div><div class="line">200</div><div class="line">201</div><div class="line">202</div><div class="line">203</div><div class="line">204</div><div class="line">205</div><div class="line">206</div><div class="line">207</div><div class="line">208</div><div class="line">209</div><div class="line">210</div><div class="line">211</div><div class="line">212</div><div class="line">213</div><div class="line">214</div><div class="line">215</div><div class="line">216</div><div class="line">217</div><div class="line">218</div><div class="line">219</div><div class="line">220</div><div class="line">221</div><div class="line">222</div><div class="line">223</div><div class="line">224</div><div class="line">225</div><div class="line">226</div><div class="line">227</div><div class="line">228</div><div class="line">229</div><div class="line">230</div><div class="line">231</div><div class="line">232</div><div class="line">233</div><div class="line">234</div><div class="line">235</div><div class="line">236</div><div class="line">237</div><div class="line">238</div><div class="line">239</div><div class="line">240</div><div class="line">241</div><div class="line">242</div><div class="line">243</div><div class="line">244</div><div class="line">245</div><div class="line">246</div><div class="line">247</div><div class="line">248</div><div class="line">249</div><div class="line">250</div><div class="line">251</div><div class="line">252</div><div class="line">253</div><div class="line">254</div><div class="line">255</div><div class="line">256</div><div class="line">257</div><div class="line">258</div><div class="line">259</div><div class="line">260</div><div class="line">261</div><div class="line">262</div><div class="line">263</div><div class="line">264</div><div class="line">265</div><div class="line">266</div><div class="line">267</div><div class="line">268</div><div class="line">269</div><div class="line">270</div><div class="line">271</div><div class="line">272</div><div class="line">273</div><div class="line">274</div><div class="line">275</div><div class="line">276</div><div class="line">277</div><div class="line">278</div><div class="line">279</div><div class="line">280</div><div class="line">281</div><div class="line">282</div><div class="line">283</div><div class="line">284</div><div class="line">285</div><div class="line">286</div><div class="line">287</div><div class="line">288</div><div class="line">289</div><div class="line">290</div><div class="line">291</div><div class="line">292</div><div class="line">293</div><div class="line">294</div><div class="line">295</div><div class="line">296</div><div class="line">297</div><div class="line">298</div><div class="line">299</div><div class="line">300</div><div class="line">301</div><div class="line">302</div><div class="line">303</div><div class="line">304</div><div class="line">305</div><div class="line">306</div><div class="line">307</div><div class="line">308</div><div class="line">309</div><div class="line">310</div><div class="line">311</div><div class="line">312</div><div class="line">313</div><div class="line">314</div><div class="line">315</div><div class="line">316</div><div class="line">317</div><div class="line">318</div><div class="line">319</div><div class="line">320</div><div class="line">321</div><div class="line">322</div><div class="line">323</div><div class="line">324</div><div class="line">325</div><div class="line">326</div><div class="line">327</div><div class="line">328</div><div class="line">329</div><div class="line">330</div><div class="line">331</div><div class="line">332</div><div class="line">333</div><div class="line">334</div><div class="line">335</div><div class="line">336</div><div class="line">337</div><div class="line">338</div><div class="line">339</div><div class="line">340</div><div class="line">341</div><div class="line">342</div><div class="line">343</div><div class="line">344</div><div class="line">345</div><div class="line">346</div><div class="line">347</div></pre></td><td class="code"><pre><div class="line">using UnityEngine;</div><div class="line">using System.Collections;</div><div class="line">using System.Collections.Generic;</div><div class="line">using System.Text.RegularExpressions;</div><div class="line">using System.Text;</div><div class="line">using System.Runtime.InteropServices;</div><div class="line"></div><div class="line">namespace Holagames</div><div class="line">&#123;</div><div class="line">    public enum HolagamesSDKType</div><div class="line">    &#123;</div><div class="line">        Analytics = 1,</div><div class="line">        Share = 2,</div><div class="line">        Social = 4,</div><div class="line">        IAP = 8,</div><div class="line">        Ads = 16,</div><div class="line">        User = 32,</div><div class="line">        Push = 64,</div><div class="line">    &#125;;</div><div class="line"></div><div class="line">    public enum UserWrapper</div><div class="line">    &#123;</div><div class="line">        ExitByGame = 0,</div><div class="line">        ExitBySdk = 1,</div><div class="line"></div><div class="line">        InitSuccess = 100,</div><div class="line">        InitFalied = 101,</div><div class="line"></div><div class="line">        LoginSuccess = 200,</div><div class="line">        LoginFailed = 201,</div><div class="line">        LoginCancel = 202,</div><div class="line">        Logining = 203,</div><div class="line">        LoginSwitch = 204,</div><div class="line"></div><div class="line">        LogoutSuccess = 300,</div><div class="line">        LogoutFailed = 301,</div><div class="line">        notLogin = 302,</div><div class="line">        GameContinue = 351,</div><div class="line">        GameExit = 352,</div><div class="line"></div><div class="line">        PaySuccess = 400,</div><div class="line">        PayFailed = 401,</div><div class="line">        PayCancel = 402,</div><div class="line">        PayCheck = 403,</div><div class="line"></div><div class="line">    &#125;;</div><div class="line"></div><div class="line">    public class HolagamesSDK</div><div class="line">    &#123;</div><div class="line">#if UNITY_IPHONE</div><div class="line"></div><div class="line">        /*[DllImport(&quot;__Internal&quot;)]</div><div class="line">        private static extern void _registerActionResultCallback(int type, string gameObject,string func);</div><div class="line"></div><div class="line">        [DllImport(&quot;__Internal&quot;)]</div><div class="line">        private static extern void _LogOut();</div><div class="line"></div><div class="line">        [DllImport(&quot;__Internal&quot;)]</div><div class="line">        private static extern void _entryaGameCenter();</div><div class="line">        </div><div class="line">        [DllImport(&quot;__Internal&quot;)]</div><div class="line">        private static extern void _Login();</div><div class="line"></div><div class="line">        [DllImport(&quot;__Internal&quot;)]</div><div class="line">        private static extern void _Init();</div><div class="line">        </div><div class="line">        [DllImport(&quot;__Internal&quot;)]</div><div class="line">        private static extern string _getUserID();</div><div class="line">                </div><div class="line">        [DllImport(&quot;__Internal&quot;)]</div><div class="line">        private static extern void _hideToolBar();</div><div class="line"></div><div class="line">        [DllImport(&quot;__Internal&quot;)]</div><div class="line">        private static extern void _showToolBar();</div><div class="line"></div><div class="line"></div><div class="line">          [DllImport(&quot;__Internal&quot;)]</div><div class="line">        private static extern void _pay(string msg);*/</div><div class="line"></div><div class="line"></div><div class="line">#endif</div><div class="line"></div><div class="line">        private static HolagamesSDK _instance;</div><div class="line">        public static HolagamesSDK instance;</div><div class="line"></div><div class="line"></div><div class="line">        public static HolagamesSDK getInstance()</div><div class="line">        &#123;</div><div class="line">            if (null == _instance)</div><div class="line">            &#123;</div><div class="line">                _instance = new HolagamesSDK();</div><div class="line">            &#125;</div><div class="line">            return _instance;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        public HolagamesSDK()</div><div class="line">        &#123;</div><div class="line">#if UNITY_ANDROID</div><div class="line">            jc = new AndroidJavaClass(&quot;com.unity3d.player.UnityPlayer&quot;);</div><div class="line">            jo = jc.GetStatic&lt;AndroidJavaObject&gt;(&quot;currentActivity&quot;);</div><div class="line">#endif</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        /// &lt;summary&gt;</div><div class="line">        /// sdk初始化</div><div class="line">        /// &lt;/summary&gt;</div><div class="line">        /// &lt;param name=&quot;appid&quot;&gt;&lt;/param&gt;</div><div class="line">        /// &lt;param name=&quot;appkey&quot;&gt;&lt;/param&gt;</div><div class="line">        public void init(string appid, string appkey, string privateKey, string oauthLoginServer)</div><div class="line">        &#123;</div><div class="line">#if UNITY_ANDROID</div><div class="line">            Debug.Log(&quot;UNITY_ANDROID===HolaSdkInit!!&quot;);</div><div class="line">            jo.Call(&quot;HolaSdkInit&quot;, appid, appkey, privateKey, oauthLoginServer);</div><div class="line">#elif UNITY_IPHONE</div><div class="line">            //_Init();</div><div class="line">#endif</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        // 登录</div><div class="line">        public void Login(string LoginString)</div><div class="line">        &#123;</div><div class="line">#if UNITY_ANDROID</div><div class="line">            Debug.Log(&quot;UNITY_ANDROID===HolaSdk==Login!!&quot;);</div><div class="line">            jo.Call(&quot;Login&quot;, LoginString);</div><div class="line">#endif</div><div class="line"></div><div class="line">#if UNITY_IPHONE</div><div class="line">            // _Login();</div><div class="line">#endif</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        // 注销</div><div class="line">        public void Logout()</div><div class="line">        &#123;</div><div class="line">#if UNITY_ANDROID</div><div class="line">            jo.Call(&quot;Logout&quot;);</div><div class="line">#endif</div><div class="line">#if UNITY_IPHONE</div><div class="line"></div><div class="line">            //_LogOut();</div><div class="line">#endif</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        // 切换帐号</div><div class="line">        public void SwitchLogin()</div><div class="line">        &#123;</div><div class="line">#if UNITY_ANDROID</div><div class="line">            jo.Call(&quot;SwitchLogin&quot;);</div><div class="line">#endif</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        // 当前登陆状态</div><div class="line">        public bool isLogin()</div><div class="line">        &#123;</div><div class="line">#if UNITY_ANDROID</div><div class="line">            return jo.Call&lt;bool&gt;(&quot;isLogin&quot;);</div><div class="line">#else</div><div class="line">            return false;</div><div class="line">#endif</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        // 隐藏悬浮窗</div><div class="line">        public void hideToolBar()</div><div class="line">        &#123;</div><div class="line">#if UNITY_ANDROID</div><div class="line">            Debug.Log(&quot;hideToolBar&quot;);</div><div class="line">            jo.Call(&quot;hideToolBar&quot;);</div><div class="line">#endif</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        // 显示悬浮窗</div><div class="line">        public void showToolBar()</div><div class="line">        &#123;</div><div class="line">#if UNITY_ANDROID</div><div class="line">            Debug.Log(&quot;showToolBar&quot;);</div><div class="line">            jo.Call(&quot;showToolBar&quot;);</div><div class="line">#endif</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        // 进入用户中心</div><div class="line">        public void entryGameCenter()</div><div class="line">        &#123;</div><div class="line">#if UNITY_ANDROID</div><div class="line">            Debug.Log(&quot;entryGameCenter&quot;);</div><div class="line">            jo.Call(&quot;entryGameCenter&quot;);</div><div class="line">#endif</div><div class="line"></div><div class="line">#if UNITY_IPHONE</div><div class="line">            //_entryaGameCenter();</div><div class="line">#endif</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        public void ExitSDK()</div><div class="line">        &#123;</div><div class="line">#if UNITY_ANDROID</div><div class="line">            jo.Call(&quot;Logout&quot;);</div><div class="line">#endif</div><div class="line">        &#125;</div><div class="line"></div><div class="line"></div><div class="line">        // 支付</div><div class="line">        public void Pay(string msg)</div><div class="line">        &#123;</div><div class="line">#if UNITY_ANDROID</div><div class="line">            Debug.Log(&quot;andriod pay=&quot; + msg);</div><div class="line">            jo.Call(&quot;Pay&quot;, msg);</div><div class="line">#elif UNITY_IPHONE</div><div class="line">            //_pay(msg);</div><div class="line">#endif</div><div class="line">        &#125;</div><div class="line"></div><div class="line"></div><div class="line">        // 支付</div><div class="line">        public void CheckBill(string msg)</div><div class="line">        &#123;</div><div class="line">#if UNITY_ANDROID</div><div class="line">            Debug.Log(&quot;andriod CheckBill=&quot; + msg);</div><div class="line">            jo.Call(&quot;CheckBill&quot;, msg);</div><div class="line">#elif UNITY_IPHONE</div><div class="line">            //_pay(msg);</div><div class="line">#endif</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        /// &lt;summary&gt;</div><div class="line">        /// 获取用户ID</div><div class="line">        /// &lt;/summary&gt;</div><div class="line">        /// &lt;returns&gt;&lt;/returns&gt;</div><div class="line">        public string getUserID()</div><div class="line">        &#123;</div><div class="line">#if UNITY_ANDROID</div><div class="line">            return jo.Call&lt;string&gt;(&quot;getUserID&quot;);</div><div class="line">#elif UNITY_IPHONE</div><div class="line">            return &quot;&quot;;//_getUserID();</div><div class="line">#else</div><div class="line">            return string.Empty;</div><div class="line">#endif</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        /// &lt;summary&gt;</div><div class="line">        /// 获取用户ID</div><div class="line">        /// &lt;/summary&gt;</div><div class="line">        /// &lt;returns&gt;&lt;/returns&gt;</div><div class="line">        public string getChannelId()</div><div class="line">        &#123;</div><div class="line">#if UNITY_ANDROID</div><div class="line">            return jo.Call&lt;string&gt;(&quot;getChannelId&quot;);</div><div class="line">#else</div><div class="line">            return string.Empty;</div><div class="line">#endif</div><div class="line">        &#125;</div><div class="line"></div><div class="line"></div><div class="line">        public void registerActionCallback(int type, MonoBehaviour gameObject, string functionName)</div><div class="line">        &#123;</div><div class="line">#if UNITY_ANDROID</div><div class="line">            if (mAndroidJavaClass == null)</div><div class="line">            &#123;</div><div class="line">                mAndroidJavaClass = new AndroidJavaClass(&quot;com.holagames.sdk.MessageHandle&quot;);</div><div class="line">            &#125;</div><div class="line">            string gameObjectName = gameObject.gameObject.name;</div><div class="line">            mAndroidJavaClass.CallStatic(&quot;registerActionResultCallback&quot;, new object[] &#123; type, gameObjectName, functionName &#125;);</div><div class="line">#endif</div><div class="line"></div><div class="line">#if UNITY_IPHONE</div><div class="line">            //_registerActionResultCallback(type, gameObject.gameObject.name, functionName);</div><div class="line">#endif</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        public void loginGameRole(string type, string msg)</div><div class="line">        &#123;</div><div class="line">#if UNITY_ANDROID</div><div class="line">            jo.Call(&quot;LoginGameRole&quot;, type, msg);</div><div class="line">#endif</div><div class="line"></div><div class="line">        &#125;</div><div class="line"></div><div class="line">        public void CreateRole(string type, string msg)</div><div class="line">        &#123;</div><div class="line">#if UNITY_ANDROID</div><div class="line">            jo.Call(&quot;CreateRole&quot;, type, msg);</div><div class="line">#endif</div><div class="line">        &#125;</div><div class="line"></div><div class="line">#if UNITY_ANDROID</div><div class="line">        private AndroidJavaClass jc;</div><div class="line">        private AndroidJavaObject jo;</div><div class="line"></div><div class="line">        private AndroidJavaClass mAndroidJavaClass;</div><div class="line">#endif</div><div class="line">        /**</div><div class="line">     	@brief the Dictionary type change to the string type </div><div class="line">    	 @param Dictionary</div><div class="line">    	 @return  string</div><div class="line">    	*/</div><div class="line">        public static Dictionary&lt;string, string&gt; stringToDictionary(string message)</div><div class="line">        &#123;</div><div class="line">            Dictionary&lt;string, string&gt; param = new Dictionary&lt;string, string&gt;();</div><div class="line">            if (null != message)</div><div class="line">            &#123;</div><div class="line">                    string[] tokens = message.Split(&apos;&amp;&apos;);</div><div class="line"></div><div class="line">                    for (var i = 0; i &lt; tokens.Length; i++)</div><div class="line">                    &#123;</div><div class="line">                        string[] _s = tokens[i].Split(&apos;=&apos;);</div><div class="line">                        if (_s.Length == 2)</div><div class="line">                        &#123;</div><div class="line">                            param.Add(_s[0], _s[1]);</div><div class="line">                        &#125;</div><div class="line">                        else</div><div class="line">                        &#123;</div><div class="line">                            string _v = &quot;&quot;;</div><div class="line">                            int _index = tokens[i].IndexOf(&quot;=&quot;);</div><div class="line">                            _v = tokens[i].Substring(_index + 1);</div><div class="line"></div><div class="line">                            param.Add(_s[0], _v);</div><div class="line">                        &#125;</div><div class="line">                    &#125;</div><div class="line">            &#125;</div><div class="line"></div><div class="line">            return param;</div><div class="line">        &#125;</div><div class="line"></div><div class="line"></div><div class="line">        public static string dictionaryToString(Dictionary&lt;string, string&gt; maps)</div><div class="line">        &#123;</div><div class="line">            StringBuilder param = new StringBuilder();</div><div class="line">            if (null != maps)</div><div class="line">            &#123;</div><div class="line">                foreach (KeyValuePair&lt;string, string&gt; kv in maps)</div><div class="line">                &#123;</div><div class="line">                    if (param.Length == 0)</div><div class="line">                    &#123;</div><div class="line">                        param.AppendFormat(&quot;&#123;0&#125;=&#123;1&#125;&quot;, kv.Key, kv.Value);</div><div class="line">                    &#125;</div><div class="line">                    else</div><div class="line">                    &#123;</div><div class="line">                        param.AppendFormat(&quot;&amp;&#123;0&#125;=&#123;1&#125;&quot;, kv.Key, kv.Value);</div><div class="line">                    &#125;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">            //			byte[] tempStr = Encoding.UTF8.GetBytes (param.ToString ());</div><div class="line">            //			string msgBody = Encoding.Default.GetString(tempStr);</div><div class="line">            return param.ToString();</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>然后就是真正调用方法的地方，代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div><div class="line">168</div><div class="line">169</div><div class="line">170</div><div class="line">171</div><div class="line">172</div><div class="line">173</div><div class="line">174</div><div class="line">175</div><div class="line">176</div><div class="line">177</div><div class="line">178</div><div class="line">179</div><div class="line">180</div><div class="line">181</div><div class="line">182</div><div class="line">183</div><div class="line">184</div><div class="line">185</div><div class="line">186</div><div class="line">187</div><div class="line">188</div><div class="line">189</div><div class="line">190</div><div class="line">191</div><div class="line">192</div><div class="line">193</div><div class="line">194</div><div class="line">195</div><div class="line">196</div><div class="line">197</div><div class="line">198</div><div class="line">199</div><div class="line">200</div><div class="line">201</div><div class="line">202</div><div class="line">203</div><div class="line">204</div><div class="line">205</div><div class="line">206</div><div class="line">207</div><div class="line">208</div><div class="line">209</div><div class="line">210</div><div class="line">211</div><div class="line">212</div><div class="line">213</div><div class="line">214</div><div class="line">215</div><div class="line">216</div><div class="line">217</div><div class="line">218</div><div class="line">219</div><div class="line">220</div><div class="line">221</div><div class="line">222</div><div class="line">223</div><div class="line">224</div><div class="line">225</div><div class="line">226</div><div class="line">227</div><div class="line">228</div><div class="line">229</div><div class="line">230</div><div class="line">231</div><div class="line">232</div><div class="line">233</div><div class="line">234</div><div class="line">235</div><div class="line">236</div><div class="line">237</div><div class="line">238</div><div class="line">239</div><div class="line">240</div><div class="line">241</div><div class="line">242</div><div class="line">243</div><div class="line">244</div><div class="line">245</div><div class="line">246</div><div class="line">247</div><div class="line">248</div><div class="line">249</div><div class="line">250</div><div class="line">251</div><div class="line">252</div><div class="line">253</div><div class="line">254</div><div class="line">255</div><div class="line">256</div><div class="line">257</div><div class="line">258</div><div class="line">259</div><div class="line">260</div><div class="line">261</div><div class="line">262</div><div class="line">263</div><div class="line">264</div><div class="line">265</div><div class="line">266</div><div class="line">267</div><div class="line">268</div><div class="line">269</div><div class="line">270</div><div class="line">271</div><div class="line">272</div><div class="line">273</div><div class="line">274</div><div class="line">275</div><div class="line">276</div><div class="line">277</div><div class="line">278</div><div class="line">279</div><div class="line">280</div><div class="line">281</div><div class="line">282</div><div class="line">283</div><div class="line">284</div><div class="line">285</div><div class="line">286</div><div class="line">287</div><div class="line">288</div><div class="line">289</div><div class="line">290</div><div class="line">291</div><div class="line">292</div><div class="line">293</div><div class="line">294</div><div class="line">295</div><div class="line">296</div><div class="line">297</div><div class="line">298</div><div class="line">299</div><div class="line">300</div><div class="line">301</div><div class="line">302</div><div class="line">303</div><div class="line">304</div><div class="line">305</div><div class="line">306</div><div class="line">307</div><div class="line">308</div><div class="line">309</div><div class="line">310</div><div class="line">311</div><div class="line">312</div><div class="line">313</div><div class="line">314</div><div class="line">315</div><div class="line">316</div><div class="line">317</div><div class="line">318</div><div class="line">319</div><div class="line">320</div><div class="line">321</div><div class="line">322</div><div class="line">323</div><div class="line">324</div><div class="line">325</div><div class="line">326</div><div class="line">327</div><div class="line">328</div><div class="line">329</div><div class="line">330</div><div class="line">331</div><div class="line">332</div><div class="line">333</div><div class="line">334</div><div class="line">335</div><div class="line">336</div><div class="line">337</div><div class="line">338</div><div class="line">339</div><div class="line">340</div><div class="line">341</div><div class="line">342</div><div class="line">343</div><div class="line">344</div><div class="line">345</div><div class="line">346</div><div class="line">347</div><div class="line">348</div><div class="line">349</div><div class="line">350</div><div class="line">351</div><div class="line">352</div><div class="line">353</div><div class="line">354</div><div class="line">355</div><div class="line">356</div><div class="line">357</div><div class="line">358</div><div class="line">359</div><div class="line">360</div><div class="line">361</div><div class="line">362</div><div class="line">363</div><div class="line">364</div><div class="line">365</div><div class="line">366</div><div class="line">367</div><div class="line">368</div><div class="line">369</div><div class="line">370</div><div class="line">371</div><div class="line">372</div><div class="line">373</div><div class="line">374</div><div class="line">375</div><div class="line">376</div><div class="line">377</div><div class="line">378</div><div class="line">379</div><div class="line">380</div><div class="line">381</div><div class="line">382</div><div class="line">383</div><div class="line">384</div><div class="line">385</div><div class="line">386</div><div class="line">387</div><div class="line">388</div><div class="line">389</div><div class="line">390</div><div class="line">391</div><div class="line">392</div><div class="line">393</div><div class="line">394</div><div class="line">395</div><div class="line">396</div><div class="line">397</div><div class="line">398</div><div class="line">399</div><div class="line">400</div><div class="line">401</div><div class="line">402</div><div class="line">403</div><div class="line">404</div><div class="line">405</div><div class="line">406</div><div class="line">407</div><div class="line">408</div><div class="line">409</div><div class="line">410</div><div class="line">411</div><div class="line">412</div><div class="line">413</div><div class="line">414</div><div class="line">415</div><div class="line">416</div><div class="line">417</div><div class="line">418</div><div class="line">419</div><div class="line">420</div><div class="line">421</div><div class="line">422</div><div class="line">423</div><div class="line">424</div><div class="line">425</div><div class="line">426</div><div class="line">427</div><div class="line">428</div><div class="line">429</div><div class="line">430</div><div class="line">431</div><div class="line">432</div><div class="line">433</div><div class="line">434</div><div class="line">435</div><div class="line">436</div><div class="line">437</div><div class="line">438</div><div class="line">439</div><div class="line">440</div><div class="line">441</div><div class="line">442</div><div class="line">443</div><div class="line">444</div><div class="line">445</div><div class="line">446</div><div class="line">447</div><div class="line">448</div></pre></td><td class="code"><pre><div class="line">using UnityEngine;</div><div class="line">using System.Collections;</div><div class="line">using Holagames;</div><div class="line">using System.Collections.Generic;</div><div class="line">using System;</div><div class="line">using System.Text;</div><div class="line"></div><div class="line">public class HuaWeiGameCenter : MonoBehaviour</div><div class="line">&#123;</div><div class="line">    public bool IsInit = false;</div><div class="line">    public bool IsCheckBill = false;</div><div class="line">    public float Timer = 0;</div><div class="line">    public string Message = &quot;AAAA&quot;;</div><div class="line">    public string Message1 = &quot;AAAA&quot;;</div><div class="line"></div><div class="line">    void Awake()</div><div class="line">    &#123;</div><div class="line">        //UnityEngine.NotificationServices.deviceToken.ToString();</div><div class="line">        HolagamesSDK.getInstance().registerActionCallback((int)HolagamesSDKType.User, this, &quot;HolaSdkCallBack&quot;);</div><div class="line">        HolagamesSDK.getInstance().registerActionCallback((int)HolagamesSDKType.IAP, this, &quot;HolaSdkCallBack&quot;);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">   </div><div class="line"></div><div class="line">    void AndroidReceive(string content)</div><div class="line">    &#123;</div><div class="line">        Debug.Log(content);</div><div class="line">        Message1 = content;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    void AndroidReceiveChangeUser(string ChangeUser)</div><div class="line">    &#123;</div><div class="line">        Debug.Log(&quot;ChangeUser&quot;);</div><div class="line">        StartSDK();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    void AndroidReceiveLoginFailed(string Value)</div><div class="line">    &#123;</div><div class="line"></div><div class="line">    &#125;</div><div class="line"></div><div class="line">    void AndroidReceiveLogin(string Value)</div><div class="line">    &#123;</div><div class="line">        string Account = Value.Split(&apos;_&apos;)[0];</div><div class="line">        string Password = Value.Split(&apos;_&apos;)[1];</div><div class="line">        Debug.Log(Account + &quot; &quot; + Password);</div><div class="line"></div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public void StartSDK()</div><div class="line">    &#123;</div><div class="line">#if XIAOMI</div><div class="line">        HolagamesSDK.getInstance().init(&quot;2882303761517475726&quot;, &quot;5331747594726&quot;, &quot;HfM9lFxOF5S0lMdWbkXgQQ==&quot;, &quot;&quot;);  </div><div class="line">        return;</div><div class="line">#elif OPPO   </div><div class="line">        HolagamesSDK.getInstance().init(&quot;&quot;, &quot;ab03f4746b8C0A1d68624598177f64AD&quot;, &quot;&quot;, &quot;&quot;);  </div><div class="line">        return;</div><div class="line">#elif UC</div><div class="line">        HolagamesSDK.getInstance().init(&quot;&quot;, &quot;&quot;, &quot;&quot;, &quot;&quot;);  </div><div class="line">        return;</div><div class="line">#elif QIHOO360</div><div class="line">        HolagamesSDK.getInstance().init(&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;);</div><div class="line">        return;</div><div class="line">#elif VIVO</div><div class="line">        HolagamesSDK.getInstance().init(&quot;9885e4eaa65e696ed43360ac994a05df&quot;, &quot;42816dacc5cfbe9fd0e95cfe35f2eebc&quot;, &quot;20160201102033928864&quot;, &quot;&quot;);  </div><div class="line">        return;</div><div class="line">#elif QQ</div><div class="line">        HolagamesSDK.getInstance().init(&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;);</div><div class="line">        return;</div><div class="line">#elif BAIDU</div><div class="line">        HolagamesSDK.getInstance().init(&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;);</div><div class="line">        return;</div><div class="line">#elif IQIYI</div><div class="line">        HolagamesSDK.getInstance().init(&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;);</div><div class="line">        return;</div><div class="line">#elif MZW</div><div class="line">        HolagamesSDK.getInstance().init(&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;);</div><div class="line">        return;</div><div class="line">#elif AMIGO</div><div class="line">        HolagamesSDK.getInstance().init(&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;);</div><div class="line">        return;</div><div class="line">#elif MEIZU</div><div class="line">        HolagamesSDK.getInstance().init(&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;);</div><div class="line">        return;</div><div class="line">#elif COOLPAD</div><div class="line">        HolagamesSDK.getInstance().init(&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;);</div><div class="line">        return;</div><div class="line">#elif LESHI</div><div class="line">        HolagamesSDK.getInstance().init(&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;);</div><div class="line">        return;</div><div class="line">#elif DPWNJOY</div><div class="line">        HolagamesSDK.getInstance().init(&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;);</div><div class="line">        return;</div><div class="line">#elif ANZHI</div><div class="line">        HolagamesSDK.getInstance().init(&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;);</div><div class="line">        return;</div><div class="line">#elif WDJ</div><div class="line">        HolagamesSDK.getInstance().init(&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;);</div><div class="line">        return;</div><div class="line">#elif LENOVO</div><div class="line">        HolagamesSDK.getInstance().init(&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;);</div><div class="line">        return;</div><div class="line">#elif PYW</div><div class="line">        HolagamesSDK.getInstance().init(&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;);</div><div class="line">        return;</div><div class="line">#elif HOLA</div><div class="line">        HolagamesSDK.getInstance().init(&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;);</div><div class="line">        return;</div><div class="line">#elif TT</div><div class="line">        HolagamesSDK.getInstance().init(&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;);</div><div class="line">        return;</div><div class="line">#elif HAIMA</div><div class="line">        HolagamesSDK.getInstance().init(&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;);</div><div class="line">        return;</div><div class="line">#elif JOLO</div><div class="line">        HolagamesSDK.getInstance().init(&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;);</div><div class="line">        return;</div><div class="line">#elif DEBUG</div><div class="line">        HolagamesSDK.getInstance().init(&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;);</div><div class="line">        return;</div><div class="line">#elif QIANHUAN</div><div class="line">        HolagamesSDK.getInstance().init(&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;);</div><div class="line">        return;</div><div class="line">#else</div><div class="line">        HolagamesSDK.getInstance().init(&quot;&quot;, &quot;&quot;, &quot;&quot;, &quot;&quot;);</div><div class="line">#endif</div><div class="line">    &#125;</div><div class="line"></div><div class="line"></div><div class="line">    private void HolaSdkCallBack(string msg)</div><div class="line">    &#123;</div><div class="line">        Debug.Log(&quot;HolaSdkCallBack==&quot; + msg);</div><div class="line">        Message = msg;</div><div class="line">        Dictionary&lt;string, string&gt; dic = HolagamesSDK.stringToDictionary(msg);</div><div class="line">        int code = Convert.ToInt32(dic[&quot;code&quot;]);</div><div class="line">        string result = dic[&quot;msg&quot;];</div><div class="line">        switch (code)</div><div class="line">        &#123;</div><div class="line">            case (int)UserWrapper.InitFalied:</div><div class="line">                Debug.LogError(&quot;SDK Init Failed&quot;);</div><div class="line">                break;</div><div class="line"></div><div class="line">            case (int)UserWrapper.InitSuccess:</div><div class="line">                Debug.LogError(&quot;SDK InitSuccess&quot;);</div><div class="line">                Message1 = &quot;SDK InitSuccess&quot;;</div><div class="line">                IsInit = true;</div><div class="line">                break;</div><div class="line">            case (int)UserWrapper.LoginCancel:</div><div class="line">#if XIAOMI</div><div class="line">                HolagamesSDK.getInstance().Login(&quot;&quot;);</div><div class="line">#endif</div><div class="line">                break;</div><div class="line"></div><div class="line">            case (int)UserWrapper.LoginSwitch:</div><div class="line">                break;</div><div class="line"></div><div class="line">            case (int)UserWrapper.LoginFailed:</div><div class="line">                break;</div><div class="line"></div><div class="line">            case (int)UserWrapper.Logining:</div><div class="line">                break;</div><div class="line"></div><div class="line">            case (int)UserWrapper.LoginSuccess:</div><div class="line">                Debug.LogError(&quot;SDK LoginSuccess&quot;);</div><div class="line">                string _chane = &quot;QQ&quot;;</div><div class="line"></div><div class="line">                string Account = _chane + result;</div><div class="line">                string Password = &quot;t_&quot; + result;</div><div class="line">                Debug.Log(Account + &quot; &quot; + Password);</div><div class="line"></div><div class="line">                Message = Account + &quot; &quot; + Password;</div><div class="line"></div><div class="line">                break;</div><div class="line">            case (int)UserWrapper.LogoutFailed:</div><div class="line">                break;</div><div class="line"></div><div class="line">            case (int)UserWrapper.LogoutSuccess:</div><div class="line">                Message1 = &quot;SDK LogoutSuccess&quot;;</div><div class="line">                break;</div><div class="line"></div><div class="line">            case (int)UserWrapper.notLogin:</div><div class="line">                break;</div><div class="line"></div><div class="line">            case (int)UserWrapper.PayFailed:</div><div class="line">                IsCheckBill = false;</div><div class="line">                Message = &quot;UserWrapper.PayFailed&quot; + msg;</div><div class="line">                break;</div><div class="line"></div><div class="line">            case (int)UserWrapper.PaySuccess:</div><div class="line">                IsCheckBill = false;</div><div class="line">                Message = &quot;UserWrapper.PaySuccess&quot;;</div><div class="line">                break;</div><div class="line"></div><div class="line">            case (int)UserWrapper.PayCheck:</div><div class="line">                IsCheckBill = true;</div><div class="line">                Message = &quot;UserWrapper.PayCheck&quot;;</div><div class="line">                break;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    void Update()</div><div class="line">    &#123;</div><div class="line">        if (IsCheckBill)</div><div class="line">        &#123;</div><div class="line">            Message1 = Timer.ToString();</div><div class="line">            Timer += Time.deltaTime;</div><div class="line">            if (Timer &gt; 1)</div><div class="line">            &#123;</div><div class="line">                Timer -= 1;</div><div class="line">                using (AndroidJavaClass jc = new AndroidJavaClass(&quot;com.unity3d.player.UnityPlayer&quot;))</div><div class="line">                &#123;</div><div class="line">                    using (AndroidJavaObject jo = jc.GetStatic&lt;AndroidJavaObject&gt;(&quot;currentActivity&quot;))</div><div class="line">                    &#123;</div><div class="line">                        jo.Call(&quot;CheckBill&quot;, &quot;10001-1-1-6&quot;);</div><div class="line">                    &#125;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    void OnGUI()</div><div class="line">    &#123;</div><div class="line">        GUILayout.BeginHorizontal();</div><div class="line">        if (GUILayout.Button(&quot;initSDK&quot;, GUILayout.Height(80), GUILayout.Width(100)))</div><div class="line">        &#123;</div><div class="line">            Message1 = &quot;Init&quot;;</div><div class="line">            StartSDK();</div><div class="line">        &#125; </div><div class="line"></div><div class="line">        if (GUILayout.Button(&quot;Login&quot;, GUILayout.Height(80), GUILayout.Width(100)))</div><div class="line">        &#123;</div><div class="line"></div><div class="line">            Message1 = &quot;Login&quot;;</div><div class="line">#if QQ</div><div class="line">        HolagamesSDK.getInstance().Login(&quot;WX&quot;);</div><div class="line">#else</div><div class="line">            HolagamesSDK.getInstance().Login(&quot;&quot;);</div><div class="line">#endif</div><div class="line"></div><div class="line">        &#125;</div><div class="line"></div><div class="line">        if (GUILayout.Button(&quot;ToGame&quot;, GUILayout.Height(80), GUILayout.Width(100)))</div><div class="line">        &#123;</div><div class="line">            Message1 = &quot;ToGame&quot;;</div><div class="line">            HolagamesSDK.getInstance().loginGameRole(&quot;create&quot;, &quot;roleId=10278&amp;roleName=阳光社&amp;roleLevel=12&amp;zoneId=androids26&amp;zoneName=混服22服幽灵杀手&amp;roleCTime=1481543091&amp;roleLevelMTime=1481547775&amp;vip=0&quot;);</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        if (GUILayout.Button(&quot;CreateRole&quot;, GUILayout.Height(80), GUILayout.Width(100)))</div><div class="line">        &#123;</div><div class="line">            Message1 = &quot;CreateRole&quot;;</div><div class="line">#if IQIYI</div><div class="line">            HolagamesSDK.getInstance().CreateRole(&quot;&quot;, &quot;&quot;);</div><div class="line">#elif VIVO</div><div class="line">            HolagamesSDK.getInstance().CreateRole(&quot;&quot;, &quot;&quot;);</div><div class="line">#elif HOLA </div><div class="line">            HolagamesSDK.getInstance().CreateRole(&quot;&quot;, &quot;&quot;);</div><div class="line">#endif</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        if(GUILayout.Button(&quot;EnterGameCenter&quot;, GUILayout.Height(80),GUILayout.Width(100)))</div><div class="line">        &#123;</div><div class="line">            Message1 = &quot;EnterGameCenter&quot;;</div><div class="line">#if HOLA</div><div class="line">            HolagamesSDK.getInstance().entryGameCenter();</div><div class="line">#endif</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        if (GUILayout.Button(&quot;ShowFloatView&quot;, GUILayout.Height(80), GUILayout.Width(100)))</div><div class="line">        &#123;</div><div class="line">            Message1 = &quot;ShowFloatView&quot;;</div><div class="line">#if PYW</div><div class="line">            HolagamesSDK.getInstance().showToolBar();</div><div class="line">#elif VIVO</div><div class="line">            HolagamesSDK.getInstance().showToolBar();</div><div class="line">#elif HUAWEI</div><div class="line">            HolagamesSDK.getInstance().showToolBar();</div><div class="line">#elif MEIZU</div><div class="line">            HolagamesSDK.getInstance().showToolBar();</div><div class="line">#elif QIANHUAN</div><div class="line">            HolagamesSDK.getInstance().showToolBar();</div><div class="line">#endif</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        if (GUILayout.Button(&quot;Pay&quot;, GUILayout.Height(80), GUILayout.Width(100)))</div><div class="line">        &#123;</div><div class="line">            Message1 = &quot;Pay&quot;;</div><div class="line">#if UC</div><div class="line">            HolagamesSDK.getInstance().Pay(&quot;1_60_10001_1_1_1_1_1_1&quot;);  //UC</div><div class="line">#elif QQ</div><div class="line">            HolagamesSDK.getInstance().Pay(&quot;1_60_10001_1_1_1_1_1_1&quot;);  //QQ zoneid, diamond, guid, serverid, paytype		</div><div class="line">#elif QIHOO360</div><div class="line">            HolagamesSDK.getInstance().Pay(&quot;100_60钻石_1_xxx_10001_10001&quot; + UnityEngine.Random.Range(1,10000) + &quot;_10001-1-1-6&quot;);  //360  Product_Price Product_Name Product_Id Role_Name Role_Id OrderId guid-server_id-pay_type-cash</div><div class="line">#elif VIVO</div><div class="line">            HolagamesSDK.getInstance().Pay(&quot;1_1_10001_xxx_1_1_60钻石&quot;);  //VIVO diamond, zoneid, guid, name, level, paytype, ProductName</div><div class="line">#elif OPPO</div><div class="line">            HolagamesSDK.getInstance().Pay(&quot;1_1_10001_xxx_1_1_60钻石&quot;);  //VIVO diamond, zoneid, guid, name, level, paytype, ProductName</div><div class="line">#elif BAIDU</div><div class="line">             HolagamesSDK.getInstance().Pay(&quot;1_AndroidS10_10001_xxx_1_1_60钻石&quot;);//BAiDU diamond, zoneid, guid, name, level, paytype, ProductName</div><div class="line">#elif HUAWEI</div><div class="line">             HolagamesSDK.getInstance().Pay(&quot;1_1_10001_xxx_1_1_60钻石&quot;);//HUAWEI diamond, zoneid, guid, name, level, paytype, ProductName</div><div class="line">#elif IQIYI</div><div class="line">            HolagamesSDK.getInstance().Pay(&quot;1_1_10001_xxx_1_1_60钻石&quot;);//IQIYI diamond, zoneid, guid, name, level, paytype, ProductName</div><div class="line">#elif MZW</div><div class="line">            HolagamesSDK.getInstance().Pay(&quot;1_1_10001_xxx_1_1_60钻石&quot;);//mzw diamond, zoneid, guid, name, level, paytype, ProductName</div><div class="line">#elif AMIGO</div><div class="line">            HolagamesSDK.getInstance().Pay(&quot;1_1_10001_xxx_1_1_60钻石&quot;);//am diamond, zoneid, guid, name, level, paytype, ProductName</div><div class="line">#elif MEIZU</div><div class="line">            HolagamesSDK.getInstance().Pay(&quot;1_1_10001_xxx_1_1_60钻石&quot;);//meizu diamond, zoneid, guid, name, level, paytype, ProductName</div><div class="line">#elif COOLPAD</div><div class="line">            HolagamesSDK.getInstance().Pay(&quot;1_1_10001_xxx_1_1_60钻石&quot;);//coolpad diamond, zoneid, guid, name, level, paytype, ProductName</div><div class="line">#elif LESHI</div><div class="line">            HolagamesSDK.getInstance().Pay(&quot;1_1_10001_xxx_1_1_60钻石&quot;);//leshi diamond, zoneid, guid, name, level, paytype, ProductName</div><div class="line">#elif DOWNJOY</div><div class="line">            HolagamesSDK.getInstance().Pay(&quot;1_1_10001_xxx_1_1_60钻石&quot;);//downjoy diamond, zoneid, guid, name, level, paytype, ProductName</div><div class="line">#elif ANZHI</div><div class="line">            HolagamesSDK.getInstance().Pay(&quot;1_1_10001_xxx_1_1_60钻石&quot;);//anzhi diamond, zoneid, guid, name, level, paytype, ProductName</div><div class="line">#elif WDJ</div><div class="line">            HolagamesSDK.getInstance().Pay(&quot;1_60_10001_1_1_1_1_1_1&quot;);//WDJ diamond, zoneid, guid, name, level, paytype, ProductName</div><div class="line">#elif LENOVO</div><div class="line">            HolagamesSDK.getInstance().Pay(&quot;1_1_10001_xxx_1_1_60钻石&quot;);//lenovo diamond, zoneid, guid, name, level, paytype, ProductName</div><div class="line">#elif PYW</div><div class="line">            HolagamesSDK.getInstance().Pay(&quot;1_1_10001_xxx_1_1_60钻石_1&quot;);//pyw diamond, zoneid, guid, name, level, paytype, ProductName</div><div class="line">#elif HOLA</div><div class="line">            HolagamesSDK.getInstance().Pay(&quot;1_AndroidS1_10001_6_1_1_60钻石_1&quot;);//hola diamond, zoneid, guid, name, level, paytype, ProductName,servername</div><div class="line">#elif TT</div><div class="line">            HolagamesSDK.getInstance().Pay(&quot;1_1_10001_xxx_1_1_60钻石&quot;);//tt diamond, zoneid, guid, name, level, paytype, ProductName</div><div class="line">#elif XIAOMI</div><div class="line">            HolagamesSDK.getInstance().Pay(&quot;1_1_10001_xxx_1_1_60钻石_1&quot;);//xiaomi diamond, zoneid, guid, name, level, paytype, ProductName</div><div class="line">#elif JOLO</div><div class="line">            HolagamesSDK.getInstance().Pay(&quot;1_AndroidS1_10001_6_1_1_60钻石_1&quot;);//聚乐 diamond, zoneid, guid, name, level, paytype, ProductName</div><div class="line">#elif DEBUG</div><div class="line">            HolagamesSDK.getInstance().Pay(&quot;http://www.baidu.com&quot;);//debug url</div><div class="line">#elif QIANHUAN</div><div class="line">            HolagamesSDK.getInstance().Pay(&quot;1_AndroidS1_10001_6_1_1_60钻石_1&quot;);//千幻 diamond, zoneid, guid, name, level, paytype, ProductName</div><div class="line">#else</div><div class="line">            HolagamesSDK.getInstance().Pay(&quot;&quot;);</div><div class="line">#endif</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        </div><div class="line">        if (GUILayout.Button(&quot;CheckBill&quot;, GUILayout.Height(80), GUILayout.Width(100)))</div><div class="line">        &#123;</div><div class="line">//#if DEBUG</div><div class="line">            HolagamesSDK.getInstance().CheckBill(&quot;http://www.baidu.com&quot;);  //debug</div><div class="line">//#endif</div><div class="line">            Message1 = &quot;CheckBill&quot;;</div><div class="line">            //HolagamesSDK.getInstance().CheckBill(&quot;http://gdown.baidu.com/data/wisegame/ba226d3cf2cfc97b/baiduyinyue_4920.apk&quot;);</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        if (GUILayout.Button(&quot;ExitSDk&quot;, GUILayout.Height(80), GUILayout.Width(100)))</div><div class="line">        &#123;</div><div class="line">#if QQ</div><div class="line">            HolagamesSDK.getInstance().Logout();</div><div class="line">#else</div><div class="line">            HolagamesSDK.getInstance().ExitSDK();</div><div class="line">#endif</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        if (GUILayout.Button(&quot;ChangeAccount&quot;, GUILayout.Height(80), GUILayout.Width(100)))</div><div class="line">        &#123;</div><div class="line">            Message1 = &quot;ChangeAccount&quot;;</div><div class="line">            HolagamesSDK.getInstance().SwitchLogin();</div><div class="line">        &#125;</div><div class="line">        GUILayout.EndHorizontal();</div><div class="line">        GUILayout.BeginHorizontal();</div><div class="line">        GUILayout.Label(Message, GUILayout.Height(200), GUILayout.Width(500));</div><div class="line">        GUILayout.Label(Message1, GUILayout.Height(200), GUILayout.Width(500));</div><div class="line">        GUILayout.EndHorizontal();</div><div class="line">    &#125;</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">    /// &lt;summary&gt;</div><div class="line">    /// 实现php的URLENCODE函数</div><div class="line">    /// &lt;/summary&gt;</div><div class="line">    /// &lt;param name=&quot;str&quot;&gt;&lt;/param&gt;</div><div class="line">    /// &lt;returns&gt;&lt;/returns&gt;</div><div class="line">    public string UrlEncode(string str)</div><div class="line">    &#123;</div><div class="line">        StringBuilder sb = new StringBuilder();</div><div class="line"></div><div class="line">        for (var i = 0; i &lt; str.Length; i++)</div><div class="line">        &#123;</div><div class="line">            char c = str[i];</div><div class="line">            if ((c &gt;= &apos;0&apos; &amp;&amp; c &lt;= &apos;9&apos;) || (c &gt;= &apos;a&apos; &amp;&amp; c &lt;= &apos;z&apos;) || (c &gt;= &apos;A&apos; &amp;&amp; c &lt;= &apos;Z&apos;))</div><div class="line">            &#123;</div><div class="line">                sb.Append(c);</div><div class="line">            &#125;</div><div class="line">            else</div><div class="line">            &#123;</div><div class="line">                byte[] bystr = charToByte(str[i]);</div><div class="line"></div><div class="line">                sb.Append(@&quot;%&quot;);</div><div class="line"></div><div class="line">                for (int ij = 0; ij &lt; bystr.Length; ij++)</div><div class="line">                &#123;</div><div class="line">                    if (bystr[ij] != 0)</div><div class="line">                    &#123;</div><div class="line">                        sb.Append(Convert.ToString(bystr[ij], 16).ToUpper());</div><div class="line">                    &#125;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        return (sb.ToString());</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public byte[] charToByte(char c)</div><div class="line">    &#123;</div><div class="line">        byte[] b = new byte[2];</div><div class="line">        b[0] = (byte)((c &amp; 0xFF00) &gt;&gt; 8);</div><div class="line">        b[1] = (byte)(c &amp; 0xFF);</div><div class="line">        return b;</div><div class="line">    &#125;</div><div class="line"></div><div class="line"></div><div class="line">    /// &lt;summary&gt;</div><div class="line">    /// ios登录取帐号</div><div class="line">    /// &lt;/summary&gt;</div><div class="line">    /// &lt;param name=&quot;www&quot;&gt;&lt;/param&gt;</div><div class="line">    /// &lt;returns&gt;&lt;/returns&gt;</div><div class="line">    IEnumerator LoginPhp(WWW www)</div><div class="line">    &#123;</div><div class="line"></div><div class="line">        yield return www;</div><div class="line">        Debug.LogError(www.text);</div><div class="line">        Debug.LogError(www.error);</div><div class="line">        if (www.error == null &amp;&amp; www.text != &quot;0&quot;)</div><div class="line">        &#123;</div><div class="line">            string _chane = &quot;KY_&quot;;</div><div class="line"></div><div class="line">#if KY</div><div class="line">#elif TBT</div><div class="line">            _chane = &quot;TBT_&quot;;</div><div class="line">            if (www.text == &quot;-1&quot;)</div><div class="line">            &#123;</div><div class="line">                HolagamesSDK.getInstance().Login(&quot;&quot;);</div><div class="line">                return;</div><div class="line">            &#125;</div><div class="line">#endif</div><div class="line"></div><div class="line">            string Account  = _chane + www.text;</div><div class="line">            string Password = &quot;t_&quot; + www.text;</div><div class="line">            Debug.Log(Account + &quot; &quot; + Password);</div><div class="line"></div><div class="line">        &#125;</div><div class="line"></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>简单介绍一下这段代码的几个关键点：</p>
+<ol>
+<li>通过UnityPlayer可以很方便的拿到当前Activity的Java对象实例。</li>
+<li>对Java对象实例的方法的调用实际上很简单，只要调用Call就可以了。</li>
+<li>注意用宏来区隔Native代码。UNITY_ANDROID 这个推荐的写法.</li>
+<li>推荐在new出AndroidJavaClass还有AndroidJavaObject的地方用using来进行保护，确保执行结束后Unity会自动回收相应的代码。</li>
+</ol>
+<p>写了这么多我们来测试一下，将相关资源拷贝的Unity中，然后对Apk进行签名，这里我是自己已经准备好了，签名文件，不会弄签名文件可以去Android Stuidio中自己生成，设置完成之后我们就打出一个apk，如果打包出错的话，先看看控制的报错信息，然后对照控制的报错信息来修改。下面是我测试的数据，分别从初始化,登录,支付,注销这几个接口来测试的，如果你有其它接口，你可以自己添加进去，然后再来测试,我测试的结果如下:<br><img src="http://upload-images.jianshu.io/upload_images/2463091-9660dac5242dcc9f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="3.png"><br>如果有我下面截图的数据那就说明你已经成功了。<br>下篇文章我将对Ios进行接入，本来想写在一起的，但是感觉篇幅太大，很多同学一开始都是Android，Ios难免难度有点大，敬请期待我下篇文章，最近几天会更新的。<br>源码下载地址:<a href="https://github.com/wlcaption/MyWarHolaSdk" target="_blank" rel="external">https://github.com/wlcaption/MyWarHolaSdk</a></p>
+<p>其他的部分在这篇文章里面我们不展开。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Unity/" rel="tag"># Unity</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/09/05/游戏开发随想（更新中）/" rel="next" title="游戏开发随想（更新中）">
+                <i class="fa fa-chevron-left"></i> 游戏开发随想（更新中）
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/09/08/Sdk开发工程师要求/" rel="prev" title="Sdk开发工程师要求">
+                Sdk开发工程师要求 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+        </div>
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+<div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">wlcaption</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+<span id="busuanzi_container_site_pv">
+    本站总访问量<span id="busuanzi_value_site_pv"></span>次
+</span>
+<span id="busuanzi_container_site_uv">
+  本站访客数<span id="busuanzi_value_site_uv"></span>人次
+</span>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
