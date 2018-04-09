@@ -77,5 +77,5 @@ theme: next
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  ##repo: https://github.com/wlcaption/wlcaption.github.io.git 
-   repo: git@wlcaption.cn:/home/game_client/blog.git
+  repo: https://github.com/wlcaption/wlcaption.github.io.git 
+   ##repo: git@wlcaption.cn:/home/game_client/blog.git
