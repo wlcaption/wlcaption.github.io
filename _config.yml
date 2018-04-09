@@ -78,4 +78,4 @@ theme: next
 deploy:
   type: git
   ##repo: https://github.com/wlcaption/wlcaption.github.io.git 
-   repo: git@www.wlcaption.cn:/home/wwc/Blog/.git
+   repo: git@wlcaption.cn:/home/game_client/blog.git
